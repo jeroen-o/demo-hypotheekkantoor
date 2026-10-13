@@ -309,6 +309,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://demo-hypotheek-kantoor.nl/woning-risicos.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://demo-hypotheek-kantoor.nl/werkgeversregelingen.html</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>

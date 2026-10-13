@@ -34,6 +34,7 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
 - [Diensten](https://demo-hypotheek-kantoor.nl/diensten.html): wat wel en wat uitdrukkelijk niet.
 - [Risico's](https://demo-hypotheek-kantoor.nl/risicos.html): arbeidsongeschiktheid, overlijden, werkloosheid, scheiding, rente, pensioen.
 - [Fiscale risico's](https://demo-hypotheek-kantoor.nl/fiscale-risicos.html): twaalf valkuilen rond de eigen woning.
+- [Risico's rond de woning](https://demo-hypotheek-kantoor.nl/woning-risicos.html): bouwkundige staat, waarde, onderhoudskosten en fundering.
 - [Draagplichtovereenkomst](https://demo-hypotheek-kantoor.nl/draagplicht.html): ongelijke inbreng en wie welk deel van de schuld draagt.
 - [Voorzieningen via uw werkgever](https://demo-hypotheek-kantoor.nl/werkgeversregelingen.html): wat mee te nemen en hoe op te vragen.
 - [Verduurzaming en fundering](https://demo-hypotheek-kantoor.nl/verduurzaming.html).
