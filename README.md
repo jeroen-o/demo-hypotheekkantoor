@@ -19,17 +19,23 @@ expliciet uitgewerkt op `nazorg.html`.
 | --- | --- |
 | `index.html` | Home met samenvatting van werkwijze, diensten, kosten en nazorg |
 | `werkwijze.html` | De vijf stappen, per stap wat wij doen, wat u aanlevert en wat u krijgt |
+| `adviesproces.html` | Het adviestraject in detail: CBI-benadering, 50%-AO-scenario en de omgang met bestaande voorzieningen |
 | `diensten.html` | Waarover wel en niet wordt geadviseerd, met drie fictieve voorbeeldsituaties |
+| `verduurzaming.html` | Energielabel en leenruimte, financiering van maatregelen, funderingsrisico (`#fundering`) |
 | `nazorg.html` | Wettelijke nazorg (gratis) versus drie onderhoudsabonnementen, met vergelijkingstabel |
-| `kosten.html` | Tarieven, staffel als het niet doorgaat, nazorgprijzen en kosten van derden |
-| `documenten.html` | Zes modeldocumenten in een overlay, te printen of op te slaan als PDF |
+| `kosten.html` | Volledige tarievenlijst, annuleringsstaffel, meerwerk, nazorgprijzen en kosten van derden |
+| `documenten.html` | Twaalf modeldocumenten in een overlay, te printen of op te slaan als PDF |
 | `over-ons.html` | Kantoor, toezichtgegevens, privacy (`#privacy`) en klachten (`#klachten`) |
 | `vragen.html` | Veelgestelde vragen in accordeons |
-| `contact.html` | Contactformulier (demo, verstuurt niets) |
+| `contact.html` | Contactformulier; opent de mailclient van de bezoeker |
 | `404.html` | Foutpagina voor GitHub Pages |
+| `robots.txt` | Houdt de demo uit zoekmachines |
 | `assets/style.css` | Gedeelde stijl |
 | `assets/site.js` | Menu, accordeons, cookiemelding, formulier |
 | `assets/docs.js` | Documentvenster, focusbeheer en printen |
+| `assets/favicon.svg` | Browser-icoon |
+| `tools/kantoor.json` | Gegevens van uw eigen kantoor |
+| `tools/personaliseer.py` | Vervangt de demowaarden door die uit `kantoor.json` |
 
 ## Technische uitgangspunten
 
@@ -43,10 +49,37 @@ expliciet uitgewerkt op `nazorg.html`.
   `role="dialog"`, focus-trap en Escape, en `prefers-reduced-motion`.
 - Documenten zijn deeplinkbaar: `documenten.html#beheer` opent dat model direct.
 
+## De demo overnemen voor een eigen kantoor
+
+```bash
+# 1. Vul tools/kantoor.json met uw eigen gegevens
+# 2. Bekijk wat er zou veranderen
+python3 tools/personaliseer.py
+# 3. Voer het door
+python3 tools/personaliseer.py --schrijf
+```
+
+Het script doet alleen exacte tekstvervanging; het raadt niets. Daarna blijft handwerk over, en het script
+herinnert daar na afloop aan:
+
+1. **Demobalk verwijderen** uit elke pagina (het rode blok bovenaan).
+2. **`noindex` weghalen** uit elke pagina én `robots.txt` aanpassen. Zolang die erin staan, blijft de site
+   onvindbaar — bewust, want fictieve AFM- en Kifid-nummers horen niet in Google.
+3. **Canonical en `og:url`** naar het eigen domein zetten.
+4. **Contactformulier koppelen** aan echte formulierverwerking, met bewaartermijn en verwerkersovereenkomst.
+5. **Modeldocumenten juridisch laten toetsen** en de fictieve aanbieders vervangen door de eigen selectie.
+6. **Tarieven controleren** — alle bedragen in deze demo zijn verzonnen.
+
 ## Documenten in de demo
 
-`documenten.html` bevat zes modellen: opdracht tot dienstverlening, algemene voorwaarden, dienstenwijzer,
-dienstverleningsdocument, vergelijkingskaart en beheerovereenkomst.
+`documenten.html` bevat twaalf modellen, elk deeplinkbaar (`documenten.html#beheer`):
+
+| Categorie | Documenten |
+| --- | --- |
+| Hypotheekadvies | Opdracht tot dienstverlening, algemene voorwaarden, dienstenwijzer, dienstverleningsdocument, vergelijkingskaart |
+| Verzekeringen | Dienstverleningsdocument risico's afdekken, vergelijkingskaart verzekeringen |
+| Nazorg en administratie | Beheerovereenkomst, machtiging automatische incasso, identificatie en Wwft |
+| Website | Disclaimer, cookieverklaring |
 
 > **Let op:** dit zijn demoteksten, geschreven als voorbeeld van begrijpelijke kantoordocumentatie. Ze zijn
 > niet juridisch getoetst en het "dienstverleningsdocument" is een vrije weergave — het wettelijke

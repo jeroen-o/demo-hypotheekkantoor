@@ -1,0 +1,43 @@
+{
+  "_toelichting": [
+    "Vul hieronder de gegevens van uw eigen kantoor in en draai daarna:",
+    "    python3 tools/personaliseer.py",
+    "Het script vervangt de demowaarden in alle HTML-bestanden.",
+    "Controleer het resultaat altijd zelf; het script kent geen context.",
+    "Laat een waarde leeg om die ongemoeid te laten."
+  ],
+
+  "kantoornaam": "Demo Hypotheek kantoor",
+  "kantoornaam_juridisch": "Demo Hypotheek kantoor B.V.",
+  "straat": "Demostraat 12",
+  "postcode_plaats": "1234 AB Demostad",
+  "plaats": "Demostad",
+  "telefoon": "085 - 000 00 00",
+  "telefoon_link": "+31850000000",
+  "email": "info@demohypotheekkantoor.nl",
+  "website": "https://jeroen-o.github.io/demo-hypotheekkantoor/",
+
+  "kvk": "99999999",
+  "afm": "99999999",
+  "kifid": "999.999999",
+  "incassant_id": "NL00ZZZ999999990000",
+  "bav_verzekeraar": "Demo Schadeverzekeringen N.V.",
+
+  "aantal_geldverstrekkers": "18",
+  "aantal_verzekeraars": "7",
+
+  "tarief_hypotheek": "2.950",
+  "tarief_orv": "495",
+  "tarief_aov": "1.450",
+  "tarief_woonlasten": "695",
+  "tarief_oversluiten": "1.750",
+  "tarief_ontslag_ha": "1.250",
+  "tarief_bankgarantie": "250",
+  "uurtarief": "145",
+
+  "abonnement_basis": "7,50",
+  "abonnement_plus": "17,50",
+  "abonnement_compleet": "29,50",
+
+  "documentdatum": "13 oktober 2026"
+}

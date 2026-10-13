@@ -11,7 +11,13 @@
     dw:    { titel: "Dienstenwijzer",                             versie: "versie 1.0, 13 oktober 2026" },
     beheer:{ titel: "Beheerovereenkomst — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
     dvd:   { titel: "Dienstverleningsdocument — voorbeeld",       versie: "voorbeeldversie 1.0, 13 oktober 2026" },
-    vgk:   { titel: "Vergelijkingskaart aanbieders",              versie: "versie 1.0, 13 oktober 2026" }
+    vgk:   { titel: "Vergelijkingskaart aanbieders",              versie: "versie 1.0, 13 oktober 2026" },
+    dvdr:  { titel: "Dienstverleningsdocument risico's afdekken — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },
+    vgkr:  { titel: "Vergelijkingskaart verzekeringen",        versie: "versie 1.0, 13 oktober 2026" },
+    wwft:  { titel: "Identificatie en Wwft",                   versie: "versie 1.0, 13 oktober 2026" },
+    incasso:{titel: "Machtiging automatische incasso — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
+    disc:  { titel: "Disclaimer",                              versie: "versie 1.0, 13 oktober 2026" },
+    cook:  { titel: "Cookieverklaring",                        versie: "versie 1.0, 13 oktober 2026" }
   };
 
   var ov      = document.getElementById("ov");

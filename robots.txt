@@ -1,0 +1,6 @@
+# Demowebsite met fictieve gegevens, waaronder niet-geldige AFM-, KvK- en
+# Kifid-nummers. Deze site hoort niet in zoekmachines thuis.
+# Een kantoor dat deze opzet overneemt, haalt deze regels weg en verwijdert
+# de meta robots-regel uit elke pagina.
+User-agent: *
+Disallow: /

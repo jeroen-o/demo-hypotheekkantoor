@@ -78,11 +78,38 @@
     }
   }
 
-  /* ---- contactformulier (demo: verstuurt niets) ---- */
+  /* ---- contactformulier ----
+     Een statische site kan zelf geen e-mail versturen. Daarom stelt het formulier
+     een bericht op en opent het de e-mailprogramma van de bezoeker. Er gaat geen
+     enkel gegeven naar een server van ons of van een derde partij. */
   var form = document.getElementById("contactform");
   if (form) {
+    var ONTVANGER = form.getAttribute("data-ontvanger") || "";
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      function waarde(id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : "";
+      }
+      var regels = [
+        "Aanvraag via de demowebsite Demo Hypotheek kantoor",
+        "",
+        "Naam: " + waarde("naam"),
+        "E-mailadres: " + waarde("mail"),
+        "Telefoonnummer: " + (waarde("tel") || "niet opgegeven"),
+        "Onderwerp: " + waarde("ond"),
+        "",
+        "Toelichting:",
+        waarde("ber") || "(geen toelichting)",
+        "",
+        "Verstuurd op " + new Date().toLocaleString("nl-NL")
+      ];
+      var link = "mailto:" + encodeURIComponent(ONTVANGER) +
+        "?subject=" + encodeURIComponent("Demo-aanvraag: " + (waarde("ond") || "contact")) +
+        "&body=" + encodeURIComponent(regels.join("\n"));
+
       var msg = document.getElementById("formmsg");
       if (msg) {
         msg.classList.add("show");
@@ -90,6 +117,7 @@
       }
       var knop = form.querySelector("button[type=submit]");
       if (knop) knop.disabled = true;
+      window.location.href = link;
     });
   }
 })();

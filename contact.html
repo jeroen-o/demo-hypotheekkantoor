@@ -6,6 +6,15 @@
 <title>Contact — Demo Hypotheek kantoor (demo)</title>
 <meta name="description" content="Plan een kosteloze kennismaking of stel uw vraag. Voorbeeldwebsite met fictieve gegevens; het formulier verstuurt niets.">
 <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeroen-o.github.io/demo-hypotheekkantoor/contact.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Demo Hypotheek kantoor">
+<meta property="og:title" content="Contact — Demo Hypotheek kantoor (demo)">
+<meta property="og:description" content="Plan een kosteloze kennismaking of stel uw vraag. Voorbeeldwebsite met fictieve gegevens; het formulier verstuurt niets.">
+<meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/contact.html">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -15,7 +24,8 @@
 <div class="demobar">
   <b>Demo-omgeving.</b> Deze website is een voorbeeld. <b>Demo Hypotheek kantoor</b> bestaat niet:
   naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
-  Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier verstuurt niets.
+  Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
+  e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
 </div>
 
 <nav aria-label="Hoofdmenu">
@@ -47,7 +57,7 @@
 <section>
   <div class="wrap">
     <div class="contact-grid">
-      <form id="contactform" novalidate>
+      <form id="contactform" novalidate data-ontvanger="jeroen.oversteegen@blinqx.tech">
         <div class="field"><label for="naam">Naam</label>
           <input id="naam" name="naam" autocomplete="name" required></div>
         <div class="field"><label for="mail">E-mailadres</label>
@@ -74,8 +84,9 @@
           <label for="akk" style="font-weight:400;color:var(--text-l)">Ik ga ermee akkoord dat mijn gegevens
             worden gebruikt om contact met mij op te nemen over deze aanvraag.</label></div>
         <button type="submit" class="btn">Verstuur aanvraag</button>
-        <div id="formmsg" role="status" tabindex="-1">Bedankt. In deze demo-omgeving wordt niets verzonden en
-          worden geen gegevens opgeslagen. Op een echte website zou hier de bevestiging staan.</div>
+        <div id="formmsg" role="status" tabindex="-1">Uw e-mailprogramma wordt geopend met een kant-en-klaar
+          bericht aan de beheerder van deze demo. U verstuurt het zelf; er gaat niets automatisch weg en er wordt
+          niets opgeslagen. Opent er niets, mail dan rechtstreeks naar jeroen.oversteegen@blinqx.tech.</div>
       </form>
 
       <div class="infocard">
@@ -90,6 +101,18 @@
         </dl>
         <p style="margin-top:18px;font-size:14px;color:var(--muted)">Alle gegevens hierboven zijn fictief.</p>
       </div>
+    </div>
+
+    <div class="note" style="margin-top:36px;border-left-color:#B3261E;max-width:none">
+      <b>Vragen over deze demo?</b> Deze website is een voorbeeld; het kantoor hierboven bestaat niet. Wilt u weten
+      hoe deze opzet werkt, of hem gebruiken als voorbeeld voor uw eigen kantoor, neem dan contact op met de
+      beheerder:
+      <br><br>
+      Jeroen Oversteegen &middot; Blinqx Verzekering &amp; Hypotheek<br>
+      <a href="mailto:jeroen.oversteegen@blinqx.tech">jeroen.oversteegen@blinqx.tech</a> &middot;
+      <a href="tel:+31621247257">06 - 21 24 72 57</a>
+      <br><br>
+      Berichten uit het formulier hierboven komen op dit adres binnen, niet bij een hypotheekadviseur.
     </div>
   </div>
 </section>
@@ -123,7 +146,7 @@
       </div>
       <div><h2>Dienstverlening</h2>
         <a href="werkwijze.html">Werkwijze</a><a href="adviesproces.html">Zo komt ons advies tot stand</a>
-        <a href="diensten.html">Diensten</a>
+        <a href="diensten.html">Diensten</a><a href="verduurzaming.html">Verduurzaming en fundering</a>
         <a href="nazorg.html">Onderhoud en nazorg</a><a href="kosten.html">Kosten</a>
         <a href="vragen.html">Veelgestelde vragen</a></div>
       <div><h2>Transparantie</h2>
