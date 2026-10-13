@@ -68,6 +68,8 @@ SAMENHANG = [
      "instructie aan een implementerend kantoor in een consumententekst"),
     (r"Gebruikt u de tools niet, dan wordt er niets geladen", "publiek",
      "onjuist zolang een rekenhulp automatisch laadt"),
+    (r"ligt het tarief 50% hoger|tarief 50% hoger|Later afgesloten: &euro;", "beide",
+     "de abonnementsprijs wordt als opslag gepresenteerd; het is een instapkorting van 33%"),
     (r"wij benoemen het als|wij signaleren het als de woning|wij letten voor u op", "publiek",
      "belooft dat het kantoor uit zichzelf meldt wat het ziet; het kijkt alleen naar wat de klant aanlevert"),
     (r"onderhoudspost op in de berekening|rekenen wij (een |de )?onderhoud", "publiek",
