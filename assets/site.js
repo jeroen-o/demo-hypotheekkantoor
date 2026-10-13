@@ -57,6 +57,17 @@
     });
   });
 
+  /* ---- toelichting per dienst in de tarieventabel ---- */
+  document.querySelectorAll(".i-knop").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var rij = document.getElementById(btn.getAttribute("aria-controls"));
+      if (!rij) return;
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      rij.hidden = open;
+    });
+  });
+
   /* ---- cookiemelding ----
      Keuze geldt voor deze browsersessie. Bewust geen localStorage: die wordt
      geblokkeerd wanneer de site in een iframe (bijv. Google Sites) staat. */

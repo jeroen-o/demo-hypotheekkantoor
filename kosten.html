@@ -70,41 +70,335 @@
     </div>
     <h3 style="margin-top:34px;font-size:20px">Alle tarieven op een rij</h3>
     <p class="sub" style="margin-bottom:20px">Welke onderdelen voor u gelden, staat in uw opdracht tot
-       dienstverlening. U betaalt nooit meer dan daarin is afgesproken.</p>
-    <table class="tbl">
+       dienstverlening. U betaalt nooit meer dan daarin is afgesproken. Klik op de <b>i</b> achter een dienst
+       voor uitleg over wat het is en waarom het geld kost.</p>
+    <table class="tbl tarieven">
       <thead><tr><th scope="col">Dienst</th><th scope="col">Tarief</th><th scope="col">Toelichting</th></tr></thead>
       <tbody>
-        <tr><td colspan="3" style="background:#fafcfd;font-weight:700;color:var(--primary)">Hypotheek</td></tr>
-        <tr><td>Advies en bemiddeling hypotheek, aankoop woning</td><td class="num">&euro; 2.950,&ndash;</td><td>Inclusief begeleiding tot het passeren</td></tr>
-        <tr><td>Oversluiten of wijzigen bestaande hypotheek</td><td class="num">&euro; 1.750,&ndash;</td><td>Bij een woning die u al bezit</td></tr>
-        <tr><td>Verhoging of tweede hypotheek</td><td class="num">&euro; 1.450,&ndash;</td><td>Bijvoorbeeld voor een verbouwing</td></tr>
-        <tr><td>Onderhandse verhoging binnen de inschrijving</td><td class="num">&euro; 750,&ndash;</td><td>Zonder notaris, als de ruimte er al is</td></tr>
-        <tr><td>Advies bij renteherziening of rentemiddeling</td><td class="num">&euro; 495,&ndash;</td><td>Einde rentevaste periode, met vergelijking</td></tr>
-        <tr><td>Verhuis- of meeneemregeling toepassen</td><td class="num">&euro; 950,&ndash;</td><td>Bestaande rente meenemen naar de nieuwe woning</td></tr>
-        <tr><td>Overbruggingskrediet</td><td class="num">Inbegrepen</td><td>Onderdeel van het hypotheekadvies</td></tr>
-        <tr><td>Bouwdepot aanvragen en begeleiden</td><td class="num">Inbegrepen</td><td>Declaraties indienen doet u zelf</td></tr>
-        <tr><td>NHG-aanvraag</td><td class="num">Inbegrepen</td><td>De borgtochtprovisie betaalt u aan Stichting WEW</td></tr>
-        <tr><td>Ontslag hoofdelijke aansprakelijkheid</td><td class="num">&euro; 1.250,&ndash;</td><td>Begeleiding richting geldverstrekker en notaris</td></tr>
-        <tr><td>Second opinion op een advies van een ander kantoor</td><td class="num">&euro; 595,&ndash;</td><td>Schriftelijke beoordeling, geen bemiddeling</td></tr>
-
-        <tr><td colspan="3" style="background:#fafcfd;font-weight:700;color:var(--primary)">Verzekeringen bij de hypotheek</td></tr>
-        <tr><td>Advies en bemiddeling overlijdensrisicoverzekering</td><td class="num">&euro; 495,&ndash;</td><td>Provisieverbod: u betaalt ons rechtstreeks</td></tr>
-        <tr><td>Advies en bemiddeling arbeidsongeschiktheidsverzekering</td><td class="num">&euro; 1.450,&ndash;</td><td>Provisieverbod: u betaalt ons rechtstreeks</td></tr>
-        <tr><td>Advies en bemiddeling woonlasten- of betalingsbescherming</td><td class="num">&euro; 695,&ndash;</td><td>Provisieverbod: u betaalt ons rechtstreeks</td></tr>
-        <tr><td>Wijziging van een via ons lopende verzekering</td><td class="num">&euro; 195,&ndash;</td><td>Bijvoorbeeld verzekerd bedrag of begunstiging</td></tr>
-
-        <tr><td colspan="3" style="background:#fafcfd;font-weight:700;color:var(--primary)">Rond de aankoop</td></tr>
-        <tr><td>Bemiddeling bankgarantie</td><td class="num">&euro; 250,&ndash;</td><td>Valt niet onder het provisieverbod; de bank rekent daarnaast zelf circa 1% van de garantiesom</td></tr>
-        <tr><td>Aanvragen taxatie via ons</td><td class="num">&euro; 95,&ndash;</td><td>De taxateur factureert zelf aan u</td></tr>
-        <tr><td>Starterslening of Duokoop begeleiden</td><td class="num">&euro; 450,&ndash;</td><td>Bovenop het hypotheekadvies</td></tr>
-        <tr><td>Familiebank of schenking uitwerken</td><td class="num">&euro; 395,&ndash;</td><td>Rekenwerk en modelovereenkomst; notaris en fiscalist apart</td></tr>
-
-        <tr><td colspan="3" style="background:#fafcfd;font-weight:700;color:var(--primary)">Toeslagen bij meerwerk</td></tr>
-        <tr><td>Inkomen uit onderneming of zzp</td><td class="num">+ &euro; 350,&ndash;</td><td>Extra beoordeling van jaarcijfers en prognose</td></tr>
-        <tr><td>Buitenlands inkomen of expatsituatie</td><td class="num">+ &euro; 450,&ndash;</td><td>Beperktere acceptatie, meer uitzoekwerk</td></tr>
-        <tr><td>Erfpacht, appartementsrecht met VvE-problematiek of funderingsherstel</td><td class="num">+ &euro; 295,&ndash;</td><td>Alleen als dit extra onderzoek vraagt</td></tr>
-        <tr><td>Overname van een lopend dossier van een ander kantoor</td><td class="num">&euro; 345,&ndash;</td><td>Controle van wat er al ligt</td></tr>
-        <tr><td>Overdracht van uw dossier naar een ander kantoor</td><td class="num">&euro; 0,&ndash;</td><td>Uw dossier is van u; wij leveren het digitaal op</td></tr>
+        <tr><td colspan="3" class="groep">Hypotheek</td></tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-hyp"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Advies en bemiddeling hypotheek, aankoop woning</span></button>Advies en bemiddeling hypotheek, aankoop woning</td>
+          <td class="num">&euro; 2.950,&ndash;</td><td>Inclusief begeleiding tot het passeren</td>
+        </tr>
+        <tr class="toelichting" id="t-hyp" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Het volledige traject: uw situatie in kaart brengen, de mogelijkheden vergelijken, een schriftelijk advies uitbrengen, de aanvraag indienen en u begeleiden tot de akte passeert.</p>
+            <p><b>Waarom dit geld kost.</b> Hier zit het meeste werk: inventarisatie, scenarioberekeningen, vergelijking van aanbieders, het adviesrapport en vier tot acht weken dossierbewaking. Reken op twaalf tot twintig uur.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-ovs"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Oversluiten of wijzigen bestaande hypotheek</span></button>Oversluiten of wijzigen bestaande hypotheek</td>
+          <td class="num">&euro; 1.750,&ndash;</td><td>Bij een woning die u al bezit</td>
+        </tr>
+        <tr class="toelichting" id="t-ovs" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Advies en bemiddeling wanneer u uw lopende hypotheek vervangt door een andere, bij dezelfde of een andere geldverstrekker.</p>
+            <p><b>Waarom dit geld kost.</b> Minder werk dan een aankoop omdat er geen koopproces meebewaakt hoeft te worden, maar de vergelijking is bewerkelijker: boeterente, resterende looptijd en fiscale gevolgen moeten alle drie worden doorgerekend.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-vrh"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Verhoging of tweede hypotheek</span></button>Verhoging of tweede hypotheek</td>
+          <td class="num">&euro; 1.450,&ndash;</td><td>Bijvoorbeeld voor een verbouwing</td>
+        </tr>
+        <tr class="toelichting" id="t-vrh" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Extra financiering bovenop uw bestaande hypotheek, als aparte lening of als verhoging bij dezelfde geldverstrekker.</p>
+            <p><b>Waarom dit geld kost.</b> Uw inkomen en de woningwaarde moeten opnieuw worden getoetst en de nieuwe lening moet passen bij wat er al loopt. Vaak komt er een notari&euml;le akte bij kijken.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-ohv"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Onderhandse verhoging binnen de inschrijving</span></button>Onderhandse verhoging binnen de inschrijving</td>
+          <td class="num">&euro; 750,&ndash;</td><td>Zonder notaris, als de ruimte er al is</td>
+        </tr>
+        <tr class="toelichting" id="t-ohv" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Opnemen van een bedrag binnen de hypotheek die al bij het Kadaster is ingeschreven, zonder nieuwe akte.</p>
+            <p><b>Waarom dit geld kost.</b> Goedkoper omdat de notaris er niet aan te pas komt, maar er is nog steeds een toets op inkomen en waarde nodig, plus de aanvraag bij de geldverstrekker.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-rnt"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Advies bij renteherziening of rentemiddeling</span></button>Advies bij renteherziening of rentemiddeling</td>
+          <td class="num">&euro; 495,&ndash;</td><td>Einde rentevaste periode, met vergelijking</td>
+        </tr>
+        <tr class="toelichting" id="t-rnt" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Advies over welke rentevaste periode en welk tarief bij u passen als uw huidige periode afloopt, of over het middelen van uw rente.</p>
+            <p><b>Waarom dit geld kost.</b> Beperkt maar inhoudelijk werk: uw huidige voorwaarden naast het actuele aanbod leggen, scenario&#39;s doorrekenen en beoordelen of oversluiten voordeliger is dan verlengen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-vhr"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Verhuis- of meeneemregeling toepassen</span></button>Verhuis- of meeneemregeling toepassen</td>
+          <td class="num">&euro; 950,&ndash;</td><td>Bestaande rente meenemen naar de nieuwe woning</td>
+        </tr>
+        <tr class="toelichting" id="t-vhr" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Uw huidige rente meenemen naar een nieuwe woning, meestal in combinatie met een aanvullend leningdeel tegen de actuele rente.</p>
+            <p><b>Waarom dit geld kost.</b> De regels per geldverstrekker verschillen sterk en u krijgt een hypotheek die uit meerdere delen met verschillende rentes en looptijden bestaat. Dat vraagt precisiewerk en extra afstemming.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-ovb1"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Overbruggingskrediet binnen ons hypotheekadvies</span></button>Overbruggingskrediet binnen ons hypotheekadvies</td>
+          <td class="num">Inbegrepen</td><td>Als wij ook uw nieuwe hypotheek verzorgen</td>
+        </tr>
+        <tr class="toelichting" id="t-ovb1" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Tijdelijke financiering van de overwaarde van uw huidige woning, zodat u kunt kopen voordat u heeft verkocht.</p>
+            <p><b>Waarom dit geld kost.</b> Dit rekenen wij niet apart, omdat het onlosmakelijk hoort bij het advies over uw nieuwe hypotheek en wij de gegevens toch al hebben.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-ovb2"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Losse overbruggingsfinanciering</span></button>Losse overbruggingsfinanciering</td>
+          <td class="num">&euro; 950,&ndash;</td><td>Zonder dat wij uw hypotheek adviseren</td>
+        </tr>
+        <tr class="toelichting" id="t-ovb2" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Dezelfde tijdelijke financiering, maar als zelfstandige opdracht wanneer uw hypotheek via een ander kantoor loopt.</p>
+            <p><b>Waarom dit geld kost.</b> Nu moeten wij uw hele situatie alsnog in kaart brengen, de verkoopbaarheid en de termijnen beoordelen en het dossier zelf bewaken, zonder dat dit werk elders terugkomt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-bmz"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Bieden met zekerheid</span></button>Bieden met zekerheid</td>
+          <td class="num">&euro; 495,&ndash;</td><td>Toetsing vooraf en een financieringsverklaring bij uw bod</td>
+        </tr>
+        <tr class="toelichting" id="t-bmz" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Wij toetsen uw financiering v&oacute;&oacute;rdat u biedt en leggen schriftelijk vast wat haalbaar is, zodat u sterker staat in de onderhandeling.</p>
+            <p><b>Waarom dit geld kost.</b> Het werk van de inventarisatie wordt naar voren gehaald en vastgelegd voordat er een woning is. Blijkt uw bod geaccepteerd en volgt het hypotheekadvies bij ons, dan verrekenen wij dit bedrag.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-bdp"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Bouwdepot aanvragen en begeleiden</span></button>Bouwdepot aanvragen en begeleiden</td>
+          <td class="num">Inbegrepen</td><td>Declaraties indienen doet u zelf</td>
+        </tr>
+        <tr class="toelichting" id="t-bdp" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een geblokkeerd bedrag binnen uw hypotheek waaruit de rekeningen van de verbouwing worden betaald.</p>
+            <p><b>Waarom dit geld kost.</b> Het aanvragen hoort bij het advies. Het indienen van facturen loopt rechtstreeks tussen u en de geldverstrekker, dus daar zit voor ons geen werk in.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-nhg"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij NHG-aanvraag</span></button>NHG-aanvraag</td>
+          <td class="num">Inbegrepen</td><td>De borgtochtprovisie betaalt u aan Stichting WEW</td>
+        </tr>
+        <tr class="toelichting" id="t-nhg" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> De Nationale Hypotheek Garantie, die bij gedwongen verkoop een restschuld kan kwijtschelden en u meestal rentekorting oplevert.</p>
+            <p><b>Waarom dit geld kost.</b> De toets of u in aanmerking komt hoort bij het advies. De premie is geen vergoeding voor ons; die gaat naar Stichting WEW.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-oha"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Ontslag hoofdelijke aansprakelijkheid</span></button>Ontslag hoofdelijke aansprakelijkheid</td>
+          <td class="num">&euro; 1.250,&ndash;</td><td>Begeleiding richting geldverstrekker en notaris</td>
+        </tr>
+        <tr class="toelichting" id="t-oha" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Regelen dat uw ex-partner niet langer aansprakelijk is voor de hypotheek, bijvoorbeeld na een scheiding.</p>
+            <p><b>Waarom dit geld kost.</b> De blijvende partner moet de volledige last alleen kunnen dragen; dat vraagt een nieuwe inkomenstoets. Daarbij komt afstemming met de geldverstrekker, de notaris en soms een mediator of advocaat.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-sop"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Second opinion op een advies van een ander kantoor</span></button>Second opinion op een advies van een ander kantoor</td>
+          <td class="num">&euro; 595,&ndash;</td><td>Schriftelijke beoordeling, geen bemiddeling</td>
+        </tr>
+        <tr class="toelichting" id="t-sop" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Wij lezen het advies dat u elders kreeg en geven schriftelijk aan of de onderbouwing klopt en of er alternatieven ontbreken.</p>
+            <p><b>Waarom dit geld kost.</b> Wij moeten uw situatie opnieuw opbouwen om het advies te kunnen beoordelen. Omdat er geen bemiddeling volgt, staat hier geen vervolgopdracht tegenover.</p>
+          </td>
+        </tr>
+        <tr><td colspan="3" class="groep">Verzekeringen bij de hypotheek</td></tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-orv"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Advies en bemiddeling overlijdensrisicoverzekering</span></button>Advies en bemiddeling overlijdensrisicoverzekering</td>
+          <td class="num">&euro; 495,&ndash;</td><td>Provisieverbod: u betaalt ons rechtstreeks</td>
+        </tr>
+        <tr class="toelichting" id="t-orv" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een verzekering die een bedrag uitkeert bij overlijden, zodat de achterblijvende partner de woonlasten kan blijven betalen.</p>
+            <p><b>Waarom dit geld kost.</b> Het verzekerde bedrag en de looptijd moeten worden berekend op basis van uw restschuld en bestaande voorzieningen. Daarbij komt begeleiding van de medische acceptatie. Provisie is wettelijk verboden, dus u betaalt ons rechtstreeks.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-aov"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Advies en bemiddeling arbeidsongeschiktheidsverzekering</span></button>Advies en bemiddeling arbeidsongeschiktheidsverzekering</td>
+          <td class="num">&euro; 1.450,&ndash;</td><td>Provisieverbod: u betaalt ons rechtstreeks</td>
+        </tr>
+        <tr class="toelichting" id="t-aov" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een verzekering die uw inkomen aanvult als u door ziekte of een ongeval niet meer volledig kunt werken.</p>
+            <p><b>Waarom dit geld kost.</b> Dit is het bewerkelijkste verzekeringsadvies: beroepsbeoordeling, keuze van het arbeidsongeschiktheidscriterium, wachttijd en eindleeftijd, plus een uitgebreide medische acceptatie die maanden kan lopen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-wlv"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Advies en bemiddeling woonlasten- of betalingsbescherming</span></button>Advies en bemiddeling woonlasten- of betalingsbescherming</td>
+          <td class="num">&euro; 695,&ndash;</td><td>Provisieverbod: u betaalt ons rechtstreeks</td>
+        </tr>
+        <tr class="toelichting" id="t-wlv" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een verzekering die tijdelijk uw maandlasten overneemt bij arbeidsongeschiktheid of onvrijwillige werkloosheid.</p>
+            <p><b>Waarom dit geld kost.</b> De voorwaarden verschillen sterk per aanbieder en de uitsluitingen zijn bepalend. Beoordelen of de dekking in uw situatie werkelijk uitkeert, kost de meeste tijd.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-wyz"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Wijziging van een via ons lopende verzekering</span></button>Wijziging van een via ons lopende verzekering</td>
+          <td class="num">&euro; 195,&ndash;</td><td>Bijvoorbeeld verzekerd bedrag of begunstiging</td>
+        </tr>
+        <tr class="toelichting" id="t-wyz" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een aanpassing van een bestaande polis, zoals het verlagen van het verzekerde bedrag of het wijzigen van wie de uitkering ontvangt.</p>
+            <p><b>Waarom dit geld kost.</b> Beperkt regelwerk, maar het moet kloppen: een verkeerd ingevulde begunstiging kan bij overlijden grote gevolgen hebben.</p>
+          </td>
+        </tr>
+        <tr><td colspan="3" class="groep">Rond de aankoop</td></tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-bkg"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Bemiddeling bankgarantie</span></button>Bemiddeling bankgarantie</td>
+          <td class="num">&euro; 250,&ndash;</td><td>Niet onder het provisieverbod; de bank rekent zelf circa 1% van de garantiesom</td>
+        </tr>
+        <tr class="toelichting" id="t-bkg" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een verklaring van de bank aan de verkoper dat de waarborgsom van tien procent betaald wordt als de koop niet doorgaat door uw toedoen.</p>
+            <p><b>Waarom dit geld kost.</b> Wij vragen de garantie aan, bewaken de termijn uit de koopovereenkomst en stemmen af met de notaris. De kosten van de bank staan hier los van.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-tax"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Regelen van de taxatie</span></button>Regelen van de taxatie</td>
+          <td class="num">&euro; 95,&ndash;</td><td>De taxateur factureert zelf aan u</td>
+        </tr>
+        <tr class="toelichting" id="t-tax" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een gevalideerd taxatierapport dat de geldverstrekker nodig heeft om de waarde van de woning vast te stellen.</p>
+            <p><b>Waarom dit geld kost.</b> Wij zoeken een taxateur die in uw regio werkt en bij uw geldverstrekker is toegelaten, geven de opdracht door en bewaken de levertijd. Het rapport zelf betaalt u aan de taxateur.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-bwk"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Regelen van een bouwkundige keuring</span></button>Regelen van een bouwkundige keuring</td>
+          <td class="num">&euro; 95,&ndash;</td><td>De keurder factureert zelf aan u</td>
+        </tr>
+        <tr class="toelichting" id="t-bwk" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een onderzoek naar de staat van de woning en de te verwachten herstelkosten.</p>
+            <p><b>Waarom dit geld kost.</b> Wij schakelen de keurder in en zorgen dat de keuring binnen de termijn van uw ontbindende voorwaarden valt. Het rapport beoordelen wij niet inhoudelijk; dat is het vak van de keurder.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-fnd"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Regelen van een funderingscheck</span></button>Regelen van een funderingscheck</td>
+          <td class="num">&euro; 145,&ndash;</td><td>Het onderzoeksbureau factureert zelf aan u</td>
+        </tr>
+        <tr class="toelichting" id="t-fnd" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een onderzoek naar de staat van de fundering, zinvol in gebieden met verzakking of een dalend grondwaterpeil.</p>
+            <p><b>Waarom dit geld kost.</b> Er zijn weinig gespecialiseerde bureaus en de wachttijden zijn lang. Het kost ons tijd om snel een partij te vinden die binnen uw termijn kan leveren, en om de uitkomst bij de geldverstrekker aan te melden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-not"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Meegaan naar de notaris</span></button>Meegaan naar de notaris</td>
+          <td class="num">&euro; 295,&ndash;</td><td>Bij het passeren van de akte</td>
+        </tr>
+        <tr class="toelichting" id="t-not" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Wij zijn aanwezig bij het passeren en lopen de akte en de nota van afrekening met u door.</p>
+            <p><b>Waarom dit geld kost.</b> Een afspraak bij de notaris duurt al snel anderhalf uur, reistijd niet meegerekend. Het is optioneel: de akte controleren wij sowieso vooraf, dus wie dat voldoende vindt, hoeft dit niet af te nemen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-uit"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Uitstel van transport of verlenging ontbindende voorwaarden</span></button>Uitstel van transport of verlenging ontbindende voorwaarden</td>
+          <td class="num">&euro; 195,&ndash;</td><td>Per verzoek</td>
+        </tr>
+        <tr class="toelichting" id="t-uit" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Het regelen van extra tijd wanneer de financiering of de verkoop van uw huidige woning niet op schema loopt.</p>
+            <p><b>Waarom dit geld kost.</b> Dit vraagt om snel schakelen tussen verkoper, makelaar, notaris en geldverstrekker, vaak met een harde deadline. Het valt buiten het normale traject en kost per geval enkele uren.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-str"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Starterslening of Duokoop begeleiden</span></button>Starterslening of Duokoop begeleiden</td>
+          <td class="num">&euro; 450,&ndash;</td><td>Bovenop het hypotheekadvies</td>
+        </tr>
+        <tr class="toelichting" id="t-str" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een aanvullende regeling van uw gemeente of een koopvorm waarbij u de grond huurt in plaats van koopt.</p>
+            <p><b>Waarom dit geld kost.</b> Elke gemeente stelt eigen voorwaarden en de aanvraag loopt via een apart loket met een eigen toets. Dat traject loopt naast uw hypotheekaanvraag en moet daarmee in de pas blijven.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-sch"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Schenking uitwerken en doorrekenen</span></button>Schenking uitwerken en doorrekenen</td>
+          <td class="num">&euro; 395,&ndash;</td><td>Notaris en fiscalist apart</td>
+        </tr>
+        <tr class="toelichting" id="t-sch" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een bedrag dat u van familie krijgt en dat meetelt in uw financiering.</p>
+            <p><b>Waarom dit geld kost.</b> Wij rekenen door wat de schenking betekent voor uw leenbedrag en lasten, en zorgen dat de geldverstrekker de herkomst accepteert. Over schenkbelasting adviseren wij niet.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-fam1"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Familiehypotheek, volledig</span></button>Familiehypotheek, volledig</td>
+          <td class="num">&euro; 1.450,&ndash;</td><td>Advies, rekenwerk, modelovereenkomst en afstemming met de notaris</td>
+        </tr>
+        <tr class="toelichting" id="t-fam1" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een lening van familie in plaats van een bank, met uw woning als onderpand.</p>
+            <p><b>Waarom dit geld kost.</b> Er is geen geldverstrekker die het werk overneemt: wij stellen de voorwaarden op, toetsen of de rente marktconform is, rekenen de aflossingsvorm door met het oog op renteaftrek en stemmen de akte af met de notaris.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-fam2"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Deel-familiehypotheek naast een bancaire hypotheek</span></button>Deel-familiehypotheek naast een bancaire hypotheek</td>
+          <td class="num">&euro; 650,&ndash;</td><td>Bovenop het hypotheekadvies</td>
+        </tr>
+        <tr class="toelichting" id="t-fam2" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een combinatie waarbij familie een deel financiert en een geldverstrekker de rest.</p>
+            <p><b>Waarom dit geld kost.</b> De bank moet de familielening accepteren en meenemen in haar toets. Beide delen moeten qua looptijd, aflossing en rangorde op elkaar aansluiten, en dat vraagt extra afstemming.</p>
+          </td>
+        </tr>
+        <tr><td colspan="3" class="groep">Toeslagen bij meerwerk</td></tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-zzp"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Inkomen uit onderneming of zzp</span></button>Inkomen uit onderneming of zzp</td>
+          <td class="num">+ &euro; 350,&ndash;</td><td>Extra beoordeling van jaarcijfers en prognose</td>
+        </tr>
+        <tr class="toelichting" id="t-zzp" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een toeslag wanneer uw inkomen niet uit loondienst komt.</p>
+            <p><b>Waarom dit geld kost.</b> Uw inkomen moet uit jaarcijfers worden afgeleid en elke geldverstrekker rekent dat anders. Vaak is een inkomensverklaring van een rekenexpert nodig, die wij aanvragen en beoordelen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-exp"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Buitenlands inkomen of expatsituatie</span></button>Buitenlands inkomen of expatsituatie</td>
+          <td class="num">+ &euro; 450,&ndash;</td><td>Beperktere acceptatie, meer uitzoekwerk</td>
+        </tr>
+        <tr class="toelichting" id="t-exp" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een toeslag wanneer uw inkomen of uw werkgever zich buiten Nederland bevindt.</p>
+            <p><b>Waarom dit geld kost.</b> Weinig geldverstrekkers accepteren dit en hun voorwaarden lopen ver uiteen. Documenten moeten vaak worden vertaald en de fiscale positie vraagt extra uitzoekwerk.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-erf"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Erfpacht, VvE-problematiek of funderingsherstel</span></button>Erfpacht, VvE-problematiek of funderingsherstel</td>
+          <td class="num">+ &euro; 295,&ndash;</td><td>Alleen als dit extra onderzoek vraagt</td>
+        </tr>
+        <tr class="toelichting" id="t-erf" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Een toeslag wanneer de woning een bijzonderheid heeft die de financiering raakt.</p>
+            <p><b>Waarom dit geld kost.</b> Erfpachtvoorwaarden, VvE-stukken of herstelplannen moeten worden opgevraagd en beoordeeld, en de geldverstrekker stelt in deze gevallen vrijwel altijd aanvullende eisen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-ovn"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Overname van een lopend dossier van een ander kantoor</span></button>Overname van een lopend dossier van een ander kantoor</td>
+          <td class="num">&euro; 345,&ndash;</td><td>Controle van wat er al ligt</td>
+        </tr>
+        <tr class="toelichting" id="t-ovn" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> Wij nemen een dossier over dat elders is gestart.</p>
+            <p><b>Waarom dit geld kost.</b> Wij kunnen niet bouwen op werk dat wij niet hebben gedaan: het dossier moet worden gecontroleerd en de aannames opnieuw worden getoetst voordat wij er verantwoordelijkheid voor nemen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="i-knop" type="button" aria-expanded="false" aria-controls="t-ovd"><span aria-hidden="true">i</span><span class="visually-hidden">Toelichting bij Overdracht van uw dossier naar een ander kantoor</span></button>Overdracht van uw dossier naar een ander kantoor</td>
+          <td class="num">&euro; 0,&ndash;</td><td>Uw dossier is van u</td>
+        </tr>
+        <tr class="toelichting" id="t-ovd" hidden>
+          <td colspan="3">
+            <p><b>Wat het is.</b> U stapt over naar een ander kantoor en neemt uw stukken mee.</p>
+            <p><b>Waarom dit geld kost.</b> Hier rekenen wij niets voor. Uw gegevens zijn van u en overstappen hoort niet te worden bemoeilijkt door een drempel.</p>
+          </td>
+        </tr>
       </tbody>
     </table>
 

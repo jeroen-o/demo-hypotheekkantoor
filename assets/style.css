@@ -120,6 +120,22 @@ section.alt .note{background:#fff}
 .tbl tr:last-child td{border-bottom:none}
 .tbl td.num{white-space:nowrap}
 
+/* tarieventabel met uitklapbare toelichting */
+.tarieven td.groep{background:var(--primary);color:#fff;font-weight:700;font-size:14px;
+  letter-spacing:.03em;text-transform:uppercase;padding:10px 14px}
+.i-knop{width:21px;height:21px;min-width:21px;border-radius:50%;border:1.5px solid var(--primary);
+  background:#fff;color:var(--primary);font-family:Georgia,serif;font-style:italic;font-weight:700;
+  font-size:13px;line-height:1;cursor:pointer;margin-right:9px;padding:0;vertical-align:1px}
+.i-knop:hover{background:var(--primary);color:#fff}
+.i-knop[aria-expanded="true"]{background:var(--accent);border-color:var(--accent);color:#2d1d02}
+.tarieven tr.toelichting td{background:#fafcfd;border-bottom:2px solid var(--line);padding:16px 18px 18px 44px}
+.tarieven tr.toelichting p{font-size:14.5px;color:var(--text-l);margin-bottom:8px;max-width:78ch}
+.tarieven tr.toelichting p:last-child{margin-bottom:0}
+.tarieven tr.toelichting b{color:var(--primary)}
+@media (max-width:620px){
+  .tarieven tr.toelichting td{padding-left:18px}
+}
+
 /* accordeon */
 .acc{max-width:860px}
 .acc-item{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff;overflow:hidden}
