@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Draagplichtovereenkomst — Demo Hypotheek kantoor (demo)</title>
+<meta name="description" content="Wat een draagplichtovereenkomst is, wanneer u er een nodig heeft bij ongelijke inbreng in een woning, en waarom wij daar niet mee rekenen. Voorbeeldwebsite met fictieve gegevens.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeroen-o.github.io/demo-hypotheekkantoor/draagplicht.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Demo Hypotheek kantoor">
+<meta property="og:title" content="Draagplichtovereenkomst: wanneer heeft u er een nodig?">
+<meta property="og:description" content="Hoe wij omgaan met de risico's rond uw hypotheek: arbeidsongeschiktheid, overlijden, werkloosheid, scheiding, rentestijging en pensioen.">
+<meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/draagplicht.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FinancialService",
+ "@id": "https://jeroen-o.github.io/demo-hypotheekkantoor/#kantoor",
+ "name": "Demo Hypotheek kantoor",
+ "alternateName": "Demo Hypotheek kantoor B.V.",
+ "description": "Voorbeeldwebsite van een hypotheekadvieskantoor. Alle gegevens zijn fictief.",
+ "url": "https://jeroen-o.github.io/demo-hypotheekkantoor/",
+ "telephone": "+31850000000",
+ "email": "info@demohypotheekkantoor.nl",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Demostraat 12",
+  "postalCode": "1234 AB",
+  "addressLocality": "Demostad",
+  "addressCountry": "NL"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "Nederland"
+ },
+ "availableLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ],
+ "priceRange": "€€",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "17:30"
+  }
+ ],
+ "knowsAbout": [
+  "hypotheekadvies",
+  "oversluiten",
+  "overlijdensrisicoverzekering",
+  "arbeidsongeschiktheid",
+  "verduurzaming",
+  "erfpacht",
+  "ontslag hoofdelijke aansprakelijkheid",
+  "NHG"
+ ],
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "name": "Hypotheekadvies en bemiddeling",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "2950",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling overlijdensrisicoverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  }
+ ],
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Naar de hoofdinhoud</a>
+
+<div class="demobar">
+  <b>Demo-omgeving.</b> Deze website is een voorbeeld. <b>Demo Hypotheek kantoor</b> bestaat niet:
+  naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
+  Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
+  e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
+</div>
+
+<div class="topbalk">
+  <div class="wrap">
+    <div class="snel">
+      <a href="tools.html">Rekenhulpen</a>
+      <a href="kosten.html">Tarieven</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="vragen.html">Veelgestelde vragen</a>
+    </div>
+    <form class="zoekvorm" role="search">
+      <label class="visually-hidden" for="zoekveld">Zoek op de hele site</label>
+      <input id="zoekveld" type="search" placeholder="Zoek op de hele site" autocomplete="off">
+      <button type="submit" aria-label="Zoeken">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <div id="zoekuitvoer" role="region" aria-live="polite" aria-label="Zoekresultaten" hidden></div>
+    </form>
+  </div>
+</div>
+
+<nav aria-label="Hoofdmenu">
+  <div class="wrap">
+    <a href="index.html" class="logo">Demo Hypotheek<span> kantoor</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="risicos.html">Risico&#39;s</a>
+      <a href="tools.html">Rekentools</a>
+      <a href="nazorg.html">Nazorg</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="contact.html" class="btn">Afspraak maken</a>
+    </div>
+    <button id="burger" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+    <div class="taalkiezer" role="group" aria-label="Taal kiezen / Choose language">
+      <span aria-current="true">NL</span>
+      <a href="en.html" hreflang="en" lang="en">EN</a>
+      <a href="de.html" hreflang="de" lang="de">DE</a>
+      <a href="pl.html" hreflang="pl" lang="pl">PL</a>
+      <a href="es.html" hreflang="es" lang="es">ES</a>
+      <a href="fr.html" hreflang="fr" lang="fr">FR</a>
+    </div>
+
+<main id="main">
+
+<header class="pagehead">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="risicos.html">Risico&#39;s</a> &rsaquo;
+       Draagplichtovereenkomst</p>
+    <div class="eyebrow">Uitleg</div>
+    <h1>De draagplichtovereenkomst</h1>
+    <p>Koopt u samen een woning terwijl u ongelijk inbrengt of ongelijk aflost, dan loopt u zonder goede vastlegging
+       het risico dat u renteaftrek misloopt of bij een breuk minder terugkrijgt dan u erin stopte. Een
+       draagplichtovereenkomst voorkomt dat.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Onze grens</div>
+    <h2>Wij rekenen hier niet mee</h2>
+    <div class="note" style="border-left-color:#B3261E">
+      <b>Dit regelt u bij de notaris, niet bij ons.</b> Wij houden in ons advies en in onze berekeningen geen
+      rekening met de draagplicht tussen u en uw partner. Wij gaan uit van de hypotheek zoals die bij de
+      geldverstrekker staat: u bent beiden hoofdelijk aansprakelijk voor het geheel.
+      <br><br>
+      Hoe u die last onderling verdeelt, wie welk deel van de rente aftrekt en wat er bij een breuk gebeurt, is een
+      afspraak tussen u tweeën die notarieel of schriftelijk moet worden vastgelegd. Wij signaleren het wel, en wij
+      vertellen u waar u op moet letten &mdash; dat leest u hieronder. Voor het opstellen verwijzen wij u door naar
+      uw notaris, en voor de fiscale uitwerking naar een belastingadviseur.
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Wat het is</div>
+    <h2>Hoofdelijk aansprakelijk, maar onderling anders verdeeld</h2>
+    <div class="prose">
+      <p>Tekent u samen voor een hypotheek, dan bent u tegenover de geldverstrekker allebei aansprakelijk voor de
+         hele schuld. Die kan bij ieder van u de volledige maandlast opeisen. Dat staat los van wat u onderling heeft
+         afgesproken.</p>
+      <p>De draagplicht gaat over die onderlinge verhouding: wie draagt welk deel van de schuld? Zonder afspraak gaat
+         de Belastingdienst uit van een gelijke verdeling, dus ieder de helft. Dat klopt niet altijd met de
+         werkelijkheid.</p>
+      <h3>Een voorbeeld</h3>
+      <p>Stel, u koopt samen een woning van vier ton. De een brengt honderdduizend euro eigen geld in, de ander
+         niets. U sluit een hypotheek van drie ton. Wie draagt die schuld?</p>
+      <p>Spreekt u niets af, dan geldt ieder de helft: honderdvijftigduizend euro per persoon. De partner die het
+         eigen geld inbracht, heeft dan feitelijk meer bijgedragen aan de woning maar draagt evenveel schuld. Bij
+         verkoop of een breuk kan dat onbedoeld uitpakken, en fiscaal mag ieder maar de rente aftrekken over het eigen
+         deel van de schuld.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Wanneer u erover moet nadenken</div>
+    <h2>Zes situaties</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Ongelijke inbreng van eigen geld</h3>
+        <p>De een brengt spaargeld, overwaarde of een schenking in, de ander niet of minder.</p>
+      </div>
+      <div class="card">
+        <h3>Ongelijk aflossen</h3>
+        <p>Een van beiden lost extra af uit eigen middelen, bijvoorbeeld na een erfenis of bonus.</p>
+      </div>
+      <div class="card">
+        <h3>Ongelijke eigendomsverhouding</h3>
+        <p>De woning staat niet fiftyfifty op naam, maar bijvoorbeeld zestig-veertig.</p>
+      </div>
+      <div class="card">
+        <h3>Eigenwoningreserve bij één van beiden</h3>
+        <p>Een van u verkocht eerder een woning met overwaarde. Die reserve bepaalt hoeveel van de nieuwe schuld
+           voor die persoon nog aftrekbaar is.</p>
+      </div>
+      <div class="card">
+        <h3>Samenwonen zonder huwelijk</h3>
+        <p>Zonder gemeenschap van goederen is er geen automatische verdeling; alles berust op wat u vastlegt.</p>
+      </div>
+      <div class="card">
+        <h3>Huwelijkse voorwaarden</h3>
+        <p>Ook getrouwd met voorwaarden kan de draagplicht afwijken van de eigendomsverhouding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Waarom het misgaat</div>
+    <h2>Twee risico's als u niets vastlegt</h2>
+    <div class="prose">
+      <h3>1. U loopt renteaftrek mis</h3>
+      <p>Renteaftrek volgt de eigenwoningschuld die bij u hoort. Betaalt u meer rente dan uw deel van de draagplicht,
+         dan is dat meerdere niet aftrekbaar. Omgekeerd kan een deel van de aftrek onbenut blijven bij uw partner. Dat
+         verschil loopt over dertig jaar flink op, en het komt vaak pas aan het licht bij een controle of bij
+         verkoop.</p>
+      <h3>2. Bij een breuk is onduidelijk wie wat krijgt</h3>
+      <p>Gaat u uit elkaar, dan is de vraag wie recht heeft op welk deel van de overwaarde en wie welk deel van de
+         restschuld draagt. Zonder vastlegging is dat een discussie met de ander, op een moment dat u die discussie
+         niet wilt voeren. Met een overeenkomst staat het zwart op wit.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Wat erin hoort</div>
+    <h2>Waar u met uw notaris naar kijkt</h2>
+    <div class="prose">
+      <ul>
+        <li>Wie draagt welk percentage of welk bedrag van de hypotheekschuld, en waarom.</li>
+        <li>Hoe u omgaat met extra aflossingen uit privévermogen van een van beiden.</li>
+        <li>Wat er gebeurt met de ingebrachte eigen middelen bij verkoop: krijgt die partner dat eerst terug?</li>
+        <li>Hoe de overwaarde of een restschuld wordt verdeeld bij beëindiging van de relatie.</li>
+        <li>Of de afspraak meeloopt met een eventueel samenlevingscontract of huwelijkse voorwaarden.</li>
+        <li>Wat er gebeurt bij overlijden van een van beiden, in samenhang met uw testament.</li>
+        <li>Of de afspraak moet worden aangepast na een verbouwing, een schenking of een nieuwe hypotheek.</li>
+      </ul>
+      <div class="note">
+        <b>Leg het op tijd vast.</b> Een draagplichtovereenkomst wordt bij voorkeur gesloten rond het moment van
+        aankoop. Achteraf repareren kan soms nog, maar de Belastingdienst kijkt naar wat er werkelijk is afgesproken
+        en wanneer. Wacht er dus niet mee tot het misgaat.
+      </div>
+    </div>
+    <div class="hero-cta" style="margin-top:26px;margin-bottom:0">
+      <a href="contact.html" class="btn">Bespreek uw situatie</a>
+      <a href="risicos.html" class="btn ghost">Andere risico&#39;s rond uw hypotheek</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h2>Demo Hypotheek kantoor</h2>
+        <p>Advies en bemiddeling bij hypotheken.<br>Demostraat 12, 1234 AB Demostad</p>
+      </div>
+      <div><h2>Dienstverlening</h2>
+        <a href="werkwijze.html">Werkwijze</a><a href="adviesproces.html">Zo komt ons advies tot stand</a>
+        <a href="diensten.html">Diensten</a><a href="risicos.html">Risico&#39;s rond uw hypotheek</a><a href="werkgeversregelingen.html">Voorzieningen via uw werkgever</a>
+        <a href="draagplicht.html">Draagplichtovereenkomst</a>
+        <a href="tools.html">Rekentools</a>
+        <a href="verduurzaming.html">Verduurzaming en fundering</a>
+        <a href="nazorg.html">Onderhoud en nazorg</a><a href="kosten.html">Kosten</a>
+        <a href="vragen.html">Veelgestelde vragen</a></div>
+      <div><h2>Transparantie</h2>
+        <a href="documenten.html#dw">Dienstenwijzer</a>
+        <a href="documenten.html#av">Algemene voorwaarden</a>
+        <a href="documenten.html#beheer">Beheerovereenkomst</a>
+        <a href="documenten.html#vgk">Vergelijkingskaart</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="governance.html">Governance en brondata</a>
+        <a href="over-ons.html#privacy">Privacy en klachten</a></div>
+      <div><h2>Toezicht</h2>
+        <a href="https://www.afm.nl/registers" target="_blank" rel="noopener">AFM-register</a>
+        <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>
+        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a></div>
+    </div>
+    <div class="social" role="group" aria-label="Volg ons en neem contact op">
+      <a href="https://www.linkedin.com/company/demo-hypotheek-kantoor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> LinkedIn</a>
+      <a href="https://www.facebook.com/demohypotheekkantoor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> Facebook</a>
+      <a href="https://www.instagram.com/demohypotheekkantoor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> Instagram</a>
+      <a href="https://wa.me/31850000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20.5l1.6-4.9A8.4 8.4 0 0 1 3.6 11 8.5 8.5 0 0 1 12 3h.5a8.4 8.4 0 0 1 8.5 8z"/></svg> WhatsApp</a>
+      <a href="tel:+31850000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> Bellen</a>
+      <a href="mailto:info@demohypotheekkantoor.nl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> E-mail</a>
+    </div>
+    <div class="f-licenties">
+      <div><b>AFM 99999999</b>Vergunning adviseren en bemiddelen</div>
+      <div><b>Kifid 999.999999</b>Aangesloten bij de geschilleninstantie</div>
+      <div><b>KvK 99999999</b>Ingeschreven te Demostad</div>
+      <div><b>Beroepsaansprakelijkheid</b>Verzekerd conform wettelijke eisen</div>
+    </div>
+    <div class="legal">
+      <span>© <span id="jaar"></span> Demo Hypotheek kantoor B.V. · KvK 99999999 · AFM 99999999 · Kifid 999.999999</span>
+      <span>Voorbeeldwebsite met fictieve gegevens — geen bestaande onderneming, geen dienstverlening.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie" hidden>
+  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. Er worden geen
+     analyse- of advertentiecookies geplaatst en uw surfgedrag wordt niet gevolgd.</p>
+  <div class="row">
+    <button class="btn" type="button" data-cookie-ok>Begrepen</button>
+    <a href="over-ons.html#privacy" class="btn ghost" data-cookie-ok>Lees meer</a>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+<script src="assets/zoeken.js"></script>
+</body>
+</html>

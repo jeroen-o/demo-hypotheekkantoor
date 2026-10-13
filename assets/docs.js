@@ -24,7 +24,8 @@
     ontvangst:{titel: "Ontvangstbevestiging documenten — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     afwijking:{titel: "Verklaring afwijking van het advies — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     afronding:{titel: "Afrondingsbericht — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
-    nazorglog:{titel: "Nazorglogboek — modelversie",               versie: "modelversie 1.0, 13 oktober 2026" }
+    nazorglog:{titel: "Nazorglogboek — modelversie",               versie: "modelversie 1.0, 13 oktober 2026" },
+    werkgever:{titel: "Opvraagformulier werkgeversregelingen — modelversie", versie: "modelversie 1.0, 13 oktober 2026" }
   };
 
   var ov      = document.getElementById("ov");

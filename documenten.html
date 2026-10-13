@@ -221,7 +221,7 @@
 <section>
   <div class="wrap">
     <div class="eyebrow">In uw dossier</div>
-    <h2>Zes stukken die in uw dossier horen</h2>
+    <h2>Zeven stukken die in uw dossier horen</h2>
     <p class="sub">De documenten hierboven gaan over wat wij afspreken. Deze gaan over wat er daadwerkelijk is
        gebeurd. Ze krijgt u van ons tijdens het traject; samen vormen ze de onderbouwing waarop u ons later kunt
        aanspreken &mdash; en wij ons kunnen verantwoorden.</p>
@@ -231,6 +231,13 @@
         <h3>Opbouw van het adviesrapport</h3>
         <p>Welke onderdelen in een adviesrapport horen, van de vastgelegde klantsituatie en de gebruikte aannames tot de afgevallen alternatieven en de risico&#39;s die blijven bestaan.</p>
         <button class="btn ghost" type="button" data-doc="adviesrapport">Bekijken</button>
+      </div>
+      <div class="dcard" id="werkgever">
+        <div class="kind">Voor uw werkgever</div>
+        <h3>Opvraagformulier werkgeversregelingen</h3>
+        <p>Waarmee uw werkgever invult welke voorzieningen er zijn bij overlijden en arbeidsongeschiktheid, met
+           bedrag, looptijd en eindleeftijd. <a href="werkgeversregelingen.html">Uitleg bij dit formulier</a>.</p>
+        <button class="btn ghost" type="button" data-doc="werkgever">Bekijken</button>
       </div>
       <div class="dcard" id="eigenverklaring">
         <div class="kind">V&oacute;&oacute;r het advies</div>
@@ -1398,6 +1405,78 @@
   <p>Leg per jaar vast welke signaleringen zijn verricht, welke zijn opgevolgd en of het pakket nog past bij wat de
      klant nodig heeft. Blijkt een pakket structureel niets op te leveren, bespreek dan verlaging of be&euml;indiging.</p>
   <div class="meta">Demo Hypotheek kantoor B.V. &middot; Demostraat 12, Demostad &middot; KvK 99999999 &middot; AFM 99999999 &middot; Kifid 999.999999 &middot; modelversie 1.0, 13 oktober 2026 &middot; fictief voorbeelddocument</div></template>
+<template id="doc-werkgever">
+  <p class="lead">Geef dit formulier aan uw werkgever of HR-afdeling. Het bevat precies de gegevens die wij nodig
+     hebben om door te rekenen wat er met uw inkomen gebeurt bij overlijden of arbeidsongeschiktheid. Kan uw
+     werkgever iets niet invullen, laat het dan open en kruis dat aan; wij rekenen die regeling dan op nul.</p>
+
+  <h3>Gegevens</h3>
+  <table class="kv">
+    <tr><td>Werkgever</td><td>&#10216;naam, adres, postcode en plaats&#10217;</td></tr>
+    <tr><td>Ingevuld door</td><td>&#10216;naam, functie, telefoon, e-mail&#10217;</td></tr>
+    <tr><td>Werknemer</td><td>&#10216;naam, geboortedatum, adres&#10217;</td></tr>
+    <tr><td>In dienst sinds / functie</td><td>&#10216;datum&#10217; &middot; &#10216;functie&#10217;</td></tr>
+    <tr><td>Kunt u gegevens niet verstrekken?</td><td>&#10216;kruis aan en vermeld de reden&#10217;</td></tr>
+  </table>
+
+  <h3>A. Bij overlijden</h3>
+  <table>
+    <tr><th>Vraag</th><th>Antwoord</th></tr>
+    <tr><td>Heeft uw bedrijf een collectieve verzekering voor een extra uitkering aan nabestaanden (ANW-hiaat)?</td><td>&#10216;ja / nee&#10217;</td></tr>
+    <tr><td>Is deze werknemer daarin opgenomen?</td><td>&#10216;ja / nee&#10217;</td></tr>
+    <tr><td>Hoogte van de uitkering</td><td>&euro; &#10216;bedrag&#10217; per jaar</td></tr>
+    <tr><td>Wanneer begint de uitkering?</td><td>&#10216;direct na overlijden / zodra het jongste kind 18 wordt&#10217;</td></tr>
+    <tr><td>Tot welke leeftijd loopt de uitkering?</td><td>&#10216;AOW-leeftijd / anders, namelijk&#10217;</td></tr>
+  </table>
+
+  <h3>B. Eerste twee ziektejaren</h3>
+  <table>
+    <tr><th>Vraag</th><th>Antwoord</th></tr>
+    <tr><td>Welk percentage van het loon betaalt u door in jaar 1?</td><td>Eerste half jaar &#10216;%&#10217; &middot; tweede half jaar &#10216;%&#10217;</td></tr>
+    <tr><td>En in jaar 2?</td><td>Eerste half jaar &#10216;%&#10217; &middot; tweede half jaar &#10216;%&#10217;</td></tr>
+    <tr><td>Waarover wordt dat percentage berekend?</td><td>&#10216;het volledige salaris / het salaris tot de WIA-loongrens&#10217;</td></tr>
+    <tr><td>Geldt een afwijkende cao-regeling?</td><td>&#10216;naam cao en artikel&#10217;</td></tr>
+  </table>
+
+  <h3>C. Na twee jaar ziekte: aanvullende WIA-dekkingen</h3>
+  <p>Heeft u voor uw werknemers een collectieve aanvullende WIA-verzekering gesloten, al dan niet via de
+     pensioenregeling? &#10216;ja / nee&#10217;. Zo ja, vul hieronder in welke dekkingen voor deze werknemer gelden.</p>
+  <table>
+    <tr><th>Dekking</th><th>Verzekerd?</th><th>Looptijd</th><th>Percentage of bedrag</th></tr>
+    <tr><td>WGA-hiaat, basisvariant</td><td>&#10216;ja / nee&#10217;</td><td>&#10216;tot AOW / tot &#10217;</td><td>&#10216;%&#10217;</td></tr>
+    <tr><td>WGA-hiaat, uitgebreide variant</td><td>&#10216;ja / nee&#10217;</td><td>&#10216;tot AOW / tot &#10217;</td><td>&#10216;%&#10217;</td></tr>
+    <tr><td>WIA-excedent, boven de WIA-loongrens</td><td>&#10216;ja / nee&#10217;</td><td>&#10216;tot AOW / tot &#10217;</td><td>&#10216;70% / 80% / anders&#10217;</td></tr>
+    <tr><td>WIA-inkomensaanvulling, tot de WIA-loongrens</td><td>&#10216;ja / nee&#10217;</td><td>&#10216;tot AOW / tot &#10217;</td><td>&#10216;10% / anders&#10217;</td></tr>
+    <tr><td>Vaste aanvulling in euro's</td><td>&#10216;ja / nee&#10217;</td><td>&#10216;tot AOW / tot &#10217;</td><td>&euro; &#10216;bedrag&#10217; per &#10216;jaar / maand&#10217;</td></tr>
+  </table>
+
+  <div class="box">
+    <p><b>Korte toelichting bij de dekkingen.</b></p>
+    <p><b>WGA-hiaat basis</b> vult de wettelijke vervolguitkering aan tot zeventig procent van het oude loon, naar
+      rato van het arbeidsongeschiktheidspercentage. <b>WGA-hiaat uitgebreid</b> vult aan tot zeventig procent van
+      het loon van v&oacute;&oacute;r de ziekte, ongeacht welke WGA-uitkering iemand ontvangt.</p>
+    <p><b>WIA-excedent</b> is bedoeld voor wie meer verdient dan de WIA-loongrens en dekt een deel van het inkomen
+      daarboven. <b>WIA-inkomensaanvulling</b> geldt juist onder die grens en vult het gemaximeerde loon aan met een
+      vast percentage.</p>
+  </div>
+
+  <h3>Ondertekening</h3>
+  <p>Ondergetekende verklaart namens de werkgever dat deze gegevens naar waarheid zijn ingevuld.</p>
+  <table class="kv">
+    <tr><td>Naam en functie</td><td>&#10216;naam&#10217;</td></tr>
+    <tr><td>Telefoon en e-mail</td><td>&#10216;gegevens voor eventuele vragen&#10217;</td></tr>
+    <tr><td>Plaats en datum</td><td>&#10216;plaats&#10217;, &#10216;datum&#10217;</td></tr>
+    <tr><td>Handtekening en firmastempel</td><td>&#10216;handtekening&#10217;</td></tr>
+  </table>
+
+  <p class="lead">Wij gebruiken deze gegevens uitsluitend om uw hypotheekadvies door te rekenen. Wij beoordelen de
+     genoemde regelingen niet inhoudelijk en controleren de polisvoorwaarden niet; wilt u dat wel, dan spreken wij
+     dat apart af.</p>
+
+  <div class="meta">Demo Hypotheek kantoor B.V. &middot; Demostraat 12, Demostad &middot; KvK 99999999 &middot;
+    AFM 99999999 &middot; Kifid 999.999999 &middot; modelversie 1.0, 13 oktober 2026 &middot; fictief
+    voorbeelddocument</div>
+</template>
 </main>
 
 <footer>
@@ -1409,7 +1488,8 @@
       </div>
       <div><h2>Dienstverlening</h2>
         <a href="werkwijze.html">Werkwijze</a><a href="adviesproces.html">Zo komt ons advies tot stand</a>
-        <a href="diensten.html">Diensten</a><a href="risicos.html">Risico&#39;s rond uw hypotheek</a>
+        <a href="diensten.html">Diensten</a><a href="risicos.html">Risico&#39;s rond uw hypotheek</a><a href="werkgeversregelingen.html">Voorzieningen via uw werkgever</a>
+        <a href="draagplicht.html">Draagplichtovereenkomst</a>
         <a href="tools.html">Rekentools</a>
         <a href="verduurzaming.html">Verduurzaming en fundering</a>
         <a href="nazorg.html">Onderhoud en nazorg</a><a href="kosten.html">Kosten</a>

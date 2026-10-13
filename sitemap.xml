@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Deze demo staat op noindex en is via robots.txt afgesloten. Deze sitemap staat
-     klaar voor een kantoor dat de site wel publiceert: vervang de domeinnaam. -->
+<!-- Demo op noindex; vervang de domeinnaam bij publicatie. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/adviesproces.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/contact.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/de.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/diensten.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/documenten.html</loc></url>
+  <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/draagplicht.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/en.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/es.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/fr.html</loc></url>
@@ -43,5 +43,6 @@
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/tools.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/verduurzaming.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/vragen.html</loc></url>
+  <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/werkgeversregelingen.html</loc></url>
   <url><loc>https://jeroen-o.github.io/demo-hypotheekkantoor/werkwijze.html</loc></url>
 </urlset>
