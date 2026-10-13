@@ -7,7 +7,7 @@
 
   var DOCS = {
     otd:   { titel: "Opdracht tot dienstverlening — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
-    av:    { titel: "Algemene voorwaarden",                       versie: "versie 1.0, 13 oktober 2026" },
+    av:    { titel: "Algemene voorwaarden",                       versie: "versie 1.3, 13 oktober 2026" },
     dw:    { titel: "Dienstenwijzer",                             versie: "versie 1.0, 13 oktober 2026" },
     beheer:{ titel: "Beheerovereenkomst — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
     dvd:   { titel: "Vergelijkingskaart hypotheekvraag — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },
@@ -18,14 +18,14 @@
     incasso:{titel: "Machtiging automatische incasso — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     disc:  { titel: "Disclaimer",                              versie: "versie 1.0, 13 oktober 2026" },
     cook:  { titel: "Cookieverklaring",                        versie: "versie 1.0, 13 oktober 2026" },
-    herroep:{titel: "Modelformulier herroeping",               versie: "modelversie 1.0, 13 oktober 2026" },
+    herroep:{titel: "Modelformulier herroeping",               versie: "modelversie 1.1, 13 oktober 2026" },
     adviesrapport:{titel: "Opbouw van het adviesrapport — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     eigenverklaring:{titel: "Verklaring aangeleverde gegevens — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     ontvangst:{titel: "Ontvangstbevestiging documenten — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     afwijking:{titel: "Verklaring afwijking van het advies — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     afronding:{titel: "Afrondingsbericht — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
-    nazorglog:{titel: "Nazorglogboek — modelversie",               versie: "modelversie 1.0, 13 oktober 2026" },
-    werkgever:{titel: "Opvraagformulier werkgeversregelingen — modelversie", versie: "modelversie 1.0, 13 oktober 2026" }
+    nazorglog:{titel: "Nazorglogboek — modelversie",               versie: "modelversie 1.1, 13 oktober 2026" },
+    werkgever:{titel: "Opvraagformulier werkgeversregelingen — modelversie", versie: "modelversie 1.1, 13 oktober 2026" }
   };
 
   var ov      = document.getElementById("ov");
