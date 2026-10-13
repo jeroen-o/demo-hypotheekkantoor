@@ -167,8 +167,8 @@ def main():
     # elke inhoudelijke hoofdpagina hoort in het hoofdmenu te staan
     # elke inhoudelijke hoofdpagina hoort in de header te staan: in het hoofdmenu of,
     # voor de stukken die daar niet meer bij passen, in de snelkoppelingen van de topbalk
-    menu = ("werkwijze.html", "diensten.html", "risicos.html", "woning-risicos.html", "fiscale-risicos.html",
-            "tools.html", "nazorg.html", "kosten.html", "documenten.html", "vragen.html")
+    menu = ("werkwijze.html", "diensten.html", "risicos.html", "tools.html", "nazorg.html",
+            "kosten.html", "documenten.html", "vragen.html")
     for f in paginas:
         if f.startswith("rekenhulp-") or f in ("404.html", "en.html", "de.html", "pl.html", "es.html", "fr.html"):
             continue
@@ -201,6 +201,13 @@ def main():
             fouten.append(f"sitemap.xml mist {f}")
     if "jeroen-o.github.io" in sitemap:
         fouten.append("sitemap.xml verwijst nog naar het oude domein")
+
+    # de twee risicocategorieen staan niet in de header maar als kaart op de risicopagina;
+    # die route moet dan wel blijven bestaan
+    risicos = pathlib.Path("risicos.html").read_text(encoding="utf-8")
+    for doel in ("woning-risicos.html", "fiscale-risicos.html"):
+        if f'href="{doel}"' not in risicos:
+            fouten.append(f"risicos.html verwijst niet naar {doel}; die pagina is dan alleen via de footer te vinden")
 
     tarieven = pathlib.Path("kosten.html").read_text(encoding="utf-8")
     knoppen = re.findall(r'aria-controls="(t-[^"]+)"', tarieven)
