@@ -69,10 +69,22 @@ herinnert daar na afloop aan:
 4. **Contactformulier koppelen** aan echte formulierverwerking, met bewaartermijn en verwerkersovereenkomst.
 5. **Modeldocumenten juridisch laten toetsen** en de fictieve aanbieders vervangen door de eigen selectie.
 6. **Tarieven controleren** — alle bedragen in deze demo zijn verzonnen.
+7. **Logo's vervangen.** Zet uw eigen bestanden in `logos/` en lees eerst `logos/LEESMIJ.md`: daar staat welke
+   logo's u wel en niet mag plaatsen en waarom.
+8. **Reviewblok koppelen** op de homepage (`index.html`, sectie "Ervaringen"). Koppel een onafhankelijk platform
+   waarop klanten zelf beoordelen, met een link naar de bron. Niet toegestaan: zelf geschreven of geselecteerde
+   citaten als klantervaring presenteren, een gemiddelde tonen zonder het aantal beoordelingen, of beoordelingen
+   filteren op gunstigheid. Dat is een misleidende handelspraktijk (afdeling 6.3.3A BW) en valt onder het toezicht
+   van de ACM.
+9. **Fiscale pagina jaarlijks nalopen** (`fiscale-risicos.html`). De teksten bevatten bewust geen percentages of
+   jaartallen, maar de regels rond aftrek, eigenwoningforfait en box 3 wijzigen jaarlijks.
+10. **Cyberverzekering regelen.** De AV sluiten cyberschade uit, maar AVG-boetes en de kosten van een datalek
+    zijn dwingend recht en vallen buiten elke exoneratie. De beroepsaansprakelijkheidsverzekering dekt dit niet:
+    het is geen beroepsfout in de hoedanigheid van financieel adviseur.
 
 ## Documenten in de demo
 
-`documenten.html` bevat twaalf modellen, elk deeplinkbaar (`documenten.html#beheer`):
+`documenten.html` bevat twintig modellen, elk deeplinkbaar (`documenten.html#beheer`):
 
 | Categorie | Documenten |
 | --- | --- |
