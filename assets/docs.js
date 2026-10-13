@@ -18,7 +18,13 @@
     incasso:{titel: "Machtiging automatische incasso — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     disc:  { titel: "Disclaimer",                              versie: "versie 1.0, 13 oktober 2026" },
     cook:  { titel: "Cookieverklaring",                        versie: "versie 1.0, 13 oktober 2026" },
-    herroep:{titel: "Modelformulier herroeping",               versie: "modelversie 1.0, 13 oktober 2026" }
+    herroep:{titel: "Modelformulier herroeping",               versie: "modelversie 1.0, 13 oktober 2026" },
+    adviesrapport:{titel: "Opbouw van het adviesrapport — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
+    eigenverklaring:{titel: "Verklaring aangeleverde gegevens — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
+    ontvangst:{titel: "Ontvangstbevestiging documenten — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
+    afwijking:{titel: "Verklaring afwijking van het advies — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
+    afronding:{titel: "Afrondingsbericht — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
+    nazorglog:{titel: "Nazorglogboek — modelversie",               versie: "modelversie 1.0, 13 oktober 2026" }
   };
 
   var ov      = document.getElementById("ov");
