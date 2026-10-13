@@ -155,6 +155,21 @@ def main():
                 if mis != len(templates) and re.search(rf"(?<![a-z]){woord} model", txt):
                     fouten.append(f"{f}: noemt '{woord} modellen' terwijl er {len(templates)} zijn")
 
+    # elke inhoudelijke hoofdpagina hoort in het hoofdmenu te staan
+    menu = ("werkwijze.html", "diensten.html", "risicos.html", "fiscale-risicos.html", "tools.html",
+            "nazorg.html", "kosten.html", "documenten.html")
+    for f in paginas:
+        if f.startswith("rekenhulp-") or f in ("404.html", "en.html", "de.html", "pl.html", "es.html", "fr.html"):
+            continue
+        txt = pathlib.Path(f).read_text(encoding="utf-8")
+        if '<div class="nav-links"' not in txt:
+            continue
+        begin = txt.index('<div class="nav-links"')
+        blok = txt[begin:txt.index("</div>", begin)]
+        for doel in menu:
+            if f'href="{doel}"' not in blok:
+                fouten.append(f"{f}: {doel} ontbreekt in het hoofdmenu")
+
     tarieven = pathlib.Path("kosten.html").read_text(encoding="utf-8")
     knoppen = re.findall(r'aria-controls="(t-[^"]+)"', tarieven)
     rijen = re.findall(r'<tr class="toelichting" id="(t-[^"]+)"', tarieven)

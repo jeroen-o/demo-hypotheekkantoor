@@ -30,7 +30,12 @@ kop = re.sub(
     '<meta name="description" content="Alle twintig modeldocumenten van het kantoor als doorlopende tekst, '
     'leesbaar en printbaar zonder JavaScript. Voorbeeldwebsite met fictieve gegevens.">',
     kop, count=1)
-kop = kop.replace("documenten.html\">", "documenten-tekst.html\">")
+# alleen de canonical en og:url wijzen naar deze pagina; de links in de topbalk en
+# het hoofdmenu moeten naar documenten.html blijven wijzen
+for _attr in ('rel="canonical" href', 'property="og:url" content'):
+    kop = kop.replace(
+        f'{_attr}="https://jeroen-o.github.io/demo-hypotheekkantoor/documenten.html"',
+        f'{_attr}="https://jeroen-o.github.io/demo-hypotheekkantoor/documenten-tekst.html"')
 
 inh = "\n".join(
     f'        <li><a href="#t-{k}">{titels.get(k, k)}</a></li>' for k, _ in blokken)
