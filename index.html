@@ -16,6 +16,93 @@
 <meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/index.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FinancialService",
+ "@id": "https://jeroen-o.github.io/demo-hypotheekkantoor/#kantoor",
+ "name": "Demo Hypotheek kantoor",
+ "alternateName": "Demo Hypotheek kantoor B.V.",
+ "description": "Voorbeeldwebsite van een hypotheekadvieskantoor. Alle gegevens zijn fictief.",
+ "url": "https://jeroen-o.github.io/demo-hypotheekkantoor/",
+ "telephone": "+31850000000",
+ "email": "info@demohypotheekkantoor.nl",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Demostraat 12",
+  "postalCode": "1234 AB",
+  "addressLocality": "Demostad",
+  "addressCountry": "NL"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "Nederland"
+ },
+ "availableLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ],
+ "priceRange": "€€",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "17:30"
+  }
+ ],
+ "knowsAbout": [
+  "hypotheekadvies",
+  "oversluiten",
+  "overlijdensrisicoverzekering",
+  "arbeidsongeschiktheid",
+  "verduurzaming",
+  "erfpacht",
+  "ontslag hoofdelijke aansprakelijkheid",
+  "NHG"
+ ],
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "name": "Hypotheekadvies en bemiddeling",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "2950",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling overlijdensrisicoverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  }
+ ],
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+}
+</script>
 </head>
 <body>
 
@@ -26,6 +113,25 @@
   naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
   Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
   e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
+</div>
+
+<div class="topbalk">
+  <div class="wrap">
+    <div class="snel">
+      <a href="tools.html">Rekenhulpen</a>
+      <a href="kosten.html">Tarieven</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="vragen.html">Veelgestelde vragen</a>
+    </div>
+    <form class="zoekvorm" role="search">
+      <label class="visually-hidden" for="zoekveld">Zoek op de hele site</label>
+      <input id="zoekveld" type="search" placeholder="Zoek op de hele site" autocomplete="off">
+      <button type="submit" aria-label="Zoeken">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <div id="zoekuitvoer" role="region" aria-live="polite" aria-label="Zoekresultaten" hidden></div>
+    </form>
+  </div>
 </div>
 
 <nav aria-label="Hoofdmenu">
@@ -58,68 +164,89 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>Advies waarbij u ziet hoe het tot stand kwam</h1>
-    <p>Wij adviseren en bemiddelen bij hypotheken. U krijgt van ons een schriftelijke onderbouwing: welke
-       mogelijkheden zijn vergeleken, wat wij aanbevelen en waarom de alternatieven afvielen.</p>
-    <div class="hero-cta">
-      <a href="contact.html" class="btn">Plan een kennismaking</a>
-      <a href="werkwijze.html" class="btn ghost">Zo werken wij</a>
+    <div class="hero-grid">
+      <div>
+        <h1>Een hypotheek die past, en een verhaal dat klopt</h1>
+        <p>Wij rekenen uw situatie door, leggen uit waarom wij iets aanraden en zeggen het ook als iets niet
+           verstandig is. De kennismaking is gratis en u zit nergens aan vast.</p>
+        <ul class="hero-punten">
+          <li>Gratis kennismaking van een uur</li>
+          <li>Alle geldverstrekkers die via het intermediair beschikbaar zijn</li>
+          <li>Vast tarief, vooraf bekend, geen provisie van aanbieders</li>
+        </ul>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn">Afspraak maken</a>
+          <a href="tools.html" class="btn ghost">Zelf berekenen</a>
+        </div>
+      </div>
+      <div class="hero-kaart">
+        <h2>Waar gaat uw vraag over?</h2>
+        <p>Kies waar u staat, dan weet u meteen wat wij voor u doen en wat het kost.</p>
+        <form action="contact.html" method="get">
+          <div class="field">
+            <label for="situatie">Uw situatie</label>
+            <select id="situatie" name="ond">
+              <option>Eerste woning kopen</option>
+              <option>Volgende woning kopen</option>
+              <option>Oversluiten of rente herzien</option>
+              <option>Verbouwen of verduurzamen</option>
+              <option>Scheiding en de woning</option>
+              <option>Ondernemer of zzp</option>
+              <option>Hypotheek en pensioen</option>
+              <option>Anders</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Plan een kennismaking</button>
+        </form>
+        <p class="hint">Liever eerst een vraag stellen? Dat kan ook, kosteloos.</p>
+      </div>
     </div>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">Werkwijze</div>
-    <h2>Vijf stappen, van kennismaking tot afronding</h2>
-    <p class="sub">Elke stap heeft een duidelijk begin en einde. U weet steeds wat wij doen, wat u van ons kunt
-       verwachten en wanneer onze opdracht afloopt.</p>
-    <div class="chain">
-      <div class="step"><div class="num">1</div><h3>Inventarisatie</h3>
-        <p>Uw situatie, wensen en risico's in kaart: inkomen, lasten, kennis en ervaring, en wat u wilt bereiken.</p></div>
-      <div class="step"><div class="num">2</div><h3>Advies</h3>
-        <p>Een schriftelijk advies met de afweging: wat is vergeleken, wat bevelen wij aan en waarom viel de rest af.</p></div>
-      <div class="step"><div class="num">3</div><h3>Bemiddeling</h3>
-        <p>De aanvraag bij de gekozen aanbieder, met bewaking van het financieringsvoorbehoud en de passeerdatum.</p></div>
-      <div class="step"><div class="num">4</div><h3>Beheer</h3>
-        <p>Een aparte afspraak. Zonder die afspraak eindigt onze opdracht bij het passeren van de akte.</p></div>
-      <div class="step"><div class="num">5</div><h3>Nazorg</h3>
-        <p>Wij volgen uw hypotheek niet. U houdt zelf bij wanneer er iets speelt en klopt bij ons aan; met een
-           abonnement betaalt u dan minder.</p></div>
+    <div class="eyebrow">Waar kunnen wij u mee helpen?</div>
+    <h2>Kies uw situatie</h2>
+    <p class="sub">Elke situatie kent eigen aandachtspunten. Hieronder leest u welke dat zijn en wat wij in dat geval
+       voor u doen.</p>
+    <div class="tegels">
+      <a href="werkwijze.html" class="tegel"><b>Eerste woning kopen</b><span>Van maximale hypotheek tot de sleutel</span></a>
+      <a href="diensten.html" class="tegel"><b>Volgende woning</b><span>Overbrugging, meeneemregeling en dubbele lasten</span></a>
+      <a href="kosten.html" class="tegel"><b>Oversluiten</b><span>Loont het, en wat kost het om over te stappen?</span></a>
+      <a href="verduurzaming.html" class="tegel"><b>Verbouwen en verduurzamen</b><span>Extra leenruimte en lagere energielasten</span></a>
+      <a href="risicos.html" class="tegel"><b>Scheiding</b><span>Uitkoop en ontslag hoofdelijke aansprakelijkheid</span></a>
+      <a href="diensten.html" class="tegel"><b>Ondernemer of zzp</b><span>Inkomensverklaring en acceptatie bij banken</span></a>
+      <a href="risicos.html" class="tegel"><b>Hypotheek en pensioen</b><span>Blijven de lasten na uw AOW-datum haalbaar?</span></a>
+      <a href="verduurzaming.html#fundering" class="tegel"><b>Twijfel over de woning</b><span>Erfpacht, VvE of fundering</span></a>
     </div>
-    <p style="margin-top:26px"><a href="werkwijze.html">Lees wat er in elke stap gebeurt →</a><br>
-       <a href="adviesproces.html">Zo komt ons advies tot stand: inventarisatie, analyse en advies →</a></p>
   </div>
 </section>
 
 <section class="alt">
   <div class="wrap">
-    <div class="eyebrow">Diensten</div>
-    <h2>Waarover wij adviseren</h2>
-    <p class="sub">Onze vergunning bepaalt waarover wij mogen adviseren en bemiddelen: hypothecair krediet en de
-       verzekeringen die daar rechtstreeks mee samenhangen. Valt uw vraag daarbuiten, dan zeggen wij dat en verwijzen
-       wij u door.</p>
+    <div class="eyebrow">In drie stappen</div>
+    <h2>Zo begint het</h2>
     <div class="cards">
       <div class="card">
-        <h3>Uw hypotheek</h3>
-        <p>Aankoop van een woning, oversluiten, verbouwen, tweede woning en hypotheek rond pensionering.</p>
-        <ul><li>Vergelijking van alle geldverstrekkers die via het intermediair beschikbaar zijn</li><li>Keuze van rentevaste periode en aflosvorm</li>
-            <li>Toetsing aan de actuele leennormen en aan NHG</li><li>Berekening van netto maandlasten</li></ul>
+        <h3>1. Gratis kennismaking</h3>
+        <p>Een gesprek van ongeveer een uur, bij ons op kantoor of digitaal. U hoort wat haalbaar is, wat het kost en
+           wat wij niet doen. Daarna beslist u.</p>
+        <p style="margin-top:14px"><a href="contact.html" class="btn">Afspraak maken</a></p>
       </div>
       <div class="card">
-        <h3>Risico's rond de hypotheek</h3>
-        <p>Wat er met uw woonlasten gebeurt als uw situatie verandert, en welke dekking daarbij past.</p>
-        <ul><li>Overlijdensrisicoverzekering</li><li>Arbeidsongeschiktheid en werkloosheid</li>
-            <li>Lasten na uw AOW-datum</li><li>Gevolgen van scheiding voor de hypotheek</li></ul>
+        <h3>2. Zelf een beeld krijgen</h3>
+        <p>Liever eerst zelf rekenen? Gebruik onze rekenhulpen voor uw maximale hypotheek, uw maandlasten of de vraag
+           of oversluiten loont.</p>
+        <p style="margin-top:14px"><a href="tools.html" class="btn ghost">Naar de rekenhulpen</a></p>
       </div>
       <div class="card">
-        <h3>Begeleiding tot het passeren</h3>
-        <p>Van aanvraag tot akte, met bewaking van de termijnen die ertoe doen.</p>
-        <ul><li>Indienen en opvolgen van de aanvraag</li><li>Bewaking van het financieringsvoorbehoud</li>
-            <li>Afstemming met makelaar, taxateur en notaris</li><li>Controle van de hypotheekakte vóór passeren</li></ul>
+        <h3>3. Weten wat het kost</h3>
+        <p>Al onze tarieven staan online, met per dienst de uitleg wat het is en waarom het geld kost. Geen
+           verrassingen achteraf.</p>
+        <p style="margin-top:14px"><a href="kosten.html" class="btn ghost">Bekijk de tarieven</a></p>
       </div>
     </div>
-    <p style="margin-top:26px"><a href="diensten.html">Alle diensten en wat er buiten valt →</a></p>
   </div>
 </section>
 
@@ -129,8 +256,7 @@
     <h2>Wij werken met alle geldverstrekkers</h2>
     <p class="sub">Alle geldverstrekkers die hun hypotheken via het intermediair aanbieden, vergelijken wij voor u.
        Een enkele aanbieder verkoopt uitsluitend rechtstreeks aan consumenten; die is via geen enkel advieskantoor
-       te krijgen. Welke partijen in úw dossier zijn vergeleken en op welke punten, staat in uw adviesrapport en in
-       de <a href="documenten.html#vgk">vergelijkingskaart</a>.</p>
+       te krijgen. Welke partijen in úw dossier zijn vergeleken en op welke punten, staat in uw adviesrapport.</p>
     <div class="logo-carrousel" role="group" aria-label="Geldverstrekkers waarmee wij werken">
       <div class="logo-rail">
         <div class="logo-track">
@@ -235,62 +361,79 @@
 
 <section class="alt">
   <div class="wrap">
-    <div class="eyebrow">Kosten</div>
-    <h2>Wat u betaalt, en waarvoor</h2>
-    <p class="sub">Voor hypotheken en overlijdensrisicoverzekeringen betaalt u ons rechtstreeks. Wij ontvangen voor
-       deze producten geen vergoeding van geldverstrekkers of verzekeraars; dat is wettelijk niet toegestaan. U weet
-       het bedrag vóórdat wij beginnen.</p>
-    <div class="price">
-      <div class="p-box"><h3>Kennismaking</h3><div class="amt">€ 0,–</div>
-        <p>Een eerste gesprek van circa een uur. Daarna weet u wat wij voor u kunnen doen en wat dat kost. U zit
-           nergens aan vast.</p></div>
-      <div class="p-box"><h3>Hypotheekadvies en bemiddeling</h3><div class="amt">€ 2.950,– <small>vast tarief</small></div>
-        <p>Inventarisatie, schriftelijk advies, aanvraag en begeleiding tot het passeren van de akte. Het exacte bedrag
-           staat in uw opdrachtbevestiging.</p></div>
-      <div class="p-box"><h3>Beheerafspraak</h3><div class="amt">€ 165,– <small>per jaar</small></div>
-        <p>Optioneel. U betaalt een vast bedrag per maand en krijgt korting op alles wat u bij ons afneemt. Geen
-           signalering: u klopt zelf aan.</p></div>
+    <div class="eyebrow">Waarom dit kantoor</div>
+    <h2>Vijf dingen die u van ons krijgt</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Een advies dat u kunt nalezen</h3>
+        <p>Schriftelijk, met de vergeleken opties, onze aanbeveling en de reden waarom de alternatieven afvielen.
+           Over vijf jaar weet u nog waarom u koos wat u koos.</p>
+      </div>
+      <div class="card">
+        <h3>Een prijs die vaststaat</h3>
+        <p>Vooraf bekend en niet afhankelijk van de aanbieder of de hoogte van uw hypotheek. Gaat het niet door, dan
+           betaalt u alleen de afgeronde fase.</p>
+      </div>
+      <div class="card">
+        <h3>Rekenen met úw cijfers</h3>
+        <p>Niet met een gemiddeld huishouden, maar met wat u maandelijks werkelijk overhoudt. Inclusief wat er
+           gebeurt bij arbeidsongeschiktheid, overlijden of een hogere rente.</p>
+      </div>
+      <div class="card">
+        <h3>Duidelijkheid over de grenzen</h3>
+        <p>Wij zeggen vooraf waarover wij niet adviseren en verwijzen u door. Liever dat dan een advies buiten ons
+           vakgebied.</p>
+      </div>
+      <div class="card">
+        <h3>Geen loze beloftes achteraf</h3>
+        <p>Wij volgen uw hypotheek na afloop niet, en zeggen dat ook. Wat u wel kosteloos krijgt, is bericht bij
+           wezenlijke wijzigingen in uw product.</p>
+      </div>
+      <div class="card">
+        <h3>Uw dossier is van u</h3>
+        <p>Opvragen kan altijd en kost niets, ook als u overstapt naar een ander kantoor.</p>
+      </div>
     </div>
-    <p><a href="kosten.html">Volledig overzicht van onze tarieven →</a></p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">Na het passeren</div>
-    <h2>Wettelijke nazorg krijgt u sowieso — en gratis</h2>
-    <p class="sub">Wij informeren u uit onszelf over wezenlijke wijzigingen in uw product of de voorwaarden, ook
-       zonder abonnement en zonder kosten. Dat is onze wettelijke plicht en die verkopen wij niet als dienst.
-       Wilt u méér dan dat — periodieke controle, een vast aanspreekpunt, een digitaal dossier — dan kiest u een
-       onderhoudsabonnement.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>Zonder abonnement</h3>
-        <p>U betaalt niets en krijgt bericht bij wezenlijke wijzigingen. Heeft u iets nodig, dan werken wij op
-           uurbasis tegen het tarief dat vooraf is afgesproken.</p>
-      </div>
-      <div class="card">
-        <h3>Met abonnement</h3>
-        <p>U krijgt korting op alles wat u bij ons afneemt, korte vragen zijn kosteloos en u bent sneller aan de
-           beurt. Signalering zit er niet in.</p>
-      </div>
-      <div class="card">
-        <h3>Altijd opzegbaar</h3>
-        <p>Het abonnement loopt een jaar en daarna maandelijks opzegbaar met één maand opzegtermijn. Geen
-           stilzwijgende vastlegging voor langere perioden.</p>
-      </div>
+    <div class="eyebrow">Ervaringen</div>
+    <h2>Wat anderen van ons vinden</h2>
+    <div class="reviewblok">
+      <p><b>Hier hoort uw echte beoordelingsscore te staan.</b> In deze demo staan geen klantervaringen: het kantoor
+         bestaat niet, en verzonnen reviews zijn misleidend en in strijd met de regels voor consumentenbescherming.</p>
+      <p>Een kantoor dat deze opzet overneemt, koppelt hier een onafhankelijk platform aan waarop klanten zelf
+         beoordelen, bijvoorbeeld Advieskeuze.nl of Google. Zie <code>logos/LEESMIJ.md</code> voor hoe u dat
+         inbouwt, en wat u daarbij niet mag doen.</p>
     </div>
-    <p style="margin-top:26px"><a href="nazorg.html">Vergelijk de nazorgpakketten →</a></p>
   </div>
 </section>
 
 <section class="alt">
   <div class="wrap">
-    <div class="eyebrow">Documenten</div>
-    <h2>Eerst lezen, dan pas tekenen</h2>
-    <p class="sub">Onze opdracht, voorwaarden, dienstenwijzer, beheerovereenkomst en de vergelijkingskaarten staan online. U kunt ze bekijken op een moment dat het u uitkomt, ook voordat u met ons
-       in gesprek gaat.</p>
-    <a href="documenten.html" class="btn">Documenten bekijken</a>
+    <div class="eyebrow">Alles vooraf te lezen</div>
+    <h2>Onze voorwaarden en documenten staan online</h2>
+    <p class="sub">Negentien modellen: van de opdracht en de algemene voorwaarden tot de vergelijkingskaarten, de
+       beheerovereenkomst en de stukken die in uw dossier horen. U leest ze op een moment dat het u uitkomt, niet aan
+       de keukentafel met een pen in uw hand.</p>
+    <div class="hero-cta" style="margin-bottom:0">
+      <a href="documenten.html" class="btn">Documenten bekijken</a>
+      <a href="vragen.html" class="btn ghost">Veelgestelde vragen</a>
+    </div>
+  </div>
+</section>
+
+<section class="slot">
+  <div class="wrap">
+    <h2>Klaar voor de volgende stap?</h2>
+    <p>Een kennismaking kost u een uur en verder niets. U hoort wat haalbaar is en wat het kost, en pas daarna
+       beslist u of u verder wilt.</p>
+    <div class="hero-cta" style="margin-bottom:0">
+      <a href="contact.html" class="btn">Afspraak maken</a>
+      <a href="tools.html" class="btn ghost">Eerst zelf rekenen</a>
+    </div>
   </div>
 </section>
 
@@ -353,5 +496,6 @@
 </div>
 
 <script src="assets/site.js"></script>
+<script src="assets/zoeken.js"></script>
 </body>
 </html>

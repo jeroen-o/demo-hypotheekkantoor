@@ -16,6 +16,93 @@
 <meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/tools.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FinancialService",
+ "@id": "https://jeroen-o.github.io/demo-hypotheekkantoor/#kantoor",
+ "name": "Demo Hypotheek kantoor",
+ "alternateName": "Demo Hypotheek kantoor B.V.",
+ "description": "Voorbeeldwebsite van een hypotheekadvieskantoor. Alle gegevens zijn fictief.",
+ "url": "https://jeroen-o.github.io/demo-hypotheekkantoor/",
+ "telephone": "+31850000000",
+ "email": "info@demohypotheekkantoor.nl",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Demostraat 12",
+  "postalCode": "1234 AB",
+  "addressLocality": "Demostad",
+  "addressCountry": "NL"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "Nederland"
+ },
+ "availableLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ],
+ "priceRange": "€€",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "17:30"
+  }
+ ],
+ "knowsAbout": [
+  "hypotheekadvies",
+  "oversluiten",
+  "overlijdensrisicoverzekering",
+  "arbeidsongeschiktheid",
+  "verduurzaming",
+  "erfpacht",
+  "ontslag hoofdelijke aansprakelijkheid",
+  "NHG"
+ ],
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "name": "Hypotheekadvies en bemiddeling",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "2950",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling overlijdensrisicoverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  }
+ ],
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+}
+</script>
 </head>
 <body class="toolspagina">
 
@@ -26,6 +113,25 @@
   naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
   Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
   e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
+</div>
+
+<div class="topbalk">
+  <div class="wrap">
+    <div class="snel">
+      <a href="tools.html">Rekenhulpen</a>
+      <a href="kosten.html">Tarieven</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="vragen.html">Veelgestelde vragen</a>
+    </div>
+    <form class="zoekvorm" role="search">
+      <label class="visually-hidden" for="zoekveld">Zoek op de hele site</label>
+      <input id="zoekveld" type="search" placeholder="Zoek op de hele site" autocomplete="off">
+      <button type="submit" aria-label="Zoeken">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <div id="zoekuitvoer" role="region" aria-live="polite" aria-label="Zoekresultaten" hidden></div>
+    </form>
+  </div>
 </div>
 
 <nav aria-label="Hoofdmenu">
@@ -59,8 +165,8 @@
 <section>
   <div class="wrap">
     <div class="note">
-      <b>Over deze hulpmiddelen.</b> De rekentools worden geleverd door Hypotheekbond en geladen vanaf hun servers.
-      Wat u invult, gaat naar die partij en niet naar ons, tenzij u het zelf verstuurt. De uitkomsten zijn gebaseerd
+      <b>Over deze hulpmiddelen.</b> De rekentools worden geleverd door Hypotheekbond en openen in een nieuw tabblad op hun eigen website.
+      Wat u invult, gaat naar die partij en niet naar ons. De uitkomsten zijn gebaseerd
       op standaardaannames en op de tarieven van dit moment; die veranderen. Aan een berekening kunt u geen rechten
       ontlenen en een geldverstrekker beslist altijd zelf over uw aanvraag.
     </div>
@@ -75,62 +181,50 @@
     <div class="tool" id="maximale-hypotheek">
       <h3>Maximale hypotheek</h3>
       <p>Een eerste indicatie van wat u kunt lenen op basis van de actuele leennormen.</p>
-      <div class="tool-laden" data-src="https://6199073b-9be6-4888-b2bd-54f1625f9d88.tools.hypotheekbond.nl/maxmortgage" data-tool="maxmortgage-iframe" data-titel="Maximale hypotheek">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://6199073b-9be6-4888-b2bd-54f1625f9d88.tools.hypotheekbond.nl/maxmortgage" target="_blank" rel="noopener">Maximale hypotheek openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="kan-ik-deze-woning-kopen">
       <h3>Kan ik deze woning kopen?</h3>
       <p>Vul een woning in en zie of de financiering binnen uw mogelijkheden valt.</p>
-      <div class="tool-laden" data-src="https://16ca0bc6-6452-4a1d-a31d-8bba9e4b3694.tools.hypotheekbond.nl/kidwk" data-tool="kidwk-iframe" data-titel="Kan ik deze woning kopen?">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://16ca0bc6-6452-4a1d-a31d-8bba9e4b3694.tools.hypotheekbond.nl/kidwk" target="_blank" rel="noopener">Kan ik deze woning kopen? openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="huren-of-kopen">
       <h3>Huren of kopen</h3>
       <p>Vergelijk wat huren en kopen u op termijn kosten.</p>
-      <div class="tool-laden" data-src="https://be44968e-a556-412b-92f6-75e8532a7e68.tools.hypotheekbond.nl/hnk" data-tool="hnk-iframe" data-titel="Huren of kopen">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://be44968e-a556-412b-92f6-75e8532a7e68.tools.hypotheekbond.nl/hnk" target="_blank" rel="noopener">Huren of kopen openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="woningwaarde">
       <h3>Woningwaarde</h3>
       <p>Een indicatie van de waarde van een woning, bruikbaar als vertrekpunt.</p>
-      <div class="tool-laden" data-src="https://edb1a9d9-1f37-48d7-b16f-545779d5da0c.tools.hypotheekbond.nl/woningwaarde" data-tool="woningwaarde-iframe" data-titel="Woningwaarde">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://edb1a9d9-1f37-48d7-b16f-545779d5da0c.tools.hypotheekbond.nl/woningwaarde" target="_blank" rel="noopener">Woningwaarde openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="zelfreflectie">
       <h3>Zelfreflectie</h3>
       <p>Een korte vragenlijst over hoeveel zekerheid u wilt en welk risico bij u past.</p>
-      <div class="tool-laden" data-src="https://f99abedd-a8d2-449b-bec7-fc4f2a143b08.tools.hypotheekbond.nl/zelfreflectie" data-tool="zelfreflectie-iframe" data-titel="Zelfreflectie">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://f99abedd-a8d2-449b-bec7-fc4f2a143b08.tools.hypotheekbond.nl/zelfreflectie" target="_blank" rel="noopener">Zelfreflectie openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="inventarisatie">
       <h3>Inventarisatie</h3>
       <p>Lever uw gegevens veilig digitaal aan, zodat het eerste gesprek over inhoud kan gaan.</p>
-      <div class="tool-laden" data-src="https://inventarisatie.hypotheekbond.nl/ec6ac04e-108a-4b55-add1-0f153a392a1b" data-tool="inventarisatie-iframe" data-titel="Inventarisatie">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://inventarisatie.hypotheekbond.nl/ec6ac04e-108a-4b55-add1-0f153a392a1b" target="_blank" rel="noopener">Inventarisatie openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>
@@ -148,52 +242,42 @@
     <div class="tool" id="rente-top-5">
       <h3>Rente top 5</h3>
       <p>De vijf scherpste tarieven van dit moment, per rentevaste periode.</p>
-      <div class="tool-laden" data-src="https://f3ec66f0-b653-4c26-96ec-4976775dd9db.tools.hypotheekbond.nl/rente-top-5" data-tool="rente-top-5-iframe" data-titel="Rente top 5">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://f3ec66f0-b653-4c26-96ec-4976775dd9db.tools.hypotheekbond.nl/rente-top-5" target="_blank" rel="noopener">Rente top 5 openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="renteoverzicht">
       <h3>Renteoverzicht</h3>
       <p>De actuele tarieven van de geldverstrekkers waarmee wij werken.</p>
-      <div class="tool-laden" data-src="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht" data-tool="renteoverzicht-iframe" data-titel="Renteoverzicht">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht" target="_blank" rel="noopener">Renteoverzicht openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="volledig-renteoverzicht">
       <h3>Volledig renteoverzicht</h3>
       <p>Hetzelfde overzicht, maar dan met alle looptijden en risicoklassen.</p>
-      <div class="tool-laden" data-src="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht/all" data-tool="renteoverzicht-all-iframe" data-titel="Volledig renteoverzicht">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht/all" target="_blank" rel="noopener">Volledig renteoverzicht openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="topafslag">
       <h3>Topafslag</h3>
       <p>Zie wat een lagere verhouding tussen lening en woningwaarde aan rentekorting oplevert.</p>
-      <div class="tool-laden" data-src="https://1ec2bc29-eceb-4818-80e2-cdd572ce1d23.tools.hypotheekbond.nl/topafslag" data-tool="topafslag-iframe" data-titel="Topafslag">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://1ec2bc29-eceb-4818-80e2-cdd572ce1d23.tools.hypotheekbond.nl/topafslag" target="_blank" rel="noopener">Topafslag openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="maandlast-per-rentevaste-periode">
       <h3>Maandlast per rentevaste periode</h3>
       <p>Wat kost dezelfde hypotheek bij 5, 10, 20 of 30 jaar vast?</p>
-      <div class="tool-laden" data-src="https://72189f23-aecd-4f66-be84-7d2f2f9c1fce.tools.hypotheekbond.nl/looptijdrente" data-tool="looptijdrente-iframe" data-titel="Maandlast per rentevaste periode">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://72189f23-aecd-4f66-be84-7d2f2f9c1fce.tools.hypotheekbond.nl/looptijdrente" target="_blank" rel="noopener">Maandlast per rentevaste periode openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>
@@ -206,32 +290,26 @@
     <div class="tool" id="maandlastengrafiek">
       <h3>Maandlastengrafiek</h3>
       <p>Het verloop van uw lasten over de hele looptijd, in beeld.</p>
-      <div class="tool-laden" data-src="https://7c716e32-526b-4f92-a06b-024963508e82.tools.hypotheekbond.nl/maandlastengrafiek" data-tool="maandlastengrafiek-iframe" data-titel="Maandlastengrafiek">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://7c716e32-526b-4f92-a06b-024963508e82.tools.hypotheekbond.nl/maandlastengrafiek" target="_blank" rel="noopener">Maandlastengrafiek openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="hypotheek-nu-en-straks">
       <h3>Hypotheek nu en straks</h3>
       <p>Wat gebeurt er met uw lasten na afloop van de rentevaste periode?</p>
-      <div class="tool-laden" data-src="https://091426e9-5cfa-4fca-ac40-9d7c088e2233.tools.hypotheekbond.nl/hns" data-tool="hns-iframe" data-titel="Hypotheek nu en straks">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://091426e9-5cfa-4fca-ac40-9d7c088e2233.tools.hypotheekbond.nl/hns" target="_blank" rel="noopener">Hypotheek nu en straks openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="bespaarcheck">
       <h3>Bespaarcheck</h3>
       <p>Kijk of uw huidige hypotheek nog marktconform is.</p>
-      <div class="tool-laden" data-src="https://747da3c5-8036-444f-83ec-58544e29d5ce.tools.hypotheekbond.nl/hypotheekbespaarcheck" data-tool="hypotheekbespaarcheck-iframe" data-titel="Bespaarcheck">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://747da3c5-8036-444f-83ec-58544e29d5ce.tools.hypotheekbond.nl/hypotheekbespaarcheck" target="_blank" rel="noopener">Bespaarcheck openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>
@@ -244,62 +322,50 @@
     <div class="tool" id="hoeveel-wilt-u-aflossen">
       <h3>Hoeveel wilt u aflossen?</h3>
       <p>Bepaal welk bedrag u extra wilt aflossen en wat dat scheelt.</p>
-      <div class="tool-laden" data-src="https://bb0f8705-be7b-42c3-a353-c04d9faf7f26.tools.hypotheekbond.nl/hoeveel-aflossen" data-tool="hoeveel-aflossen-iframe" data-titel="Hoeveel wilt u aflossen?">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://bb0f8705-be7b-42c3-a353-c04d9faf7f26.tools.hypotheekbond.nl/hoeveel-aflossen" target="_blank" rel="noopener">Hoeveel wilt u aflossen? openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="maandlasten-bij-aflossen">
       <h3>Maandlasten bij aflossen</h3>
       <p>Het effect van extra aflossen op uw maandlast.</p>
-      <div class="tool-laden" data-src="https://58af877f-e368-4aed-abb7-57573219bd60.tools.hypotheekbond.nl/maandlasten-bij-aflossen" data-tool="maandlasten-bij-aflossen-iframe" data-titel="Maandlasten bij aflossen">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://58af877f-e368-4aed-abb7-57573219bd60.tools.hypotheekbond.nl/maandlasten-bij-aflossen" target="_blank" rel="noopener">Maandlasten bij aflossen openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="vast-bedrag-per-maand-aflossen">
       <h3>Vast bedrag per maand aflossen</h3>
       <p>Wat levert een vast extra bedrag per maand op over de looptijd?</p>
-      <div class="tool-laden" data-src="https://b2c44b72-9091-4e08-b4b4-85a8c0e77d63.tools.hypotheekbond.nl/vast-bedrag-per-maand" data-tool="vast-bedrag-per-maand-iframe" data-titel="Vast bedrag per maand aflossen">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://b2c44b72-9091-4e08-b4b4-85a8c0e77d63.tools.hypotheekbond.nl/vast-bedrag-per-maand" target="_blank" rel="noopener">Vast bedrag per maand aflossen openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="aflossen-of-beleggen">
       <h3>Aflossen of beleggen</h3>
       <p>Een vergelijking van beide routes, met hun eigen onzekerheden.</p>
-      <div class="tool-laden" data-src="https://c5267d9a-f89a-416c-9c1e-2d8a2a020bf9.tools.hypotheekbond.nl/aflossen-of-beleggen" data-tool="aflossen-of-beleggen-iframe" data-titel="Aflossen of beleggen">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://c5267d9a-f89a-416c-9c1e-2d8a2a020bf9.tools.hypotheekbond.nl/aflossen-of-beleggen" target="_blank" rel="noopener">Aflossen of beleggen openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="hoeveel-levert-sparen-op">
       <h3>Hoeveel levert sparen op?</h3>
       <p>Bereken wat sparen oplevert bij de huidige rente.</p>
-      <div class="tool-laden" data-src="https://e87d3ef8-c0bc-4317-9486-e5ac64279541.tools.hypotheekbond.nl/hoeveel-levert-sparen-op" data-tool="hoeveel-levert-sparen-op-iframe" data-titel="Hoeveel levert sparen op?">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://e87d3ef8-c0bc-4317-9486-e5ac64279541.tools.hypotheekbond.nl/hoeveel-levert-sparen-op" target="_blank" rel="noopener">Hoeveel levert sparen op? openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="spaarrente-top-10">
       <h3>Spaarrente top 10</h3>
       <p>De tien hoogste spaarrentes van dit moment.</p>
-      <div class="tool-laden" data-src="https://dcc95cc3-4597-4777-9f02-97126980bf5e.tools.hypotheekbond.nl/spaar-rente" data-tool="spaar-rente-iframe" data-titel="Spaarrente top 10">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://dcc95cc3-4597-4777-9f02-97126980bf5e.tools.hypotheekbond.nl/spaar-rente" target="_blank" rel="noopener">Spaarrente top 10 openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>
@@ -312,22 +378,18 @@
     <div class="tool" id="overlijdensrisicoverzekering">
       <h3>Overlijdensrisicoverzekering</h3>
       <p>Een indicatie van de premie bij verschillende verzekerde bedragen.</p>
-      <div class="tool-laden" data-src="https://5f0e35a1-0f78-46e5-b5b5-9e4867503a4f.tools.hypotheekbond.nl/orv" data-tool="orv-iframe" data-titel="Overlijdensrisicoverzekering">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://5f0e35a1-0f78-46e5-b5b5-9e4867503a4f.tools.hypotheekbond.nl/orv" target="_blank" rel="noopener">Overlijdensrisicoverzekering openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="tool" id="duurzaamheidsprofiel">
       <h3>Duurzaamheidsprofiel</h3>
       <p>Welke maatregelen passen bij uw woning en wat besparen ze?</p>
-      <div class="tool-laden" data-src="https://duurzaamheidsprofiel.hypotheekbond.nl" data-tool="duurzaamheidsprofiel-iframe" data-titel="Duurzaamheidsprofiel">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://duurzaamheidsprofiel.hypotheekbond.nl" target="_blank" rel="noopener">Duurzaamheidsprofiel openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>
@@ -340,12 +402,10 @@
     <div class="tool" id="werkgeversverklaring">
       <h3>Werkgeversverklaring</h3>
       <p>Het landelijke model, digitaal in te vullen door uw werkgever.</p>
-      <div class="tool-laden" data-src="https://formulier.werkgeversverklaring.nl" data-tool="werkgeversverklaring-iframe" data-titel="Werkgeversverklaring">
-        <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en laadt vanaf hun
-           servers. Daarbij kunnen zij gegevens op uw apparaat plaatsen en zien zij wat u invult. Pas
-           als u hieronder klikt, wordt er iets geladen.</p>
-        <button type="button" class="btn">Rekenhulp laden</button>
-      </div>
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door Hypotheekbond en opent in een nieuw
+         tabblad. Wat u invult, gaat naar die partij en niet naar ons.</p>
+      <a class="btn" href="https://formulier.werkgeversverklaring.nl" target="_blank" rel="noopener">Werkgeversverklaring openen
+        <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>
@@ -402,7 +462,7 @@
 
 <div id="cookie" hidden>
   <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. De rekentools op deze
-     pagina worden geladen vanaf de servers van Hypotheekbond; die partij kan daarbij eigen gegevens plaatsen.</p>
+     pagina openen op de website van Hypotheekbond; daar geldt het privacybeleid van die partij.</p>
   <div class="row">
     <button class="btn" type="button" data-cookie-ok>Begrepen</button>
     <a href="over-ons.html#privacy" class="btn ghost" data-cookie-ok>Lees meer</a>
@@ -410,6 +470,6 @@
 </div>
 
 <script src="assets/site.js"></script>
-<script defer src="https://s.hstatic.nl/js/iframe/iframeResizer.min.js"></script>
+<script src="assets/zoeken.js"></script>
 </body>
 </html>

@@ -16,6 +16,93 @@
 <meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/contact.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FinancialService",
+ "@id": "https://jeroen-o.github.io/demo-hypotheekkantoor/#kantoor",
+ "name": "Demo Hypotheek kantoor",
+ "alternateName": "Demo Hypotheek kantoor B.V.",
+ "description": "Voorbeeldwebsite van een hypotheekadvieskantoor. Alle gegevens zijn fictief.",
+ "url": "https://jeroen-o.github.io/demo-hypotheekkantoor/",
+ "telephone": "+31850000000",
+ "email": "info@demohypotheekkantoor.nl",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Demostraat 12",
+  "postalCode": "1234 AB",
+  "addressLocality": "Demostad",
+  "addressCountry": "NL"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "Nederland"
+ },
+ "availableLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ],
+ "priceRange": "€€",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "17:30"
+  }
+ ],
+ "knowsAbout": [
+  "hypotheekadvies",
+  "oversluiten",
+  "overlijdensrisicoverzekering",
+  "arbeidsongeschiktheid",
+  "verduurzaming",
+  "erfpacht",
+  "ontslag hoofdelijke aansprakelijkheid",
+  "NHG"
+ ],
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "name": "Hypotheekadvies en bemiddeling",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "2950",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling overlijdensrisicoverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  }
+ ],
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+}
+</script>
 </head>
 <body>
 
@@ -26,6 +113,25 @@
   naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
   Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
   e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
+</div>
+
+<div class="topbalk">
+  <div class="wrap">
+    <div class="snel">
+      <a href="tools.html">Rekenhulpen</a>
+      <a href="kosten.html">Tarieven</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="vragen.html">Veelgestelde vragen</a>
+    </div>
+    <form class="zoekvorm" role="search">
+      <label class="visually-hidden" for="zoekveld">Zoek op de hele site</label>
+      <input id="zoekveld" type="search" placeholder="Zoek op de hele site" autocomplete="off">
+      <button type="submit" aria-label="Zoeken">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <div id="zoekuitvoer" role="region" aria-live="polite" aria-label="Zoekresultaten" hidden></div>
+    </form>
+  </div>
 </div>
 
 <nav aria-label="Hoofdmenu">
@@ -204,5 +310,6 @@
 </div>
 
 <script src="assets/site.js"></script>
+<script src="assets/zoeken.js"></script>
 </body>
 </html>

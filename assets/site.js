@@ -147,37 +147,3 @@
     });
   }
 })();
-
-/* ---- rekentools pas laden na toestemming ----
-   Externe tools plaatsen mogelijk gegevens op het apparaat van de bezoeker.
-   Daarom laadt er niets totdat de bezoeker daar zelf om vraagt. */
-(function () {
-  "use strict";
-  document.querySelectorAll(".tool-laden").forEach(function (plek) {
-    var knop = plek.querySelector("button");
-    if (!knop) return;
-    knop.addEventListener("click", function () {
-      var frame = document.createElement("iframe");
-      frame.setAttribute("title", plek.getAttribute("data-titel") || "Rekenhulp");
-      frame.setAttribute("data-hypotheekbond-tool", plek.getAttribute("data-tool") || "");
-      frame.setAttribute("data-auto-scrolling", "enabled");
-      frame.setAttribute("scrolling", "no");
-      frame.setAttribute("referrerpolicy", "origin");
-      frame.setAttribute("loading", "lazy");
-      frame.style.width = "100%";
-      frame.style.border = "0";
-      frame.src = plek.getAttribute("data-src");
-      plek.replaceWith(frame);
-
-      // Het meeschalen pas aanzetten zodra de tool geladen is; lukt dat niet,
-      // dan blijft de ruime vaste hoogte uit de stylesheet staan.
-      var schaalMee = function () {
-        if (!window.iFrameResize) return;
-        try { window.iFrameResize({ checkOrigin: false, heightCalculationMethod: "lowestElement" }, frame); }
-        catch (e) { /* vaste hoogte blijft gelden */ }
-      };
-      frame.addEventListener("load", schaalMee);
-      setTimeout(schaalMee, 1200);
-    });
-  });
-})();
