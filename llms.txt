@@ -31,6 +31,7 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
 - [Home](https://demo-hypotheek-kantoor.nl/): overzicht en situatiekiezer.
 - [Werkwijze](https://demo-hypotheek-kantoor.nl/werkwijze.html): het traject in vijf stappen.
 - [Zo komt ons advies tot stand](https://demo-hypotheek-kantoor.nl/adviesproces.html): consumptief besteedbaar inkomen, scenario's, aannames.
+- [Wat u van ons advies mag verwachten](https://demo-hypotheek-kantoor.nl/adviesrapport.html): de negen hoofdstukken van het adviesrapport, de vaste aannames, de verwachtingen van de AFM-leidraad en de grenzen van het advies.
 - [Diensten](https://demo-hypotheek-kantoor.nl/diensten.html): wat wel en wat uitdrukkelijk niet.
 - [Risico's](https://demo-hypotheek-kantoor.nl/risicos.html): arbeidsongeschiktheid, overlijden, werkloosheid, scheiding, rente, pensioen.
 - [Fiscale risico's](https://demo-hypotheek-kantoor.nl/fiscale-risicos.html): twaalf valkuilen rond de eigen woning.
