@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Hypotheek kantoor — Hypotheekadvies (demo)</title>
+<meta name="description" content="Demo Hypotheek kantoor — voorbeeldwebsite voor een hypotheekadvieskantoor. Alle gegevens op deze site zijn fictief; dit is geen bestaande onderneming.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{
+  --primary:#003057; --primary-l:#0a4a7d; --accent:#E5A138; --accent-s:#f6e3c4;
+  --bg:#F4F7F9; --surface:#fff; --text:#333; --text-l:#4A4A4A; --muted:#78848f; --line:#dde5ec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+.demobar{background:#B3261E;color:#fff;font-size:13.5px;line-height:1.5;padding:11px 22px;text-align:center}
+.demobar b{color:#fff}
+@media print{.demobar{display:none}}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text);background:var(--surface);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:var(--primary-l)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{font-family:Georgia,'DM Serif Display',serif;font-size:21px;color:var(--primary);text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--text-l);text-decoration:none;font-size:14.5px;font-weight:600}
+.nav-links a:hover{color:var(--primary)}
+.btn{display:inline-block;background:var(--primary);color:#fff!important;text-decoration:none;padding:11px 22px;
+  border-radius:8px;font-size:14.5px;font-weight:700;border:none;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--primary-l)}
+.btn.ghost{background:transparent;color:var(--primary)!important;border:1.5px solid var(--primary)}
+.btn.ghost:hover{background:#eef4f8}
+#burger{display:none;background:none;border:none;font-size:24px;color:var(--primary);cursor:pointer}
+
+/* hero */
+header.hero{background:linear-gradient(160deg,#003057 0%,#024876 100%);color:#fff;padding:78px 0 86px}
+header.hero h1{font-family:Georgia,serif;font-weight:400;font-size:46px;line-height:1.14;margin-bottom:20px;max-width:16ch}
+header.hero p{color:#c6d8e6;font-size:18px;max-width:58ch;margin-bottom:30px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.hero-cta .btn{background:var(--accent);color:#2d1d02!important}
+.hero-cta .btn:hover{background:#f0b556}
+.hero-cta .btn.ghost{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.45)}
+.hero-cta .btn.ghost:hover{background:rgba(255,255,255,.1)}
+.badges{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:#9fbdd3;border-top:1px solid rgba(255,255,255,.15);padding-top:20px}
+.badges b{color:#fff;display:block;font-size:14px;font-weight:700}
+
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--bg)}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+h2{font-family:Georgia,serif;font-weight:400;font-size:34px;color:var(--primary);margin-bottom:14px;line-height:1.2}
+.sub{font-size:17px;color:var(--text-l);max-width:62ch;margin-bottom:38px}
+h3{font-size:18px;color:var(--primary);margin-bottom:8px}
+
+/* keten */
+.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(192px,1fr));gap:16px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;position:relative}
+section.alt .step{background:#fff}
+.step .num{width:32px;height:32px;border-radius:8px;background:var(--primary);color:#fff;display:flex;
+  align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:14px}
+.step p{font-size:14.5px;color:var(--text-l)}
+
+/* diensten */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;border-top:4px solid var(--accent)}
+.card ul{margin:12px 0 0 18px;font-size:14.5px;color:var(--text-l)}
+.card li{margin-bottom:5px}
+.card p{font-size:15px;color:var(--text-l)}
+
+/* kosten */
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-bottom:26px}
+.p-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.p-box .amt{font-family:Georgia,serif;font-size:32px;color:var(--primary);margin:6px 0 10px}
+.p-box .amt small{font-size:14px;color:var(--muted);font-family:inherit}
+.p-box p{font-size:14.5px;color:var(--text-l)}
+.note{background:#fff;border-left:4px solid var(--primary);padding:18px 22px;border-radius:0 10px 10px 0;
+  font-size:15px;color:var(--text-l);max-width:800px}
+
+/* accordion */
+.acc{max-width:860px}
+.acc-item{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff;overflow:hidden}
+.acc-head{width:100%;text-align:left;background:none;border:none;padding:17px 20px;font-family:inherit;font-size:16px;
+  font-weight:600;color:var(--primary);cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.acc-head:hover{background:#f8fafc}
+.acc-head .ic{color:var(--accent);font-size:20px;line-height:1;transition:transform .2s}
+.acc-item.open .acc-head .ic{transform:rotate(45deg)}
+.acc-body{display:none;padding:0 20px 20px;font-size:15.3px;color:var(--text-l)}
+.acc-item.open .acc-body{display:block}
+.acc-body ul{margin:10px 0 0 19px}
+.acc-body li{margin-bottom:6px}
+.acc-body p{margin-bottom:10px}
+.acc-body p:last-child{margin-bottom:0}
+.acc-body table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0}
+.acc-body td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.acc-body td:first-child{font-weight:600;color:var(--text);width:38%}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.field{margin-bottom:16px}
+label{display:block;font-size:14px;font-weight:600;color:var(--primary);margin-bottom:6px}
+input,textarea,select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:8px;font-family:inherit;
+  font-size:15px;color:var(--text);background:#fff}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary)}
+textarea{min-height:110px;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--text-l);margin-bottom:18px}
+.consent input{width:18px;height:18px;min-width:18px;margin-top:2px}
+.infocard{background:var(--bg);border-radius:12px;padding:26px}
+.infocard dl{font-size:15px}
+.infocard dt{font-weight:700;color:var(--primary);margin-top:14px;font-size:13.5px}
+.infocard dt:first-child{margin-top:0}
+.infocard dd{color:var(--text-l)}
+#formmsg{display:none;background:#eef7f2;border:1px solid #bfe0cd;color:#1f7a4d;padding:13px 16px;border-radius:8px;
+  font-size:14.5px;margin-top:14px}
+
+/* footer */
+footer{background:var(--primary);color:#b9cddc;padding:56px 0 30px;font-size:14.5px}
+.f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:34px;margin-bottom:34px}
+footer h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.04em;text-transform:uppercase}
+footer a{color:#b9cddc;text-decoration:none;display:block;margin-bottom:7px}
+footer a:hover{color:var(--accent)}
+.legal{border-top:1px solid rgba(255,255,255,.16);padding-top:22px;font-size:13px;color:#8aa7bd;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* documenten */
+.dlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.dcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column}
+.dcard .kind{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:9px}
+.dcard h3{margin-bottom:8px}
+.dcard p{font-size:14.5px;color:var(--text-l);flex:1;margin-bottom:16px}
+.dcard button{align-self:flex-start}
+
+/* document-overlay */
+#ov{display:none;position:fixed;inset:0;background:rgba(0,30,55,.55);z-index:200;overflow-y:auto;padding:28px 16px}
+#ov.open{display:block}
+.ovbox{max-width:860px;margin:0 auto;background:#fff;border-radius:14px;box-shadow:0 20px 60px rgba(0,30,55,.3)}
+.ovbar{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);border-radius:14px 14px 0 0;
+  padding:16px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;z-index:2}
+.ovbar h3{margin:0;font-size:17px}
+.ovbar .acts{display:flex;gap:8px}
+.ovbar button{background:#fff;border:1px solid var(--line);color:var(--primary);border-radius:7px;padding:8px 14px;
+  font-family:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.ovbar button:hover{background:#eef4f8}
+.ovbody{padding:30px 40px 44px;font-size:15px}
+.ovbody h4{font-size:16px;color:var(--primary);margin:24px 0 9px}
+.ovbody h4:first-child{margin-top:0}
+.ovbody .n{font-size:11.5px;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;
+  margin:22px 0 3px}
+.ovbody p{margin-bottom:10px;color:var(--text-l)}
+.ovbody ol,.ovbody ul{margin:0 0 12px 22px;color:var(--text-l)}
+.ovbody li{margin-bottom:6px}
+.ovbody table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0 18px}
+.ovbody td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--text-l)}
+.ovbody td:first-child{font-weight:600;color:var(--text);width:36%;background:#fafcfd}
+.ovbody .meta{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:26px}
+.ovbody .box{background:#fafcfd;border-left:4px solid var(--primary);padding:15px 19px;border-radius:0 8px 8px 0;margin:14px 0}
+.ovbody .box p:last-child{margin-bottom:0}
+@media (max-width:680px){ .ovbody{padding:22px 20px 34px} }
+
+/* cookie */
+#cookie{position:fixed;bottom:16px;left:16px;right:16px;max-width:620px;margin:0 auto;background:#fff;
+  border:1px solid var(--line);box-shadow:0 10px 36px rgba(0,48,87,.18);border-radius:12px;padding:20px;z-index:100}
+#cookie p{font-size:14.3px;color:var(--text-l);margin-bottom:14px}
+#cookie .row{display:flex;gap:10px;flex-wrap:wrap}
+
+@media (max-width:880px){
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;
+    align-items:stretch;padding:14px 22px 20px;border-bottom:1px solid var(--line);gap:4px}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:10px 0;border-bottom:1px solid #f0f4f7}
+  #burger{display:block}
+  header.hero h1{font-size:33px}
+  h2{font-size:27px}
+  section{padding:54px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <b>Demo-omgeving.</b> Deze website is een voorbeeld. <b>Demo Hypotheek kantoor</b> bestaat niet:
+  naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
+  Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier verstuurt niets.
+</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Demo Hypotheek<span> kantoor</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#kosten">Kosten</a>
+      <a href="#documenten">Documenten</a>
+      <a href="#contact" class="btn">Afspraak maken</a>
+    </div>
+    <button id="burger" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1>Advies waarbij u ziet hoe het tot stand kwam</h1>
+    <p>Wij adviseren en bemiddelen bij hypotheken. U krijgt van ons een schriftelijke onderbouwing: welke
+       mogelijkheden zijn vergeleken, wat wij aanbevelen en waarom de alternatieven afvielen.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn">Plan een kennismaking</a>
+      <a href="#werkwijze" class="btn ghost">Zo werken wij</a>
+    </div>
+    <div class="badges">
+      <div><b>AFM 99999999</b>Vergunning adviseren en bemiddelen</div>
+      <div><b>Kifid 999.999999</b>Aangesloten bij de geschilleninstantie</div>
+      <div><b>KvK 99999999</b>Ingeschreven te Demostad</div>
+      <div><b>Beroepsaansprakelijkheid</b>Verzekerd conform wettelijke eisen</div>
+    </div>
+  </div>
+</header>
+
+<!-- WERKWIJZE -->
+<section id="werkwijze">
+  <div class="wrap">
+    <div class="eyebrow">Werkwijze</div>
+    <h2>Vijf stappen, van kennismaking tot afronding</h2>
+    <p class="sub">Elke stap heeft een duidelijk begin en einde. U weet steeds wat wij doen, wat u van ons kunt
+       verwachten en wanneer onze opdracht afloopt.</p>
+    <div class="chain">
+      <div class="step"><div class="num">1</div><h3>Inventarisatie</h3>
+        <p>Wij brengen uw situatie, wensen en risico's in kaart: inkomen, lasten, kennis en ervaring, en wat u wilt
+           bereiken. Ook bespreken wij wat er gebeurt bij pensionering, arbeidsongeschiktheid of overlijden.</p></div>
+      <div class="step"><div class="num">2</div><h3>Advies</h3>
+        <p>U ontvangt een schriftelijk advies met onze afweging: welke oplossingen zijn vergeleken, welke wij aanbevelen
+           en waarom de andere mogelijkheden niet passen bij uw situatie.</p></div>
+      <div class="step"><div class="num">3</div><h3>Bemiddeling</h3>
+        <p>Kiest u voor ons voorstel, dan verzorgen wij de aanvraag en bewaken wij de afgesproken termijnen, zoals het
+           financieringsvoorbehoud en de datum van passeren.</p></div>
+      <div class="step"><div class="num">4</div><h3>Beheer</h3>
+        <p>Beheer is een aparte afspraak. Sluit u die af, dan staat in de overeenkomst precies welke momenten wij voor u
+           signaleren. Zonder die afspraak eindigt onze opdracht bij het passeren van de akte.</p></div>
+      <div class="step"><div class="num">5</div><h3>Nazorg</h3>
+        <p>Binnen een beheerafspraak nemen wij contact met u op bij de afgesproken momenten, bijvoorbeeld het einde van
+           uw rentevaste periode. U ontvangt van ons altijd een bericht wanneer uw dossier wordt afgerond.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIENSTEN -->
+<section class="alt" id="diensten">
+  <div class="wrap">
+    <div class="eyebrow">Diensten</div>
+    <h2>Waarover wij adviseren</h2>
+    <p class="sub">Onze vergunning bepaalt waarover wij mogen adviseren en bemiddelen: hypothecair krediet en de
+       verzekeringen die daar rechtstreeks mee samenhangen. Valt uw vraag daarbuiten, dan zeggen wij dat en verwijzen
+       wij u door.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Uw hypotheek</h3>
+        <p>Aankoop van een woning, oversluiten, verbouwen, tweede woning en hypotheek rond pensionering.</p>
+        <ul><li>Vergelijking van 18 geldverstrekkers</li><li>Keuze van rentevaste periode en aflosvorm</li>
+            <li>Toetsing aan de actuele leennormen en aan NHG</li><li>Berekening van netto maandlasten</li></ul>
+      </div>
+      <div class="card">
+        <h3>Risico's rond de hypotheek</h3>
+        <p>Wat er met uw woonlasten gebeurt als uw situatie verandert, en welke dekking daarbij past.</p>
+        <ul><li>Overlijdensrisicoverzekering</li><li>Arbeidsongeschiktheid en werkloosheid</li>
+            <li>Lasten na uw AOW-datum</li><li>Gevolgen van scheiding voor de hypotheek</li></ul>
+      </div>
+      <div class="card">
+        <h3>Begeleiding tot het passeren</h3>
+        <p>Van aanvraag tot akte, met bewaking van de termijnen die ertoe doen.</p>
+        <ul><li>Indienen en opvolgen van de aanvraag</li><li>Bewaking van het financieringsvoorbehoud</li>
+            <li>Afstemming met makelaar, taxateur en notaris</li><li>Controle van de hypotheekakte vóór passeren</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOSTEN -->
+<section id="kosten">
+  <div class="wrap">
+    <div class="eyebrow">Kosten</div>
+    <h2>Wat u betaalt, en waarvoor</h2>
+    <p class="sub">Voor hypotheken en overlijdensrisicoverzekeringen betaalt u ons rechtstreeks. Wij ontvangen voor
+       deze producten geen vergoeding van geldverstrekkers of verzekeraars; dat is wettelijk niet toegestaan. U weet
+       het bedrag vóórdat wij beginnen.</p>
+    <div class="price">
+      <div class="p-box"><h3>Kennismaking</h3><div class="amt">€ 0,–</div>
+        <p>Een eerste gesprek van circa een uur. Daarna weet u wat wij voor u kunnen doen en wat dat kost. U zit
+           nergens aan vast.</p></div>
+      <div class="p-box"><h3>Hypotheekadvies en bemiddeling</h3><div class="amt">€ 2.950,– <small>vast tarief</small></div>
+        <p>Inventarisatie, schriftelijk advies, aanvraag en begeleiding tot het passeren van de akte. Het exacte bedrag
+           staat in uw opdrachtbevestiging.</p></div>
+      <div class="p-box"><h3>Beheerafspraak</h3><div class="amt">€ 165,– <small>per jaar</small></div>
+        <p>Optioneel en apart af te sluiten. In de overeenkomst staat welke momenten wij signaleren en welke
+           werkzaamheden daar wel en niet onder vallen.</p></div>
+    </div>
+    <div class="note">
+      <b>Geen resultaatafhankelijke beloning.</b> Ons tarief staat vast en is niet afhankelijk van welke
+      geldverstrekker u kiest of van de hoogte van uw hypotheek. Gaat uw aanvraag niet door, dan brengen wij uitsluitend
+      de werkelijk verrichte werkzaamheden in rekening; dat staat in uw opdrachtbevestiging. Vóór het advies ontvangt u
+      ons dienstverleningsdocument, waarin per dienst staat wat u krijgt en wat u betaalt.
+    </div>
+  </div>
+</section>
+
+<!-- DIENSTENWIJZER + JURIDISCH -->
+<section class="alt" id="dienstenwijzer">
+  <div class="wrap">
+    <div class="eyebrow">Transparantie</div>
+    <h2>Dienstenwijzer en voorwaarden</h2>
+    <p class="sub">Alles wat u wettelijk van ons mag verwachten, op één plek. Klap open wat u wilt lezen.</p>
+    <div class="acc" id="acc">
+
+      <div class="acc-item">
+        <button class="acc-head" onclick="acc(this)">Wie wij zijn en onder welk toezicht wij staan <span class="ic">+</span></button>
+        <div class="acc-body">
+          <table>
+            <tr><td>Statutaire naam</td><td>Demo Hypotheek kantoor B.V.</td></tr>
+            <tr><td>Bezoekadres</td><td>Demostraat 12, 1234 AB Demostad</td></tr>
+            <tr><td>Telefoon / e-mail</td><td>085 - 000 00 00 · info@demohypotheekkantoor.nl</td></tr>
+            <tr><td>KvK-nummer</td><td>99999999 <i>(demonummer)</i></td></tr>
+            <tr><td>AFM-vergunningnummer</td><td>99999999 <i>(demonummer — niet geldig, niet terug te vinden in het AFM-register)</i></td></tr>
+            <tr><td>Kifid-aansluitnummer</td><td>999.999999 <i>(demonummer)</i></td></tr>
+            <tr><td>Beroepsaansprakelijkheid</td><td>Verzekerd bij Demo Schadeverzekeringen N.V., conform de wettelijke minimumbedragen</td></tr>
+          </table>
+          <p>Onze vergunning geldt voor adviseren en bemiddelen in hypothecair krediet en in de verzekeringen die
+             daarmee samenhangen (inkomensverzekeringen en overlijdensrisicoverzekering). Buiten die reikwijdte adviseren
+             wij niet. Vragen over bijvoorbeeld beleggen, pensioenregelingen, schadeverzekeringen of fiscale aangifte
+             vallen niet onder onze dienstverlening; daarvoor verwijzen wij u door.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" onclick="acc(this)">Met welke aanbieders wij werken <span class="ic">+</span></button>
+        <div class="acc-body">
+          <p>Wij zijn niet verbonden aan één aanbieder en hebben geen aandelenbelang in een geldverstrekker of
+             verzekeraar; ook heeft geen aanbieder een belang in ons kantoor.</p>
+          <p>Wij vergelijken het aanbod van een selectie van 18 geldverstrekkers en 7 verzekeraars. Dat is
+             dus niet het volledige marktaanbod. Welke partijen dat zijn en hoe wij de selectie maken, staat in de
+             vergelijkingskaart die u bij het advies ontvangt.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" onclick="acc(this)">Wat onze opdracht wel en niet omvat <span class="ic">+</span></button>
+        <div class="acc-body">
+          <p>Voordat wij beginnen, ontvangt u een opdracht tot dienstverlening. Daarin staat wat wij doen, wat het kost
+             en wanneer onze opdracht eindigt.</p>
+          <p><b>Wel inbegrepen:</b> het in kaart brengen van uw situatie, een schriftelijk en onderbouwd advies, de
+             aanvraag bij de gekozen aanbieder en de begeleiding tot het passeren van de akte.</p>
+          <p><b>Niet inbegrepen, tenzij apart afgesproken:</b></p>
+          <ul>
+            <li>het volgen van uw hypotheek of verzekeringen na afronding van de opdracht</li>
+            <li>beoordeling van producten die u elders heeft lopen en die niet in het advies zijn betrokken</li>
+            <li>fiscale aangifte, juridisch advies, bouwkundige of taxatiewerkzaamheden</li>
+            <li>uitspraken over de toekomstige waarde van uw woning of over de renteontwikkeling</li>
+          </ul>
+          <p>Wilt u dat wij uw situatie ook na afloop blijven volgen, dan sluiten wij daarvoor een aparte
+             beheerovereenkomst. Zonder die overeenkomst eindigt onze dienstverlening bij het passeren van de akte.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" onclick="acc(this)">Hoe wij met uw gegevens omgaan <span class="ic">+</span></button>
+        <div class="acc-body">
+          <p>Voor ons advies verwerken wij persoonsgegevens: naam en contactgegevens, inkomens- en vermogensgegevens,
+             gegevens over uw woning en soms gezondheidsgegevens wanneer u een overlijdensrisicoverzekering aanvraagt.</p>
+          <p><b>Grondslag.</b> Wij verwerken deze gegevens om de overeenkomst met u uit te voeren en om te voldoen aan
+             wettelijke verplichtingen. Gezondheidsgegevens verwerken wij uitsluitend met uw uitdrukkelijke toestemming.</p>
+          <p><b>Delen.</b> Wij delen uw gegevens met de aanbieder waar wij uw aanvraag indienen en met leveranciers van
+             onze advies- en dossiersoftware. Met die partijen hebben wij verwerkersovereenkomsten gesloten.</p>
+          <p><b>Bewaren.</b> Uw adviesdossier bewaren wij ten minste vijf jaar na afloop van onze dienstverlening, omdat
+             de wet dat voorschrijft. Daarna verwijderen wij uw gegevens, tenzij een andere wettelijke termijn geldt.</p>
+          <p><b>Uw rechten.</b> U kunt uw gegevens inzien, laten corrigeren of laten verwijderen, en bezwaar maken tegen
+             de verwerking. Stuur daarvoor een bericht aan info@demohypotheekkantoor.nl. Bent u het oneens met onze reactie, dan kunt u
+             een klacht indienen bij de Autoriteit Persoonsgegevens.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" onclick="acc(this)">Als u een klacht heeft <span class="ic">+</span></button>
+        <div class="acc-body">
+          <p>Bent u niet tevreden, laat het ons dan eerst zelf weten via info@demohypotheekkantoor.nl of 085 - 000 00 00. U ontvangt
+             binnen vijf werkdagen een bevestiging en binnen vier weken een schriftelijke reactie. Uw klacht wordt
+             behandeld door iemand die niet bij uw dossier betrokken was.</p>
+          <p>Komen wij er samen niet uit, dan kunt u uw klacht voorleggen aan het Klachteninstituut Financiële
+             Dienstverlening (Kifid), waarbij wij zijn aangesloten onder nummer 999.999999. Doe dat binnen drie maanden na
+             onze schriftelijke reactie. U kunt uw klacht ook aan de rechter voorleggen.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" onclick="acc(this)">Algemene voorwaarden en aansprakelijkheid <span class="ic">+</span></button>
+        <div class="acc-body">
+          <p>Op onze dienstverlening zijn algemene voorwaarden van toepassing. U ontvangt die samen met de opdracht tot
+             dienstverlening, zodat u ze vóór het sluiten van de overeenkomst kunt lezen.</p>
+          <p>Wij voeren onze opdracht uit zoals een redelijk bekwaam en redelijk handelend adviseur dat doet. Schiet
+             onze dienstverlening tekort, dan is onze aansprakelijkheid beperkt tot het bedrag dat onze
+             beroepsaansprakelijkheidsverzekering in dat geval uitkeert, vermeerderd met het eigen risico. Keert de
+             verzekeraar niet uit, dan is de aansprakelijkheid beperkt tot het honorarium dat u voor de betreffende
+             opdracht heeft betaald.</p>
+          <p>Deze beperking geldt niet bij opzet of bewuste roekeloosheid aan onze kant.</p>
+          <p>Meent u dat wij tekortgeschoten zijn, meld dat dan zo snel mogelijk nadat u het heeft ontdekt, zodat wij
+             de situatie nog kunnen herstellen.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTEN -->
+<section id="documenten">
+  <div class="wrap">
+    <div class="eyebrow">Documenten</div>
+    <h2>Onze documenten, vooraf in te zien</h2>
+    <p class="sub">U krijgt deze stukken van ons voordat u iets ondertekent. Ze staan hier zodat u ze rustig kunt
+       lezen op een moment dat het u uitkomt. Elk document is te lezen op het scherm en te printen of op te slaan
+       als PDF.</p>
+    <div class="dlist">
+      <div class="dcard">
+        <div class="kind">Model · vóór het advies</div>
+        <h3>Opdracht tot dienstverlening</h3>
+        <p>Hierin staat wat wij voor u doen, wat wij uitdrukkelijk niet doen, wat het kost en wanneer onze opdracht
+           eindigt. U ontvangt een op uw situatie ingevulde versie voordat wij beginnen.</p>
+        <button class="btn ghost" onclick="openDoc('otd')">Model bekijken</button>
+      </div>
+      <div class="dcard">
+        <div class="kind">Van toepassing op elke opdracht</div>
+        <h3>Algemene voorwaarden</h3>
+        <p>Onze voorwaarden, waaronder de regeling van onze aansprakelijkheid. U ontvangt ze samen met de opdracht
+           tot dienstverlening, dus voordat u tekent.</p>
+        <button class="btn ghost" onclick="openDoc('av')">Voorwaarden lezen</button>
+      </div>
+      <div class="dcard">
+        <div class="kind">Wettelijk verplicht</div>
+        <h3>Dienstenwijzer</h3>
+        <p>Wie wij zijn, onder welk toezicht wij staan, met welke aanbieders wij werken en hoe wij worden beloond.</p>
+        <button class="btn ghost" onclick="openDoc('dw')">Dienstenwijzer openen</button>
+      </div>
+    </div>
+    <div class="note" style="margin-top:26px">
+      Daarnaast ontvangt u vóór het adviesgesprek ons <b>dienstverleningsdocument</b>. Dat is een wettelijk
+      voorgeschreven standaardformulier waarmee u onze dienstverlening en kosten kunt vergelijken met die van andere
+      kantoren. Vraag er gerust naar.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Een kennismaking plannen</h2>
+    <p class="sub">Laat uw gegevens achter, dan nemen wij binnen twee werkdagen contact met u op. Aan een kennismaking
+       zijn geen kosten verbonden.</p>
+    <div class="contact-grid">
+      <form onsubmit="return submitForm(event)">
+        <div class="field"><label for="naam">Naam</label><input id="naam" required></div>
+        <div class="field"><label for="mail">E-mailadres</label><input id="mail" type="email" required></div>
+        <div class="field"><label for="tel">Telefoonnummer</label><input id="tel" type="tel"></div>
+        <div class="field"><label for="ond">Waar gaat uw vraag over?</label>
+          <select id="ond">
+            <option>Hypotheek — aankoop woning</option>
+            <option>Hypotheek — oversluiten of verbouwen</option>
+            <option>Hypotheek — tweede woning</option>
+            <option>Risico's rond de hypotheek (overlijden, arbeidsongeschiktheid)</option>
+            <option>Anders</option>
+          </select></div>
+        <div class="field"><label for="ber">Toelichting</label><textarea id="ber"></textarea></div>
+        <div class="consent"><input type="checkbox" id="akk" required>
+          <label for="akk" style="font-weight:400;color:var(--text-l)">Ik ga ermee akkoord dat mijn gegevens worden
+            gebruikt om contact met mij op te nemen over deze aanvraag.</label></div>
+        <button type="submit" class="btn">Verstuur aanvraag</button>
+        <div id="formmsg">Bedankt. Uw bericht is geregistreerd; wij nemen binnen twee werkdagen contact met u op.</div>
+      </form>
+
+      <div class="infocard">
+        <dl>
+          <dt>Bezoekadres</dt><dd>Demostraat 12<br>1234 AB Demostad</dd>
+          <dt>Telefoon</dt><dd>085 - 000 00 00</dd>
+          <dt>E-mail</dt><dd>info@demohypotheekkantoor.nl</dd>
+          <dt>Openingstijden</dt><dd>Maandag t/m vrijdag, 09.00–17.30 uur<br>Avondafspraken in overleg</dd>
+          <dt>AFM-vergunning</dt><dd>99999999</dd>
+          <dt>Kifid</dt><dd>999.999999</dd>
+          <dt>KvK</dt><dd>99999999</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>Demo Hypotheek kantoor</h4>
+        <p style="color:#9fbdd3">Advies en bemiddeling bij hypotheken.<br>
+           Demostraat 12, 1234 AB Demostad</p>
+      </div>
+      <div><h4>Dienstverlening</h4>
+        <a href="#werkwijze">Werkwijze</a><a href="#diensten">Diensten</a><a href="#kosten">Kosten</a></div>
+      <div><h4>Transparantie</h4>
+        <a href="#documenten" onclick="openDoc('dw');return false;">Dienstenwijzer</a>
+        <a href="#documenten" onclick="openDoc('av');return false;">Algemene voorwaarden</a>
+        <a href="#documenten" onclick="openDoc('otd');return false;">Opdracht tot dienstverlening</a>
+        <a href="#dienstenwijzer">Privacy en klachten</a></div>
+      <div><h4>Toezicht</h4>
+        <a href="https://www.afm.nl/registers" target="_blank" rel="noopener">AFM-register</a>
+        <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>
+        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="jaar"></span> Demo Hypotheek kantoor B.V. · KvK 99999999 · AFM 99999999 · Kifid 999.999999</span>
+      <span>Voorbeeldwebsite met fictieve gegevens — geen bestaande onderneming, geen dienstverlening.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- DOCUMENT-OVERLAY -->
+<div id="ov" onclick="if(event.target===this)closeDoc()">
+  <div class="ovbox">
+    <div class="ovbar">
+      <h3 id="ovtitle"></h3>
+      <div class="acts">
+        <button onclick="printDoc()">Printen / PDF</button>
+        <button onclick="closeDoc()">Sluiten</button>
+      </div>
+    </div>
+    <div class="ovbody" id="ovbody"></div>
+  </div>
+</div>
+
+<!-- documentteksten -->
+<template id="doc-otd">
+  <p style="color:var(--muted);font-size:13.5px">Modelversie. U ontvangt een op uw situatie ingevulde en ondertekende
+     versie voordat wij met het advies beginnen. Ingevulde gegevens zijn hier weergegeven als &#10216;tussen punthaken&#10217;.</p>
+
+  <h4>1. Wie deze afspraak maken</h4>
+  <table>
+    <tr><td>Opdrachtnemer</td><td>Demo Hypotheek kantoor B.V., Demostraat 12, Demostad<br>KvK 99999999 · AFM 99999999 · Kifid 999.999999</td></tr>
+    <tr><td>Opdrachtgever</td><td>&#10216;naam&#10217;, geboren &#10216;geboortedatum&#10217;, wonend te &#10216;adres&#10217;</td></tr>
+    <tr><td>Mede-opdrachtgever</td><td>&#10216;naam&#10217;, geboren &#10216;geboortedatum&#10217;</td></tr>
+    <tr><td>Uw adviseur</td><td>&#10216;naam adviseur&#10217;</td></tr>
+  </table>
+  <p>Hierna noemen wij u "u" en onszelf "wij". Zijn er twee opdrachtgevers, dan gelden alle afspraken voor u beiden.</p>
+
+  <h4>2. Waarvoor u ons inschakelt</h4>
+  <p>U vraagt ons te adviseren over en te bemiddelen bij: een hypotheek voor de aankoop van een woning, het oversluiten
+     of wijzigen van uw bestaande hypotheek, een hypotheek voor verbouwing of verduurzaming, en/of een
+     overlijdensrisicoverzekering die met deze hypotheek samenhangt. In uw eigen opdracht wordt aangekruist wat op u
+     van toepassing is.</p>
+
+  <h4>3. Wat wij voor u doen</h4>
+  <ol>
+    <li><b>Inventarisatie.</b> Wij brengen uw financiële situatie in kaart: inkomen, vermogen, lasten en bestaande
+      producten. Ook bespreken wij uw wensen en doelen, uw kennis en ervaring met hypotheken en hoeveel risico u wilt
+      en kunt dragen. Daarbij komen in elk geval aan de orde: wat er gebeurt bij overlijden, bij arbeidsongeschiktheid,
+      bij werkloosheid, bij scheiding en na uw AOW-datum.</li>
+    <li><b>Advies.</b> U ontvangt een schriftelijk advies. Daarin staat welke oplossingen wij hebben vergeleken, welke
+      wij u aanbevelen en waarom de andere mogelijkheden niet bij uw situatie passen. Ook rekenen wij voor wat uw
+      maandlasten worden en wat er gebeurt als de rente na uw rentevaste periode hoger is.</li>
+    <li><b>Bemiddeling.</b> Kiest u voor ons voorstel, dan dienen wij de aanvraag in bij de door u gekozen
+      geldverstrekker, verzamelen wij de benodigde stukken en bewaken wij de afgesproken termijnen.</li>
+    <li><b>Begeleiding tot het passeren.</b> Wij stemmen af met de geldverstrekker, de taxateur en de notaris en
+      controleren de hypotheekofferte en de conceptakte op de met u besproken punten.</li>
+  </ol>
+  <div class="box"><p><b>Wij vergelijken niet het volledige marktaanbod.</b> Wij werken met een selectie van 18
+    geldverstrekkers en 7 verzekeraars. Welke partijen dat zijn en hoe wij die selectie maken, staat in de
+    vergelijkingskaart die u bij het advies ontvangt.</p></div>
+
+  <h4>4. Wat wij niet voor u doen</h4>
+  <p>Het is belangrijk dat u weet waar onze opdracht ophoudt. De volgende werkzaamheden vallen er uitdrukkelijk
+     <b>niet</b> onder, tenzij wij daarover een aparte schriftelijke afspraak maken:</p>
+  <ul>
+    <li>het volgen van uw hypotheek, verzekeringen of rente nadat de akte is gepasseerd;</li>
+    <li>u waarschuwen bij het einde van uw rentevaste periode, bij rentedalingen of bij wetswijzigingen;</li>
+    <li>het beoordelen van producten die u elders heeft lopen en die niet in dit advies zijn betrokken;</li>
+    <li>advies over beleggen, pensioenregelingen, schadeverzekeringen, erfrecht of huwelijkse voorwaarden;</li>
+    <li>het verzorgen van uw belastingaangifte of fiscaal advies over uw persoonlijke situatie;</li>
+    <li>het bouwkundig beoordelen of taxeren van de woning;</li>
+    <li>uitspraken over de toekomstige waarde van uw woning of over de toekomstige renteontwikkeling;</li>
+    <li>juridische bijstand bij geschillen met de verkoper, de makelaar, de notaris of de geldverstrekker.</li>
+  </ul>
+  <p>Heeft u op een van deze punten hulp nodig, zeg dat dan gerust. Wij verwijzen u door naar een partij die daarin
+     gespecialiseerd is.</p>
+
+  <h4>5. Wat wij van u nodig hebben</h4>
+  <p>Ons advies kan alleen kloppen als het op juiste gegevens is gebaseerd. Daarom vragen wij u:</p>
+  <ul>
+    <li>ons volledig en juist te informeren over uw inkomen, vermogen, schulden en lopende verplichtingen;</li>
+    <li>de gevraagde stukken op tijd aan te leveren;</li>
+    <li>ons direct te laten weten als uw situatie verandert tussen het advies en het passeren van de akte — denk aan
+      een nieuwe baan, een proeftijd, een auto op afbetaling, een schenking of een gewijzigde gezinssituatie;</li>
+    <li>de documenten die u van ons of van de geldverstrekker ontvangt zelf te lezen en bij ons aan de bel te trekken
+      als iets niet klopt of niet duidelijk is.</li>
+  </ul>
+  <p>Baseren wij ons advies op gegevens die achteraf onjuist of onvolledig blijken, dan kunnen wij niet instaan voor de
+     uitkomst daarvan.</p>
+
+  <h4>6. Wat u betaalt</h4>
+  <table>
+    <tr><td>Advies en bemiddeling hypotheek</td><td>€ 2.950,– (vast tarief, vrijgesteld van btw)</td></tr>
+    <tr><td>Advies en bemiddeling overlijdensrisicoverzekering</td><td>€ 495,–</td></tr>
+    <tr><td>Wanneer te betalen</td><td>Bij het passeren van de akte, via de nota van de notaris</td></tr>
+  </table>
+  <p>Ons tarief staat vast. Het hangt niet af van welke geldverstrekker u kiest, van de hoogte van uw hypotheek of van
+     de vraag of u een verzekering afsluit. Voor hypotheken en overlijdensrisicoverzekeringen ontvangen wij geen
+     vergoeding van aanbieders; dat is wettelijk niet toegestaan.</p>
+  <p><b>Als het niet doorgaat.</b> Gaat de hypotheek niet door, om welke reden ook, dan brengen wij in rekening: na
+     afronding van de inventarisatie en het adviesgesprek € 750,–; na het uitbrengen van het schriftelijke advies
+     € 1.500,–; na indiening van de aanvraag het volledige tarief. Beëindigt u de opdracht eerder, dan betaalt u voor
+     de fase die op dat moment is afgerond.</p>
+
+  <h4>7. Hoe lang deze opdracht duurt</h4>
+  <p>Deze opdracht begint op de datum van ondertekening en <b>eindigt op het moment dat de hypotheekakte bij de notaris
+     passeert</b>. Gaat de hypotheek niet door, dan eindigt de opdracht zodra wij u schriftelijk laten weten dat wij
+     onze werkzaamheden afronden.</p>
+  <p>Na afloop van de opdracht volgen wij uw hypotheek niet meer. U ontvangt van ons geen signalen over rente,
+     wetswijzigingen of uw verzekeringen, tenzij u een beheerovereenkomst met ons sluit.</p>
+  <div class="box"><p><b>Wilt u dat wij uw situatie blijven volgen?</b> Dan sluiten wij daarvoor een aparte
+    beheerovereenkomst. Daarin staat precies welke momenten wij voor u signaleren, hoe vaak wij contact opnemen en wat
+    dat kost. Zonder die overeenkomst doen wij dat niet.</p></div>
+
+  <h4>8. Uw gegevens</h4>
+  <p>Wij verwerken uw persoonsgegevens om deze opdracht uit te voeren en om te voldoen aan wettelijke verplichtingen.
+     Wij delen uw gegevens met de geldverstrekker en verzekeraar waar wij uw aanvraag indienen, en met de leveranciers
+     van onze advies- en dossiersoftware. Uw dossier bewaren wij ten minste vijf jaar na afloop van onze
+     dienstverlening, omdat de wet dat voorschrijft.</p>
+
+  <h4>9. Als u niet tevreden bent</h4>
+  <p>Laat het ons dan eerst zelf weten via info@demohypotheekkantoor.nl of 085 - 000 00 00. U krijgt binnen vijf werkdagen een
+     bevestiging en binnen vier weken een schriftelijke reactie. Komen wij er samen niet uit, dan kunt u uw klacht
+     binnen drie maanden voorleggen aan het Klachteninstituut Financiële Dienstverlening (Kifid), waarbij wij zijn
+     aangesloten onder nummer 999.999999. U kunt uw klacht ook aan de rechter voorleggen.</p>
+
+  <h4>10. Algemene voorwaarden</h4>
+  <p>Op deze opdracht zijn onze algemene voorwaarden van toepassing. Daarin staat onder meer hoe onze
+     aansprakelijkheid is geregeld. U ontvangt die voorwaarden samen met deze opdracht, vóórdat u tekent.</p>
+
+  <h4>Bij ondertekening bevestigt u</h4>
+  <ul>
+    <li>dat u de algemene voorwaarden heeft ontvangen en gelezen vóórdat u tekende;</li>
+    <li>dat u het dienstverleningsdocument heeft ontvangen vóórdat het advies begon;</li>
+    <li>dat u weet dat deze opdracht eindigt bij het passeren van de akte en dat er daarna geen doorlopende
+      dienstverlening is.</li>
+  </ul>
+
+  <div class="meta">Demo Hypotheek kantoor B.V. · Demostraat 12, Demostad · KvK 99999999 · AFM 99999999 · Kifid 999.999999 ·
+    modelversie 1.0, 13 oktober 2026</div>
+</template>
+
+<template id="doc-av">
+  <div class="n">Artikel 1 — Definities</div>
+  <ol>
+    <li><b>Opdrachtnemer:</b> Demo Hypotheek kantoor B.V., ingeschreven bij de Kamer van Koophandel onder nummer 99999999,
+      houder van een vergunning van de Autoriteit Financiële Markten onder nummer 99999999.</li>
+    <li><b>Opdrachtgever:</b> de natuurlijke persoon of rechtspersoon die opdrachtnemer een opdracht verstrekt.</li>
+    <li><b>Consument:</b> opdrachtgever die handelt buiten de uitoefening van een beroep of bedrijf.</li>
+    <li><b>Opdracht:</b> de overeenkomst van opdracht als bedoeld in artikel 7:400 BW, zoals vastgelegd in de opdracht
+      tot dienstverlening.</li>
+    <li><b>Dienstverlening:</b> het adviseren over en bemiddelen bij hypothecair krediet en daarmee samenhangende
+      verzekeringen, binnen de reikwijdte van de vergunning van opdrachtnemer.</li>
+  </ol>
+
+  <div class="n">Artikel 2 — Toepasselijkheid</div>
+  <ol>
+    <li>Deze voorwaarden zijn van toepassing op iedere opdracht, offerte en overeenkomst tussen opdrachtnemer en
+      opdrachtgever, en op alle daaruit voortvloeiende werkzaamheden.</li>
+    <li>Opdrachtnemer stelt deze voorwaarden vóór of bij het sluiten van de overeenkomst aan opdrachtgever ter hand en
+      legt dat vast. Opdrachtgever bevestigt de ontvangst in de opdracht tot dienstverlening.</li>
+    <li>Afwijkingen gelden alleen als opdrachtnemer die schriftelijk heeft bevestigd.</li>
+    <li>Algemene voorwaarden van opdrachtgever worden uitdrukkelijk van de hand gewezen.</li>
+    <li>Is een bepaling nietig of wordt zij vernietigd, dan blijven de overige bepalingen van kracht. Partijen treden
+      in dat geval in overleg over een vervangende bepaling die de strekking van de oorspronkelijke zoveel mogelijk
+      benadert.</li>
+  </ol>
+
+  <div class="n">Artikel 3 — Totstandkoming en inhoud van de opdracht</div>
+  <ol>
+    <li>De opdracht komt tot stand op het moment dat opdrachtgever de opdracht tot dienstverlening ondertekent, dan wel
+      op het moment dat opdrachtnemer met instemming van opdrachtgever met de uitvoering begint.</li>
+    <li>De omvang van de opdracht wordt uitsluitend bepaald door de opdracht tot dienstverlening. Werkzaamheden die
+      daarin niet zijn omschreven, maken geen deel uit van de opdracht.</li>
+    <li>Opdrachtnemer is niet gehouden tot werkzaamheden waarvoor haar vergunning niet strekt.</li>
+    <li>Een door opdrachtnemer afgegeven indicatie van doorlooptijd of maandlast is nooit een garantie of een fatale
+      termijn.</li>
+  </ol>
+
+  <div class="n">Artikel 4 — Uitvoering van de opdracht</div>
+  <ol>
+    <li>Opdrachtnemer voert de opdracht uit zoals een redelijk bekwaam en redelijk handelend adviseur dat doet. De
+      opdracht betreft een inspanningsverbintenis; opdrachtnemer staat niet in voor het bereiken van een bepaald
+      resultaat, waaronder uitdrukkelijk begrepen het verkrijgen van een offerte, de acceptatie van een aanvraag of het
+      tot stand komen van een financiering.</li>
+    <li>Opdrachtnemer bepaalt de wijze waarop en door welke medewerker de opdracht wordt uitgevoerd. De artikelen 7:404
+      en 7:407 lid 2 BW zijn niet van toepassing.</li>
+    <li>Opdrachtnemer mag derden inschakelen en neemt bij de keuze daarvan de nodige zorgvuldigheid in acht.
+      Opdrachtnemer is niet aansprakelijk voor tekortkomingen van derden, waaronder begrepen geldverstrekkers,
+      verzekeraars, taxateurs, bouwkundig keurders, makelaars en notarissen.</li>
+    <li>Het advies is gebaseerd op de situatie, de regelgeving en de productvoorwaarden zoals die gelden op het moment
+      van uitbrengen. Opdrachtnemer is niet gehouden het advies nadien te actualiseren.</li>
+  </ol>
+
+  <div class="n">Artikel 5 — Verplichtingen van opdrachtgever</div>
+  <ol>
+    <li>Opdrachtgever verstrekt tijdig alle gegevens en bescheiden die voor de uitvoering nodig zijn, en staat in voor
+      de juistheid en volledigheid daarvan.</li>
+    <li>Opdrachtgever meldt onverwijld iedere wijziging in zijn persoonlijke, financiële of arbeidsrechtelijke situatie
+      die van invloed kan zijn op het advies of op de aanvraag.</li>
+    <li>Opdrachtgever neemt kennis van de documenten die hij van opdrachtnemer, de geldverstrekker of de verzekeraar
+      ontvangt en meldt onjuistheden onverwijld.</li>
+    <li>Schade die voortvloeit uit onjuiste, onvolledige of niet tijdig verstrekte informatie van opdrachtgever komt
+      voor rekening van opdrachtgever.</li>
+  </ol>
+
+  <div class="n">Artikel 6 — Reikwijdte van de dienstverlening</div>
+  <ol>
+    <li>De dienstverlening eindigt op het in de opdracht tot dienstverlening bepaalde moment, in beginsel het passeren
+      van de hypotheekakte.</li>
+    <li>Op opdrachtnemer rust na afloop van de opdracht geen verplichting tot het volgen, bewaken of beoordelen van de
+      door bemiddeling tot stand gekomen producten, noch tot het informeren van opdrachtgever over wijzigingen in
+      rente, wet- en regelgeving, fiscaliteit of productvoorwaarden.</li>
+    <li>Een doorlopende verplichting als bedoeld in het vorige lid ontstaat uitsluitend door het sluiten van een
+      afzonderlijke, schriftelijke beheerovereenkomst, en uitsluitend voor de daarin limitatief omschreven
+      werkzaamheden.</li>
+    <li>Het vorige lid laat onverlet de wettelijke verplichting van opdrachtnemer om opdrachtgever gedurende de
+      looptijd van een door haar bemiddelde verzekering te informeren over wezenlijke wijzigingen in de eerder
+      verstrekte informatie.</li>
+    <li>Opdrachtnemer adviseert niet over fiscale aangifte, erfrecht, huwelijksvermogensrecht, beleggen,
+      pensioenregelingen of de bouwkundige staat en de waardeontwikkeling van de woning.</li>
+  </ol>
+
+  <div class="n">Artikel 7 — Honorarium en betaling</div>
+  <ol>
+    <li>Het honorarium is vastgelegd in de opdracht tot dienstverlening en is niet afhankelijk van de gekozen
+      aanbieder, de hoogte van de financiering of de totstandkoming daarvan.</li>
+    <li>Komt de financiering niet tot stand, dan is opdrachtgever het in de opdracht tot dienstverlening bepaalde
+      gedeelte van het honorarium verschuldigd, naar rato van de afgeronde fase.</li>
+    <li>Bij niet tijdige betaling is opdrachtgever de wettelijke rente verschuldigd, alsmede de buitengerechtelijke
+      incassokosten conform de wettelijke staffel.</li>
+    <li>Opdrachtnemer ontvangt voor hypothecair krediet en overlijdensrisicoverzekeringen geen provisie van
+      aanbieders.</li>
+  </ol>
+
+  <div class="n">Artikel 8 — Duur, opschorting en beëindiging</div>
+  <ol>
+    <li>Beide partijen kunnen de opdracht te allen tijde schriftelijk opzeggen. Opdrachtgever is in dat geval het
+      honorarium verschuldigd voor de tot dat moment afgeronde fase.</li>
+    <li>Opdrachtnemer mag haar werkzaamheden opschorten zolang opdrachtgever de gevraagde gegevens niet verstrekt of
+      een opeisbare betalingsverplichting niet nakomt.</li>
+    <li>Opdrachtnemer mag de opdracht met onmiddellijke ingang beëindigen indien voortzetting in strijd zou komen met
+      wet- of regelgeving, waaronder de Wet op het financieel toezicht en de Wet ter voorkoming van witwassen en
+      financieren van terrorisme.</li>
+  </ol>
+
+  <div class="n">Artikel 9 — Aansprakelijkheid</div>
+  <ol>
+    <li>Opdrachtnemer is uitsluitend aansprakelijk voor schade die het rechtstreekse gevolg is van een toerekenbare
+      tekortkoming in de nakoming van de opdracht.</li>
+    <li>De aansprakelijkheid is beperkt tot het bedrag dat in het betreffende geval onder de
+      beroepsaansprakelijkheidsverzekering van opdrachtnemer wordt uitgekeerd, vermeerderd met het bedrag van het eigen
+      risico dat ingevolge de polisvoorwaarden voor rekening van opdrachtnemer komt.</li>
+    <li>Keert de verzekeraar in enig geval niet uit, dan is de aansprakelijkheid beperkt tot het honorarium dat
+      opdrachtgever voor de betreffende opdracht heeft voldaan, met een maximum van € 25.000,–.</li>
+    <li>De beperkingen in de leden 2 en 3 gelden niet indien de schade het gevolg is van opzet of bewuste roekeloosheid
+      van opdrachtnemer of van haar leidinggevenden.</li>
+    <li>Opdrachtnemer is niet aansprakelijk voor:
+      <ul>
+        <li>schade die voortvloeit uit onjuiste, onvolledige of niet tijdig door opdrachtgever verstrekte informatie;</li>
+        <li>schade als gevolg van handelen of nalaten van derden als bedoeld in artikel 4 lid 3;</li>
+        <li>schade die verband houdt met de ontwikkeling van rentestanden, beleggingsresultaten, woningwaarde of
+          wijzigingen in wet- en regelgeving na het uitbrengen van het advies;</li>
+        <li>schade die voortvloeit uit het door opdrachtgever afwijken van het schriftelijk uitgebrachte advies;</li>
+        <li>indirecte schade, waaronder gevolgschade, gederfde winst en gemiste besparingen.</li>
+      </ul>
+    </li>
+    <li>Opdrachtgever meldt een gebeurtenis die tot aansprakelijkheid kan leiden schriftelijk aan opdrachtnemer binnen
+      een redelijke termijn nadat hij die heeft ontdekt of redelijkerwijs had kunnen ontdekken, zodat opdrachtnemer in
+      de gelegenheid is de gevolgen te beperken of te herstellen.</li>
+  </ol>
+
+  <div class="n">Artikel 10 — Vrijwaring</div>
+  <ol>
+    <li>Opdrachtgever vrijwaart opdrachtnemer tegen aanspraken van derden die verband houden met de uitvoering van de
+      opdracht, voor zover die voortvloeien uit door opdrachtgever verstrekte onjuiste of onvolledige informatie.</li>
+    <li>Deze vrijwaring geldt niet jegens opdrachtgevers die consument zijn, voor zover zij in strijd zou komen met
+      dwingend consumentenrecht.</li>
+  </ol>
+
+  <div class="n">Artikel 11 — Klachten</div>
+  <ol>
+    <li>Klachten meldt opdrachtgever schriftelijk aan opdrachtnemer. Opdrachtnemer bevestigt de ontvangst binnen
+      vijf werkdagen en reageert binnen vier weken schriftelijk en gemotiveerd.</li>
+    <li>Leidt de interne behandeling niet tot een oplossing, dan kan opdrachtgever de klacht binnen drie maanden na de
+      schriftelijke reactie voorleggen aan het Klachteninstituut Financiële Dienstverlening (Kifid), waarbij
+      opdrachtnemer is aangesloten onder nummer 999.999999.</li>
+    <li>Opdrachtgever behoudt het recht het geschil aan de bevoegde rechter voor te leggen.</li>
+  </ol>
+
+  <div class="n">Artikel 12 — Persoonsgegevens en geheimhouding</div>
+  <ol>
+    <li>Opdrachtnemer verwerkt persoonsgegevens in overeenstemming met de Algemene verordening gegevensbescherming en
+      de op haar website gepubliceerde privacyverklaring.</li>
+    <li>Partijen behandelen alle informatie die zij over elkaar verkrijgen vertrouwelijk, behoudens een wettelijke
+      verplichting tot verstrekking.</li>
+    <li>Opdrachtnemer bewaart het dossier gedurende de wettelijke bewaartermijn van ten minste vijf jaar na afloop van
+      de dienstverlening.</li>
+  </ol>
+
+  <div class="n">Artikel 13 — Intellectuele eigendom</div>
+  <ol>
+    <li>Alle rechten op door opdrachtnemer vervaardigde adviezen, berekeningen, rapporten en modellen berusten bij
+      opdrachtnemer.</li>
+    <li>Opdrachtgever mag deze stukken uitsluitend gebruiken voor het doel waarvoor zij zijn verstrekt en niet zonder
+      schriftelijke toestemming verveelvoudigen of aan derden ter beschikking stellen, behoudens verstrekking aan de
+      eigen adviseurs van opdrachtgever.</li>
+  </ol>
+
+  <div class="n">Artikel 14 — Toepasselijk recht en bevoegde rechter</div>
+  <ol>
+    <li>Op alle overeenkomsten is Nederlands recht van toepassing.</li>
+    <li>Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement waar opdrachtnemer is gevestigd. Is
+      opdrachtgever consument, dan heeft hij gedurende een maand nadat opdrachtnemer zich op deze bepaling heeft
+      beroepen, het recht te kiezen voor de volgens de wet bevoegde rechter.</li>
+  </ol>
+
+  <div class="meta">Demo Hypotheek kantoor B.V. · Demostraat 12, Demostad · KvK 99999999 · AFM 99999999 · Kifid 999.999999 ·
+    algemene voorwaarden versie 1.0, 13 oktober 2026</div>
+</template>
+
+<template id="doc-dw">
+  <h4>Wie wij zijn</h4>
+  <table>
+    <tr><td>Statutaire naam</td><td>Demo Hypotheek kantoor B.V.</td></tr>
+    <tr><td>Bezoekadres</td><td>Demostraat 12, 1234 AB Demostad</td></tr>
+    <tr><td>Telefoon / e-mail</td><td>085 - 000 00 00 · info@demohypotheekkantoor.nl</td></tr>
+    <tr><td>KvK-nummer</td><td>99999999 <i>(demonummer)</i></td></tr>
+    <tr><td>AFM-vergunningnummer</td><td>99999999 <i>(demonummer — niet geldig, niet terug te vinden in het AFM-register)</i></td></tr>
+    <tr><td>Kifid-aansluitnummer</td><td>999.999999 <i>(demonummer)</i></td></tr>
+    <tr><td>Beroepsaansprakelijkheid</td><td>Verzekerd bij Demo Schadeverzekeringen N.V., conform de wettelijke minimumbedragen</td></tr>
+  </table>
+
+  <h4>Waarover wij mogen adviseren</h4>
+  <p>Onze vergunning geldt voor adviseren en bemiddelen in hypothecair krediet en in de verzekeringen die daarmee
+     samenhangen (inkomensverzekeringen en overlijdensrisicoverzekering). Buiten die reikwijdte adviseren wij niet.
+     Vragen over bijvoorbeeld beleggen, pensioenregelingen, schadeverzekeringen of fiscale aangifte vallen niet onder
+     onze dienstverlening; daarvoor verwijzen wij u door.</p>
+
+  <h4>Met welke aanbieders wij werken</h4>
+  <p>Wij zijn niet verbonden aan één aanbieder en hebben geen aandelenbelang in een geldverstrekker of verzekeraar;
+     ook heeft geen aanbieder een belang in ons kantoor.</p>
+  <p>Wij vergelijken het aanbod van een selectie van 18 geldverstrekkers en 7 verzekeraars. Dat is dus niet
+     het volledige marktaanbod. Welke partijen dat zijn en hoe wij de selectie maken, staat in de vergelijkingskaart die
+     u bij het advies ontvangt.</p>
+
+  <h4>Hoe wij worden beloond</h4>
+  <p>Voor hypotheken en overlijdensrisicoverzekeringen betaalt u ons rechtstreeks, tegen een vast tarief dat vooraf
+     bekend is. Wij ontvangen voor deze producten geen vergoeding van geldverstrekkers of verzekeraars; dat is
+     wettelijk niet toegestaan. Ons tarief hangt niet af van welke aanbieder u kiest of van de hoogte van uw hypotheek.</p>
+  <p>Vóór het adviesgesprek ontvangt u ons dienstverleningsdocument. Dat is een wettelijk voorgeschreven
+     standaardformulier waarmee u onze dienstverlening en kosten kunt vergelijken met die van andere kantoren.</p>
+
+  <h4>Wat onze opdracht omvat — en wat niet</h4>
+  <p>Voordat wij beginnen ontvangt u een opdracht tot dienstverlening met daarin de omvang van onze werkzaamheden, de
+     kosten en het moment waarop onze opdracht eindigt. Onze opdracht eindigt in beginsel bij het passeren van de
+     hypotheekakte. Daarna volgen wij uw hypotheek niet meer, tenzij u een aparte beheerovereenkomst met ons sluit.</p>
+
+  <h4>Hoe wij met uw gegevens omgaan</h4>
+  <p>Voor ons advies verwerken wij persoonsgegevens: naam en contactgegevens, inkomens- en vermogensgegevens, gegevens
+     over uw woning en soms gezondheidsgegevens wanneer u een overlijdensrisicoverzekering aanvraagt. Wij verwerken
+     deze gegevens om de overeenkomst met u uit te voeren en om te voldoen aan wettelijke verplichtingen;
+     gezondheidsgegevens uitsluitend met uw uitdrukkelijke toestemming.</p>
+  <p>Wij delen uw gegevens met de aanbieder waar wij uw aanvraag indienen en met leveranciers van onze advies- en
+     dossiersoftware, met wie wij verwerkersovereenkomsten hebben gesloten. Uw adviesdossier bewaren wij ten minste
+     vijf jaar na afloop van onze dienstverlening, omdat de wet dat voorschrijft.</p>
+  <p>U kunt uw gegevens inzien, laten corrigeren of laten verwijderen en bezwaar maken tegen de verwerking. Stuur
+     daarvoor een bericht aan info@demohypotheekkantoor.nl. Bent u het oneens met onze reactie, dan kunt u een klacht indienen bij de
+     Autoriteit Persoonsgegevens.</p>
+
+  <h4>Als u een klacht heeft</h4>
+  <p>Laat het ons eerst zelf weten via info@demohypotheekkantoor.nl of 085 - 000 00 00. U ontvangt binnen vijf werkdagen een
+     bevestiging en binnen vier weken een schriftelijke reactie. Uw klacht wordt behandeld door iemand die niet bij
+     uw dossier betrokken was. Komen wij er samen niet uit, dan kunt u uw klacht binnen drie maanden voorleggen aan het
+     Klachteninstituut Financiële Dienstverlening (Kifid), aansluitnummer 999.999999. U kunt uw klacht ook aan de rechter
+     voorleggen.</p>
+
+  <div class="meta">Demo Hypotheek kantoor B.V. · Demostraat 12, Demostad · KvK 99999999 · AFM 99999999 · Kifid 999.999999 ·
+    dienstenwijzer versie 1.0, 13 oktober 2026</div>
+</template>
+
+<div id="cookie">
+  <p>Deze website gebruikt alleen functionele cookies die nodig zijn om de site te laten werken. Er worden geen
+     analyse- of advertentiecookies geplaatst en uw surfgedrag wordt niet gevolgd.</p>
+  <div class="row">
+    <button class="btn" onclick="document.getElementById('cookie').style.display='none'">Begrepen</button>
+    <a href="#dienstenwijzer" class="btn ghost" onclick="document.getElementById('cookie').style.display='none'">Lees meer</a>
+  </div>
+</div>
+
+<script>
+document.getElementById("jaar").textContent = new Date().getFullYear();
+
+function acc(btn){
+  const item = btn.parentElement;
+  const wasOpen = item.classList.contains("open");
+  document.querySelectorAll(".acc-item").forEach(i=>i.classList.remove("open"));
+  if(!wasOpen) item.classList.add("open");
+}
+
+function submitForm(e){
+  e.preventDefault();
+  // Demo: geen externe verzending. Koppel hier uw eigen formulierafhandeling aan.
+  document.getElementById("formmsg").style.display="block";
+  e.target.querySelector("button[type=submit]").disabled = true;
+  return false;
+}
+
+document.querySelectorAll('.nav-links a').forEach(a=>
+  a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+
+/* ---- documentvenster ---- */
+const DOCTITELS = {
+  otd: "Opdracht tot dienstverlening — modelversie",
+  av:  "Algemene voorwaarden",
+  dw:  "Dienstenwijzer"
+};
+let huidigDoc = null;
+
+function openDoc(id){
+  const tpl = document.getElementById("doc-"+id);
+  if(!tpl) return;
+  huidigDoc = id;
+  document.getElementById("ovtitle").textContent = DOCTITELS[id] || "";
+  const body = document.getElementById("ovbody");
+  body.innerHTML = "";
+  body.appendChild(tpl.content.cloneNode(true));
+  body.scrollTop = 0;
+  document.getElementById("ov").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDoc(){
+  document.getElementById("ov").classList.remove("open");
+  document.body.style.overflow = "";
+  huidigDoc = null;
+}
+
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeDoc(); });
+
+function printDoc(){
+  // window.print() wordt in iframes (o.a. Google Sites) geblokkeerd — daarom via een eigen venster
+  if(!huidigDoc) return;
+  const w = window.open("", "_blank");
+  if(!w){ alert("Sta pop-ups toe om dit document te kunnen printen."); return; }
+  const titel = DOCTITELS[huidigDoc] || "Document";
+  const css = `
+    body{font-family:Georgia,'Times New Roman',serif;color:#333;line-height:1.55;font-size:11pt;
+      max-width:17cm;margin:0 auto;padding:18mm 0}
+    h1{font-size:19pt;color:#003057;font-weight:400;margin:0 0 4px;border-bottom:3px solid #003057;padding-bottom:10px}
+    .kopregel{font-size:9pt;color:#78848f;margin:0 0 22px}
+    h4{font-size:12pt;color:#003057;margin:20px 0 7px;page-break-after:avoid}
+    .n{font-size:9.5pt;font-weight:700;color:#8a6212;letter-spacing:.05em;text-transform:uppercase;
+      margin:20px 0 3px;page-break-after:avoid}
+    p{margin:0 0 9px}
+    ol,ul{margin:0 0 11px 20px}
+    li{margin-bottom:5px}
+    table{width:100%;border-collapse:collapse;font-size:10pt;margin:11px 0 16px;page-break-inside:avoid}
+    td{padding:7px 9px;border-bottom:1px solid #dde5ec;vertical-align:top}
+    td:first-child{font-weight:700;width:36%}
+    .box{border-left:3px solid #003057;padding:11px 15px;margin:12px 0;background:#fafcfd}
+    .box p:last-child{margin-bottom:0}
+    .meta{font-size:8.5pt;color:#78848f;border-top:1px solid #dde5ec;padding-top:12px;margin-top:24px}
+    @page{margin:18mm 16mm}
+  `;
+  w.document.write("<!DOCTYPE html><html lang='nl'><head><meta charset='utf-8'><title>"+titel+"</title>");
+  w.document.write("<style>"+css+"</style></head><body>");
+  w.document.write("<h1>"+titel+"</h1><div class='kopregel'>Demo Hypotheek kantoor B.V. · AFM 99999999 · Kifid 999.999999 · versie 1.0, 13 oktober 2026</div>");
+  w.document.write(document.getElementById("ovbody").innerHTML);
+  w.document.write("</body></html>");
+  w.document.close();
+  w.focus();
+  setTimeout(()=>w.print(), 350);
+}
+</script>
+</body>
+</html>
