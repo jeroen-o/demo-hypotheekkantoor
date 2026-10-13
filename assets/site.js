@@ -68,6 +68,21 @@
     });
   });
 
+  /* ---- logocarrousel pauzeren ----
+     Hover werkt niet op een touchscreen, dus er is een echte knop nodig. */
+  var pauzeknop = document.getElementById("logopauze");
+  var carrousel = document.querySelector(".logo-carrousel");
+  if (pauzeknop && carrousel) {
+    var tekst = pauzeknop.querySelector(".tekst");
+    var icoon = pauzeknop.querySelector(".ic");
+    pauzeknop.addEventListener("click", function () {
+      var stil = carrousel.classList.toggle("stil");
+      pauzeknop.setAttribute("aria-pressed", stil ? "true" : "false");
+      if (tekst) tekst.textContent = stil ? "Laat het weer schuiven" : "Pauzeer het schuiven";
+      if (icoon) icoon.innerHTML = stil ? "&#9654;" : "&#10073;&#10073;";
+    });
+  }
+
   /* ---- cookiemelding ----
      Keuze geldt voor deze browsersessie. Bewust geen localStorage: die wordt
      geblokkeerd wanneer de site in een iframe (bijv. Google Sites) staat. */

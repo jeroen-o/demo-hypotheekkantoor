@@ -129,6 +129,13 @@ section.alt .tool{background:#fff}
 @keyframes logoschuif{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .logo-rail:hover .logo-track,
 .logo-rail:focus-within .logo-track{animation-play-state:paused}
+.logo-carrousel.stil .logo-track{animation-play-state:paused}
+.logo-pauze{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:#fff;
+  border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-family:inherit;font-size:14px;
+  font-weight:600;color:var(--primary);cursor:pointer}
+.logo-pauze:hover{background:#eef4f8}
+.logo-pauze .ic{font-size:11px;letter-spacing:1px;line-height:1}
+.logo-pauze[aria-pressed="true"] .ic{letter-spacing:0}
 @media (prefers-reduced-motion:reduce){
   .logo-track{animation:none}
   .logo-rail{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
