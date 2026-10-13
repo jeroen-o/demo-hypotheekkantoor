@@ -211,6 +211,9 @@ footer h2{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.04em;text
 footer a{color:#b9cddc;text-decoration:none;display:block;margin-bottom:7px}
 footer a:hover{color:var(--accent);text-decoration:underline}
 footer p{color:#9fbdd3}
+.f-licenties{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:18px 26px;
+  border-top:1px solid rgba(255,255,255,.16);padding-top:24px;margin-bottom:26px;font-size:13px;color:#9fbdd3}
+.f-licenties b{color:#fff;display:block;font-size:14px;font-weight:700;margin-bottom:2px}
 .legal{border-top:1px solid rgba(255,255,255,.16);padding-top:22px;font-size:13px;color:#8aa7bd;
   display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
