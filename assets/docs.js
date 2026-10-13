@@ -10,14 +10,15 @@
     av:    { titel: "Algemene voorwaarden",                       versie: "versie 1.0, 13 oktober 2026" },
     dw:    { titel: "Dienstenwijzer",                             versie: "versie 1.0, 13 oktober 2026" },
     beheer:{ titel: "Beheerovereenkomst — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
-    dvd:   { titel: "Dienstverleningsdocument — voorbeeld",       versie: "voorbeeldversie 1.0, 13 oktober 2026" },
-    vgk:   { titel: "Vergelijkingskaart aanbieders",              versie: "versie 1.0, 13 oktober 2026" },
-    dvdr:  { titel: "Dienstverleningsdocument risico's afdekken — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },
-    vgkr:  { titel: "Vergelijkingskaart verzekeringen",        versie: "versie 1.0, 13 oktober 2026" },
+    dvd:   { titel: "Vergelijkingskaart hypotheekvraag — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },
+    vgk:   { titel: "Overzicht van onze geldverstrekkers",        versie: "versie 1.0, 13 oktober 2026" },
+    dvdr:  { titel: "Vergelijkingskaart risico's afdekken — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },
+    vgkr:  { titel: "Overzicht van onze verzekeraars",           versie: "versie 1.0, 13 oktober 2026" },
     wwft:  { titel: "Identificatie en Wwft",                   versie: "versie 1.0, 13 oktober 2026" },
     incasso:{titel: "Machtiging automatische incasso — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     disc:  { titel: "Disclaimer",                              versie: "versie 1.0, 13 oktober 2026" },
-    cook:  { titel: "Cookieverklaring",                        versie: "versie 1.0, 13 oktober 2026" }
+    cook:  { titel: "Cookieverklaring",                        versie: "versie 1.0, 13 oktober 2026" },
+    herroep:{titel: "Modelformulier herroeping",               versie: "modelversie 1.0, 13 oktober 2026" }
   };
 
   var ov      = document.getElementById("ov");
