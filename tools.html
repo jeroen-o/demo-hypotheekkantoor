@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekentools — Demo Hypotheek kantoor (demo)</title>
+<meta name="description" content="Reken zelf: maximale hypotheek, maandlasten, rentevergelijking, aflossen of sparen, overlijdensrisico en verduurzaming. Voorbeeldwebsite met fictieve gegevens.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeroen-o.github.io/demo-hypotheekkantoor/tools.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Demo Hypotheek kantoor">
+<meta property="og:title" content="Rekentools — Demo Hypotheek kantoor (demo)">
+<meta property="og:description" content="Reken zelf: maximale hypotheek, maandlasten, rentevergelijking, aflossen of sparen.">
+<meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/tools.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Naar de hoofdinhoud</a>
+
+<div class="demobar">
+  <b>Demo-omgeving.</b> Deze website is een voorbeeld. <b>Demo Hypotheek kantoor</b> bestaat niet:
+  naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
+  Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
+  e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
+</div>
+
+<nav aria-label="Hoofdmenu">
+  <div class="wrap">
+    <a href="index.html" class="logo">Demo Hypotheek<span> kantoor</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="risicos.html">Risico&#39;s</a>
+      <a href="tools.html">Rekentools</a>
+      <a href="nazorg.html">Nazorg</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="contact.html" class="btn">Afspraak maken</a>
+    </div>
+    <button id="burger" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="pagehead">
+  <div class="wrap">
+    <div class="eyebrow">Rekentools</div>
+    <h1>Reken eerst zelf, dan praten we verder</h1>
+    <p>23 hulpmiddelen waarmee u zelf een beeld krijgt. Een uitkomst hier is een indicatie, geen advies en
+       geen aanbod: pas als wij uw volledige situatie kennen, kunnen wij zeggen wat bij u past.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="note">
+      <b>Over deze hulpmiddelen.</b> De rekentools worden geleverd door Hypotheekbond en geladen vanaf hun servers.
+      Wat u invult, gaat naar die partij en niet naar ons, tenzij u het zelf verstuurt. De uitkomsten zijn gebaseerd
+      op standaardaannames en op de tarieven van dit moment; die veranderen. Aan een berekening kunt u geen rechten
+      ontlenen en een geldverstrekker beslist altijd zelf over uw aanvraag.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Rekenhulp</div>
+    <h2>Oriënteren</h2>
+    <p class="sub">Beginnen bij het begin: wat is haalbaar en wat past bij uw situatie?</p>
+    <div class="tool" id="maximale-hypotheek">
+      <h3>Maximale hypotheek</h3>
+      <p>Een eerste indicatie van wat u kunt lenen op basis van de actuele leennormen.</p>
+      <iframe
+        title="Maximale hypotheek"
+        data-hypotheekbond-tool="maxmortgage-iframe"
+        data-auto-scrolling="enabled"
+        src="https://6199073b-9be6-4888-b2bd-54f1625f9d88.tools.hypotheekbond.nl/maxmortgage"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="kan-ik-deze-woning-kopen">
+      <h3>Kan ik deze woning kopen?</h3>
+      <p>Vul een woning in en zie of de financiering binnen uw mogelijkheden valt.</p>
+      <iframe
+        title="Kan ik deze woning kopen?"
+        data-hypotheekbond-tool="kidwk-iframe"
+        data-auto-scrolling="enabled"
+        src="https://16ca0bc6-6452-4a1d-a31d-8bba9e4b3694.tools.hypotheekbond.nl/kidwk"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="huren-of-kopen">
+      <h3>Huren of kopen</h3>
+      <p>Vergelijk wat huren en kopen u op termijn kosten.</p>
+      <iframe
+        title="Huren of kopen"
+        data-hypotheekbond-tool="hnk-iframe"
+        data-auto-scrolling="enabled"
+        src="https://be44968e-a556-412b-92f6-75e8532a7e68.tools.hypotheekbond.nl/hnk"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="woningwaarde">
+      <h3>Woningwaarde</h3>
+      <p>Een indicatie van de waarde van een woning, bruikbaar als vertrekpunt.</p>
+      <iframe
+        title="Woningwaarde"
+        data-hypotheekbond-tool="woningwaarde-iframe"
+        data-auto-scrolling="enabled"
+        src="https://edb1a9d9-1f37-48d7-b16f-545779d5da0c.tools.hypotheekbond.nl/woningwaarde"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="zelfreflectie">
+      <h3>Zelfreflectie</h3>
+      <p>Een korte vragenlijst over hoeveel zekerheid u wilt en welk risico bij u past.</p>
+      <iframe
+        title="Zelfreflectie"
+        data-hypotheekbond-tool="zelfreflectie-iframe"
+        data-auto-scrolling="enabled"
+        src="https://f99abedd-a8d2-449b-bec7-fc4f2a143b08.tools.hypotheekbond.nl/zelfreflectie"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="inventarisatie">
+      <h3>Inventarisatie</h3>
+      <p>Lever uw gegevens veilig digitaal aan, zodat het eerste gesprek over inhoud kan gaan.</p>
+      <iframe
+        title="Inventarisatie"
+        data-hypotheekbond-tool="inventarisatie-iframe"
+        data-auto-scrolling="enabled"
+        src="https://inventarisatie.hypotheekbond.nl/ec6ac04e-108a-4b55-add1-0f153a392a1b"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Rekenhulp</div>
+    <h2>Rente</h2>
+    <p class="sub">Welk tarief geldt waar, en wat betekent uw rentevaste periode?</p>
+    <div class="tool" id="rente-top-5">
+      <h3>Rente top 5</h3>
+      <p>De vijf scherpste tarieven van dit moment, per rentevaste periode.</p>
+      <iframe
+        title="Rente top 5"
+        data-hypotheekbond-tool="rente-top-5-iframe"
+        data-auto-scrolling="enabled"
+        src="https://f3ec66f0-b653-4c26-96ec-4976775dd9db.tools.hypotheekbond.nl/rente-top-5"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="renteoverzicht">
+      <h3>Renteoverzicht</h3>
+      <p>De actuele tarieven van de geldverstrekkers waarmee wij werken.</p>
+      <iframe
+        title="Renteoverzicht"
+        data-hypotheekbond-tool="renteoverzicht-iframe"
+        data-auto-scrolling="enabled"
+        src="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="volledig-renteoverzicht">
+      <h3>Volledig renteoverzicht</h3>
+      <p>Hetzelfde overzicht, maar dan met alle looptijden en risicoklassen.</p>
+      <iframe
+        title="Volledig renteoverzicht"
+        data-hypotheekbond-tool="renteoverzicht-all-iframe"
+        data-auto-scrolling="enabled"
+        src="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht/all"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="topafslag">
+      <h3>Topafslag</h3>
+      <p>Zie wat een lagere verhouding tussen lening en woningwaarde aan rentekorting oplevert.</p>
+      <iframe
+        title="Topafslag"
+        data-hypotheekbond-tool="topafslag-iframe"
+        data-auto-scrolling="enabled"
+        src="https://1ec2bc29-eceb-4818-80e2-cdd572ce1d23.tools.hypotheekbond.nl/topafslag"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="maandlast-per-rentevaste-periode">
+      <h3>Maandlast per rentevaste periode</h3>
+      <p>Wat kost dezelfde hypotheek bij 5, 10, 20 of 30 jaar vast?</p>
+      <iframe
+        title="Maandlast per rentevaste periode"
+        data-hypotheekbond-tool="looptijdrente-iframe"
+        data-auto-scrolling="enabled"
+        src="https://72189f23-aecd-4f66-be84-7d2f2f9c1fce.tools.hypotheekbond.nl/looptijdrente"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Rekenhulp</div>
+    <h2>Maandlasten</h2>
+    <p class="sub">Wat betaalt u nu, en wat straks?</p>
+    <div class="tool" id="maandlastengrafiek">
+      <h3>Maandlastengrafiek</h3>
+      <p>Het verloop van uw lasten over de hele looptijd, in beeld.</p>
+      <iframe
+        title="Maandlastengrafiek"
+        data-hypotheekbond-tool="maandlastengrafiek-iframe"
+        data-auto-scrolling="enabled"
+        src="https://7c716e32-526b-4f92-a06b-024963508e82.tools.hypotheekbond.nl/maandlastengrafiek"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="hypotheek-nu-en-straks">
+      <h3>Hypotheek nu en straks</h3>
+      <p>Wat gebeurt er met uw lasten na afloop van de rentevaste periode?</p>
+      <iframe
+        title="Hypotheek nu en straks"
+        data-hypotheekbond-tool="hns-iframe"
+        data-auto-scrolling="enabled"
+        src="https://091426e9-5cfa-4fca-ac40-9d7c088e2233.tools.hypotheekbond.nl/hns"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="bespaarcheck">
+      <h3>Bespaarcheck</h3>
+      <p>Kijk of uw huidige hypotheek nog marktconform is.</p>
+      <iframe
+        title="Bespaarcheck"
+        data-hypotheekbond-tool="hypotheekbespaarcheck-iframe"
+        data-auto-scrolling="enabled"
+        src="https://747da3c5-8036-444f-83ec-58544e29d5ce.tools.hypotheekbond.nl/hypotheekbespaarcheck"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Rekenhulp</div>
+    <h2>Aflossen en sparen</h2>
+    <p class="sub">Wat levert extra aflossen op, en wanneer is sparen verstandiger?</p>
+    <div class="tool" id="hoeveel-wilt-u-aflossen">
+      <h3>Hoeveel wilt u aflossen?</h3>
+      <p>Bepaal welk bedrag u extra wilt aflossen en wat dat scheelt.</p>
+      <iframe
+        title="Hoeveel wilt u aflossen?"
+        data-hypotheekbond-tool="hoeveel-aflossen-iframe"
+        data-auto-scrolling="enabled"
+        src="https://bb0f8705-be7b-42c3-a353-c04d9faf7f26.tools.hypotheekbond.nl/hoeveel-aflossen"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="maandlasten-bij-aflossen">
+      <h3>Maandlasten bij aflossen</h3>
+      <p>Het effect van extra aflossen op uw maandlast.</p>
+      <iframe
+        title="Maandlasten bij aflossen"
+        data-hypotheekbond-tool="maandlasten-bij-aflossen-iframe"
+        data-auto-scrolling="enabled"
+        src="https://58af877f-e368-4aed-abb7-57573219bd60.tools.hypotheekbond.nl/maandlasten-bij-aflossen"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="vast-bedrag-per-maand-aflossen">
+      <h3>Vast bedrag per maand aflossen</h3>
+      <p>Wat levert een vast extra bedrag per maand op over de looptijd?</p>
+      <iframe
+        title="Vast bedrag per maand aflossen"
+        data-hypotheekbond-tool="vast-bedrag-per-maand-iframe"
+        data-auto-scrolling="enabled"
+        src="https://b2c44b72-9091-4e08-b4b4-85a8c0e77d63.tools.hypotheekbond.nl/vast-bedrag-per-maand"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="aflossen-of-beleggen">
+      <h3>Aflossen of beleggen</h3>
+      <p>Een vergelijking van beide routes, met hun eigen onzekerheden.</p>
+      <iframe
+        title="Aflossen of beleggen"
+        data-hypotheekbond-tool="aflossen-of-beleggen-iframe"
+        data-auto-scrolling="enabled"
+        src="https://c5267d9a-f89a-416c-9c1e-2d8a2a020bf9.tools.hypotheekbond.nl/aflossen-of-beleggen"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="hoeveel-levert-sparen-op">
+      <h3>Hoeveel levert sparen op?</h3>
+      <p>Bereken wat sparen oplevert bij de huidige rente.</p>
+      <iframe
+        title="Hoeveel levert sparen op?"
+        data-hypotheekbond-tool="hoeveel-levert-sparen-op-iframe"
+        data-auto-scrolling="enabled"
+        src="https://e87d3ef8-c0bc-4317-9486-e5ac64279541.tools.hypotheekbond.nl/hoeveel-levert-sparen-op"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="spaarrente-top-10">
+      <h3>Spaarrente top 10</h3>
+      <p>De tien hoogste spaarrentes van dit moment.</p>
+      <iframe
+        title="Spaarrente top 10"
+        data-hypotheekbond-tool="spaar-rente-iframe"
+        data-auto-scrolling="enabled"
+        src="https://dcc95cc3-4597-4777-9f02-97126980bf5e.tools.hypotheekbond.nl/spaar-rente"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Rekenhulp</div>
+    <h2>Risico's en verduurzaming</h2>
+    <p class="sub">Wat als het anders loopt, en wat levert verduurzamen op?</p>
+    <div class="tool" id="overlijdensrisicoverzekering">
+      <h3>Overlijdensrisicoverzekering</h3>
+      <p>Een indicatie van de premie bij verschillende verzekerde bedragen.</p>
+      <iframe
+        title="Overlijdensrisicoverzekering"
+        data-hypotheekbond-tool="orv-iframe"
+        data-auto-scrolling="enabled"
+        src="https://5f0e35a1-0f78-46e5-b5b5-9e4867503a4f.tools.hypotheekbond.nl/orv"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+    <div class="tool" id="duurzaamheidsprofiel">
+      <h3>Duurzaamheidsprofiel</h3>
+      <p>Welke maatregelen passen bij uw woning en wat besparen ze?</p>
+      <iframe
+        title="Duurzaamheidsprofiel"
+        data-hypotheekbond-tool="duurzaamheidsprofiel-iframe"
+        data-auto-scrolling="enabled"
+        src="https://duurzaamheidsprofiel.hypotheekbond.nl"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Rekenhulp</div>
+    <h2>Formulieren</h2>
+    <p class="sub">Stukken die u toch moet aanleveren, digitaal in te vullen.</p>
+    <div class="tool" id="werkgeversverklaring">
+      <h3>Werkgeversverklaring</h3>
+      <p>Het landelijke model, digitaal in te vullen door uw werkgever.</p>
+      <iframe
+        title="Werkgeversverklaring"
+        data-hypotheekbond-tool="werkgeversverklaring-iframe"
+        data-auto-scrolling="enabled"
+        src="https://formulier.werkgeversverklaring.nl"
+        style="width:100%;border:0"
+        scrolling="no"
+        loading="lazy"
+        referrerpolicy="origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Uitkomst onduidelijk?</h2>
+    <p class="sub">Een rekentool kent uw situatie niet. Wij wel, zodra u ons die vertelt. Een kennismaking is
+       kosteloos en u zit nergens aan vast.</p>
+    <a href="contact.html" class="btn">Plan een kennismaking</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h2>Demo Hypotheek kantoor</h2>
+        <p>Advies en bemiddeling bij hypotheken.<br>Demostraat 12, 1234 AB Demostad</p>
+      </div>
+      <div><h2>Dienstverlening</h2>
+        <a href="werkwijze.html">Werkwijze</a><a href="adviesproces.html">Zo komt ons advies tot stand</a>
+        <a href="diensten.html">Diensten</a><a href="risicos.html">Risico&#39;s rond uw hypotheek</a>
+        <a href="tools.html">Rekentools</a>
+        <a href="verduurzaming.html">Verduurzaming en fundering</a>
+        <a href="nazorg.html">Onderhoud en nazorg</a><a href="kosten.html">Kosten</a>
+        <a href="vragen.html">Veelgestelde vragen</a></div>
+      <div><h2>Transparantie</h2>
+        <a href="documenten.html#dw">Dienstenwijzer</a>
+        <a href="documenten.html#av">Algemene voorwaarden</a>
+        <a href="documenten.html#beheer">Beheerovereenkomst</a>
+        <a href="documenten.html#vgk">Vergelijkingskaart</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="over-ons.html#privacy">Privacy en klachten</a></div>
+      <div><h2>Toezicht</h2>
+        <a href="https://www.afm.nl/registers" target="_blank" rel="noopener">AFM-register</a>
+        <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>
+        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a></div>
+    </div>
+    <div class="f-licenties">
+      <div><b>AFM 99999999</b>Vergunning adviseren en bemiddelen</div>
+      <div><b>Kifid 999.999999</b>Aangesloten bij de geschilleninstantie</div>
+      <div><b>KvK 99999999</b>Ingeschreven te Demostad</div>
+      <div><b>Beroepsaansprakelijkheid</b>Verzekerd conform wettelijke eisen</div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="jaar"></span> Demo Hypotheek kantoor B.V. &middot; KvK 99999999 &middot; AFM 99999999 &middot; Kifid 999.999999</span>
+      <span>Voorbeeldwebsite met fictieve gegevens &mdash; geen bestaande onderneming, geen dienstverlening.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie" hidden>
+  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. De rekentools op deze
+     pagina worden geladen vanaf de servers van Hypotheekbond; die partij kan daarbij eigen gegevens plaatsen.</p>
+  <div class="row">
+    <button class="btn" type="button" data-cookie-ok>Begrepen</button>
+    <a href="over-ons.html#privacy" class="btn ghost" data-cookie-ok>Lees meer</a>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+<script src="https://s.hstatic.nl/js/iframe/iframeResizer.min.js"></script>
+</body>
+</html>
