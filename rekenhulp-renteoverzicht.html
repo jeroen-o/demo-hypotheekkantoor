@@ -164,16 +164,15 @@
 
 <section class="rekenhulp">
   <div class="wrap">
-    <iframe
-      title="Renteoverzicht"
-      data-hypotheekbond-tool="renteoverzicht-iframe"
-      data-auto-scrolling="enabled"
-      src="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht"
-      scrolling="no"
-      referrerpolicy="origin"
-    ></iframe>
-    <p class="hint">Deze rekenhulp wordt geleverd door Hypotheekbond en geladen vanaf hun servers. Wat u invult, gaat
-       naar die partij en niet naar ons, tenzij u het resultaat zelf naar ons stuurt.</p>
+    <div class="tool-laden" id="toollader">
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door <b>Hypotheekbond</b> en draait op hun servers. Klikt
+         u op de knop, dan laadt uw browser de tool van <b>tools.hypotheekbond.nl</b> en een hulpbestand van
+         <b>s.hstatic.nl</b>, en legt uw browser verbinding met die partij. Wat u invult gaat naar Hypotheekbond en
+         niet naar ons, tenzij u het resultaat zelf naar ons stuurt. Zolang u niet klikt, wordt er niets van die
+         partij geladen.</p>
+      <button class="btn" type="button" data-tool-start data-src="https://5c5db45d-edd6-43cc-85fe-7e6a4788db68.tools.hypotheekbond.nl/renteoverzicht" data-tool="renteoverzicht-iframe"
+        data-titel="Renteoverzicht">Rekenhulp laden</button>
+    </div>
   </div>
 </section>
 
@@ -240,8 +239,9 @@
 </footer>
 
 <div id="cookie" hidden>
-  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. De rekentools op deze
-     pagina openen op de website van Hypotheekbond; daar geldt het privacybeleid van die partij.</p>
+  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. De rekenhulp op deze
+     pagina wordt geleverd door Hypotheekbond en pas geladen nadat u daarop klikt; daar geldt het privacybeleid van
+     die partij.</p>
   <div class="row">
     <button class="btn" type="button" data-cookie-ok>Begrepen</button>
     <a href="over-ons.html#privacy" class="btn ghost" data-cookie-ok>Lees meer</a>
@@ -250,13 +250,5 @@
 
 <script src="assets/site.js"></script>
 <script src="assets/zoeken.js"></script>
-<script src="https://s.hstatic.nl/js/iframe/iframeResizer.min.js"></script>
-<script>
-  (function () {
-    var f = document.querySelector(".rekenhulp iframe");
-    function schaal() { if (window.iFrameResize) { try { window.iFrameResize({ checkOrigin: false }, f); } catch (e) {} } }
-    if (f) { f.addEventListener("load", schaal); setTimeout(schaal, 1200); }
-  })();
-</script>
 </body>
 </html>

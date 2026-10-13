@@ -147,3 +147,47 @@
     });
   }
 })();
+
+/* Rekenhulpen van Hypotheekbond: pas laden nadat de bezoeker daarom vraagt.
+   Zolang er niet geklikt is, legt de pagina geen verbinding met een derde partij. */
+(function () {
+  var knop = document.querySelector("[data-tool-start]");
+  if (!knop) return;
+  var houder = knop.closest(".tool-laden");
+  var resizerBezig = false;
+
+  function schaal(f) {
+    if (!window.iFrameResize) return;
+    try { window.iFrameResize({ checkOrigin: true, log: false }, f); } catch (e) {}
+  }
+
+  function resizer(f) {
+    if (resizerBezig) { schaal(f); return; }
+    resizerBezig = true;
+    var s = document.createElement("script");
+    s.src = "https://s.hstatic.nl/js/iframe/iframeResizer.min.js";
+    s.onload = function () { schaal(f); setTimeout(function () { schaal(f); }, 1200); };
+    document.body.appendChild(s);
+  }
+
+  knop.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.title = knop.getAttribute("data-titel") || "Rekenhulp";
+    f.setAttribute("data-hypotheekbond-tool", knop.getAttribute("data-tool") || "");
+    f.setAttribute("data-auto-scrolling", "enabled");
+    f.setAttribute("scrolling", "no");
+    f.setAttribute("referrerpolicy", "origin");
+    f.src = knop.getAttribute("data-src");
+    f.addEventListener("load", function () { resizer(f); });
+
+    var hint = document.createElement("p");
+    hint.className = "hint";
+    hint.innerHTML = "Deze rekenhulp is geladen vanaf de servers van Hypotheekbond. Wat u invult, gaat naar die " +
+      "partij en niet naar ons, tenzij u het resultaat zelf naar ons stuurt.";
+
+    var wrap = houder.parentNode;
+    wrap.replaceChild(f, houder);
+    wrap.appendChild(hint);
+    f.focus();
+  });
+})();

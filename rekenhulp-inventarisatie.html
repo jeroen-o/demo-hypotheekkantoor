@@ -164,31 +164,32 @@
 
 <section class="rekenhulp">
   <div class="wrap">
-    <iframe
-      title="Inventarisatie"
-      data-hypotheekbond-tool="inventarisatie-iframe"
-      data-auto-scrolling="enabled"
-      src="https://inventarisatie.hypotheekbond.nl/ec6ac04e-108a-4b55-add1-0f153a392a1b"
-      scrolling="no"
-      referrerpolicy="origin"
-    ></iframe>
-    <p class="hint">Deze rekenhulp wordt geleverd door Hypotheekbond en geladen vanaf hun servers. Wat u invult, gaat
-       naar die partij en niet naar ons, tenzij u het resultaat zelf naar ons stuurt.</p>
+    <div class="tool-laden" id="toollader">
+      <p class="tool-uitleg">Deze rekenhulp wordt geleverd door <b>Hypotheekbond</b> en draait op hun servers. Klikt
+         u op de knop, dan laadt uw browser de tool van <b>tools.hypotheekbond.nl</b> en een hulpbestand van
+         <b>s.hstatic.nl</b>, en legt uw browser verbinding met die partij. Wat u invult gaat naar Hypotheekbond en
+         en komt daarna bij ons terecht: dit formulier is er juist voor bedoeld om uw gegevens aan ons aan te
+         leveren, en wat u invult belandt in uw dossier. Zolang u niet klikt, wordt er niets van die partij
+         geladen.</p>
+      <button class="btn" type="button" data-tool-start data-src="https://inventarisatie.hypotheekbond.nl/ec6ac04e-108a-4b55-add1-0f153a392a1b" data-tool="inventarisatie-iframe"
+        data-titel="Inventarisatie">Rekenhulp laden</button>
+    </div>
   </div>
 </section>
 
 <section class="alt">
   <div class="wrap">
-    <h2>Wat zegt deze uitkomst wel en niet?</h2>
+    <h2>Wat gebeurt er met wat u invult?</h2>
     <div class="prose">
-      <p>De uitkomst is een indicatie op basis van standaardaannames en de tarieven van dit moment. Het is geen advies
-         en geen aanbod: een geldverstrekker beslist altijd zelf over uw aanvraag, en wat voor u passend is hangt af
-         van uw volledige situatie.</p>
-      <p>Wilt u weten wat de uitkomst voor u betekent, dan rekenen wij het door met uw eigen cijfers. De kennismaking
-         is kosteloos.</p>
+      <p>Dit is geen rekenhulp maar een invulformulier. Wat u hier invult, gebruiken wij als uitgangspunt voor het
+         gesprek en voor onze berekeningen. Het is nog geen advies en geen aanvraag: een geldverstrekker beslist
+         altijd zelf, en wat voor u passend is hangt af van uw volledige situatie.</p>
+      <p>Bedragen van bestaande voorzieningen nemen wij over zoals u ze opgeeft; polisvoorwaarden controleren wij
+         niet. Wat u niet onderbouwt, rekenen wij op nul. Daarna bespreken wij het met u door. De kennismaking is
+         kosteloos.</p>
     </div>
     <div class="hero-cta" style="margin-bottom:0;margin-top:22px">
-      <a href="contact.html" class="btn">Bespreek uw uitkomst</a>
+      <a href="contact.html" class="btn">Maak een afspraak</a>
       <a href="kosten.html" class="btn ghost">Wat kost advies?</a>
     </div>
     <p class="buren"><a href="rekenhulp-zelfreflectie.html">&larr; Zelfreflectie</a> &middot; <a href="tools.html">Alle rekenhulpen</a> &middot; <a href="rekenhulp-rente-top-5.html">Rente top 5 &rarr;</a></p>
@@ -240,8 +241,9 @@
 </footer>
 
 <div id="cookie" hidden>
-  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. De rekentools op deze
-     pagina openen op de website van Hypotheekbond; daar geldt het privacybeleid van die partij.</p>
+  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. De rekenhulp op deze
+     pagina wordt geleverd door Hypotheekbond en pas geladen nadat u daarop klikt; daar geldt het privacybeleid van
+     die partij.</p>
   <div class="row">
     <button class="btn" type="button" data-cookie-ok>Begrepen</button>
     <a href="over-ons.html#privacy" class="btn ghost" data-cookie-ok>Lees meer</a>
@@ -250,13 +252,5 @@
 
 <script src="assets/site.js"></script>
 <script src="assets/zoeken.js"></script>
-<script src="https://s.hstatic.nl/js/iframe/iframeResizer.min.js"></script>
-<script>
-  (function () {
-    var f = document.querySelector(".rekenhulp iframe");
-    function schaal() { if (window.iFrameResize) { try { window.iFrameResize({ checkOrigin: false }, f); } catch (e) {} } }
-    if (f) { f.addEventListener("load", schaal); setTimeout(schaal, 1200); }
-  })();
-</script>
 </body>
 </html>
