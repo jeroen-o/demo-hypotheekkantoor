@@ -20,13 +20,13 @@
 <meta property="og:image:alt" content="Demo Hypotheek kantoor — voorbeeldwebsite van een hypotheekadvieskantoor">
 <meta name="twitter:image" content="https://demo-hypotheek-kantoor.nl/assets/og-afbeelding.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" hreflang="nl" href="https://demo-hypotheek-kantoor.nl/index.html">
+<link rel="alternate" hreflang="nl" href="https://demo-hypotheek-kantoor.nl/">
 <link rel="alternate" hreflang="en" href="https://demo-hypotheek-kantoor.nl/en.html">
 <link rel="alternate" hreflang="de" href="https://demo-hypotheek-kantoor.nl/de.html">
 <link rel="alternate" hreflang="pl" href="https://demo-hypotheek-kantoor.nl/pl.html">
 <link rel="alternate" hreflang="es" href="https://demo-hypotheek-kantoor.nl/es.html">
 <link rel="alternate" hreflang="fr" href="https://demo-hypotheek-kantoor.nl/fr.html">
-<link rel="alternate" hreflang="x-default" href="https://demo-hypotheek-kantoor.nl/index.html">
+<link rel="alternate" hreflang="x-default" href="https://demo-hypotheek-kantoor.nl/">
 <meta name="geo.region" content="NL">
 <meta name="geo.placename" content="Demostad">
 <meta name="language" content="nl-NL">
@@ -90,10 +90,41 @@
  "makesOffer": [
   {
    "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "description": "Circa een uur, vrijblijvend",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
    "name": "Hypotheekadvies en bemiddeling",
+   "description": "Inventarisatie, schriftelijk advies, aanvraag en begeleiding tot het passeren. Toeslagen voor ondernemersinkomen, buitenlands inkomen of erfpacht.",
    "priceSpecification": {
     "@type": "PriceSpecification",
     "price": "2950",
+    "priceCurrency": "EUR",
+    "valueAddedTaxIncluded": false
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Oversluiten of wijzigen van een bestaande hypotheek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1750",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Ontslag hoofdelijke aansprakelijkheid",
+   "description": "Zonder wijziging van het leenbedrag; met verhoging of herfinanciering 1950 euro",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1250",
     "priceCurrency": "EUR"
    }
   },
@@ -108,15 +139,56 @@
   },
   {
    "@type": "Offer",
-   "name": "Kennismakingsgesprek",
+   "name": "Advies en bemiddeling arbeidsongeschiktheidsverzekering",
    "priceSpecification": {
     "@type": "PriceSpecification",
-    "price": "0",
+    "price": "1450",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Bemiddeling bankgarantie",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "250",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Losse adviesopdracht per uur",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
     "priceCurrency": "EUR"
    }
   }
  ],
- "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening.",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://demo-hypotheek-kantoor.nl/assets/logo.png",
+  "width": 512,
+  "height": 512
+ },
+ "image": "https://demo-hypotheek-kantoor.nl/assets/og-afbeelding.png",
+ "sameAs": [
+  "https://www.linkedin.com/company/demo-hypotheek-kantoor",
+  "https://www.facebook.com/demohypotheekkantoor",
+  "https://www.instagram.com/demohypotheekkantoor"
+ ],
+ "currenciesAccepted": "EUR",
+ "paymentAccepted": "Bankoverschrijving, via de nota van de notaris",
+ "slogan": "Eerst rekenen, dan pas praten over verzekeren",
+ "knowsLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ]
 }
 </script>
 <script type="application/ld+json">
@@ -157,6 +229,59 @@
    }
   ]
  }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "@id": "https://demo-hypotheek-kantoor.nl/werkwijze.html#werkwijze",
+ "name": "Zo verloopt een hypotheekaanvraag bij een onafhankelijk advieskantoor",
+ "description": "De vijf stappen van kennismaking tot het passeren van de akte, met per stap wat het kantoor doet en wat de klant zelf aanlevert.",
+ "totalTime": "P8W",
+ "inLanguage": "nl",
+ "estimatedCost": {
+  "@type": "MonetaryAmount",
+  "currency": "EUR",
+  "value": "2950"
+ },
+ "step": [
+  {
+   "@type": "HowToStep",
+   "position": 1,
+   "name": "Kennismaking",
+   "text": "Een gesprek van circa een uur waarin uw situatie, wensen en mogelijkheden aan bod komen. Kosteloos en vrijblijvend. Vóór dit gesprek ontvangt u de vergelijkingskaart, de dienstenwijzer en de algemene voorwaarden.",
+   "url": "https://demo-hypotheek-kantoor.nl/werkwijze.html"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 2,
+   "name": "Inventarisatie",
+   "text": "Uw inkomen, vermogen, lasten en bestaande voorzieningen worden vastgelegd, samen met uw kennis, ervaring, risicobereidheid en doelstellingen. U bevestigt die vastlegging voordat het advies wordt uitgebracht.",
+   "url": "https://demo-hypotheek-kantoor.nl/werkwijze.html"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 3,
+   "name": "Advies",
+   "text": "U ontvangt een schriftelijk advies met de vergeleken oplossingen, de aanbeveling, de reden waarom de alternatieven afvielen en de gebruikte aannames. Inclusief de scenario's voor arbeidsongeschiktheid, overlijden, werkloosheid, scheiding en rentestijging.",
+   "url": "https://demo-hypotheek-kantoor.nl/werkwijze.html"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 4,
+   "name": "Bemiddeling",
+   "text": "De aanvraag wordt ingediend bij de gekozen geldverstrekker, de stukken worden verzameld en er wordt binnen de afgesproken termijnen gewerkt. U wordt schriftelijk gewezen op de datum waarop uw ontbindende voorwaarden verlopen.",
+   "url": "https://demo-hypotheek-kantoor.nl/werkwijze.html"
+  },
+  {
+   "@type": "HowToStep",
+   "position": 5,
+   "name": "Passeren en afronding",
+   "text": "Afstemming met de notaris, controle van de hypotheekofferte en de conceptakte, en een afrondingsbericht met de data die u zelf bijhoudt. Daarna eindigt de opdracht.",
+   "url": "https://demo-hypotheek-kantoor.nl/werkwijze.html"
+  }
+ ]
 }
 </script>
 </head>

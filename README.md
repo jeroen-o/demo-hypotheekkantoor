@@ -113,7 +113,19 @@ Eenmalig in te stellen buiten deze repository:
   `hreflang` voor zes talen plus `x-default`, en JSON-LD met `FinancialService`, `WebPage` en
   `BreadcrumbList`. Op de homepage daarbij `WebSite` met een `SearchAction`; de zoekfunctie
   begrijpt daarom `?q=zoekterm` in de url.
-- De og-afbeelding staat in `assets/og-afbeelding.png`. Vervang die bij een eigen kantoor.
+- De og-afbeelding staat in `assets/og-afbeelding.png` en het vierkante logo voor de structured data in
+  `assets/logo.png`. Vervang beide bij een eigen kantoor.
+- Geen enkele pagina staat meer op `noindex`, ook `404.html` niet; die pagina wordt door de 404-status zelf al
+  buiten de index gehouden.
+- Titels blijven onder de 65 tekens en elke pagina heeft een eigen beschrijving van 70 tot 175 tekens; dat
+  bewaakt `tools/controle.py` niet, dus loop het na bij een nieuwe pagina.
+- Afbeeldingen hebben `width`, `height`, `loading="lazy"` en `decoding="async"`, zodat de 37 logo's op de
+  homepage de laadtijd en de layout shift niet beïnvloeden.
+- Extra structured data: `HowTo` met de vijf stappen op de werkwijzepagina, `OfferCatalog` met 61 geprijsde
+  diensten op de kostenpagina, en op elke pagina een `FinancialService` met logo, afbeelding, talen en acht
+  aanbiedingen met prijs. Dat is wat antwoordmachines uitlezen als zij een prijsvraag krijgen.
+- `llms.txt` sluit af met zes veelgestelde vragen met een kort antwoord, zodat een taalmodel het model van dit
+  kantoor kan citeren zonder de hele site te lezen.
 
 **Let op bij een echt kantoor.** De demo staat nu op indexeren met fictieve AFM-, KvK- en
 Kifid-nummers; die zijn in de footer uitdrukkelijk als fictief gemarkeerd en de demobalk staat op

@@ -20,13 +20,13 @@
 <meta property="og:image:alt" content="Demo Hypotheek kantoor — voorbeeldwebsite van een hypotheekadvieskantoor">
 <meta name="twitter:image" content="https://demo-hypotheek-kantoor.nl/assets/og-afbeelding.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" hreflang="nl" href="https://demo-hypotheek-kantoor.nl/index.html">
+<link rel="alternate" hreflang="nl" href="https://demo-hypotheek-kantoor.nl/">
 <link rel="alternate" hreflang="en" href="https://demo-hypotheek-kantoor.nl/en.html">
 <link rel="alternate" hreflang="de" href="https://demo-hypotheek-kantoor.nl/de.html">
 <link rel="alternate" hreflang="pl" href="https://demo-hypotheek-kantoor.nl/pl.html">
 <link rel="alternate" hreflang="es" href="https://demo-hypotheek-kantoor.nl/es.html">
 <link rel="alternate" hreflang="fr" href="https://demo-hypotheek-kantoor.nl/fr.html">
-<link rel="alternate" hreflang="x-default" href="https://demo-hypotheek-kantoor.nl/index.html">
+<link rel="alternate" hreflang="x-default" href="https://demo-hypotheek-kantoor.nl/">
 <meta name="geo.region" content="NL">
 <meta name="geo.placename" content="Demostad">
 <meta name="language" content="nl-NL">
@@ -90,10 +90,41 @@
  "makesOffer": [
   {
    "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "description": "Circa een uur, vrijblijvend",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
    "name": "Hypotheekadvies en bemiddeling",
+   "description": "Inventarisatie, schriftelijk advies, aanvraag en begeleiding tot het passeren. Toeslagen voor ondernemersinkomen, buitenlands inkomen of erfpacht.",
    "priceSpecification": {
     "@type": "PriceSpecification",
     "price": "2950",
+    "priceCurrency": "EUR",
+    "valueAddedTaxIncluded": false
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Oversluiten of wijzigen van een bestaande hypotheek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1750",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Ontslag hoofdelijke aansprakelijkheid",
+   "description": "Zonder wijziging van het leenbedrag; met verhoging of herfinanciering 1950 euro",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1250",
     "priceCurrency": "EUR"
    }
   },
@@ -108,15 +139,56 @@
   },
   {
    "@type": "Offer",
-   "name": "Kennismakingsgesprek",
+   "name": "Advies en bemiddeling arbeidsongeschiktheidsverzekering",
    "priceSpecification": {
     "@type": "PriceSpecification",
-    "price": "0",
+    "price": "1450",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Bemiddeling bankgarantie",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "250",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Losse adviesopdracht per uur",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
     "priceCurrency": "EUR"
    }
   }
  ],
- "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening.",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://demo-hypotheek-kantoor.nl/assets/logo.png",
+  "width": 512,
+  "height": 512
+ },
+ "image": "https://demo-hypotheek-kantoor.nl/assets/og-afbeelding.png",
+ "sameAs": [
+  "https://www.linkedin.com/company/demo-hypotheek-kantoor",
+  "https://www.facebook.com/demohypotheekkantoor",
+  "https://www.instagram.com/demohypotheekkantoor"
+ ],
+ "currenciesAccepted": "EUR",
+ "paymentAccepted": "Bankoverschrijving, via de nota van de notaris",
+ "slogan": "Eerst rekenen, dan pas praten over verzekeren",
+ "knowsLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ]
 }
 </script>
 <script type="application/ld+json">
@@ -157,6 +229,631 @@
    }
   ]
  }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "OfferCatalog",
+ "@id": "https://demo-hypotheek-kantoor.nl/kosten.html#tarieven",
+ "name": "Tarievenlijst Demo Hypotheek kantoor",
+ "inLanguage": "nl",
+ "description": "Alle 61 diensten met een vast tarief, elk met uitleg over wat het is en waarom het geld kost. Bedragen in euro, advies en bemiddeling bij hypotheken zijn vrijgesteld van btw.",
+ "provider": {
+  "@id": "https://demo-hypotheek-kantoor.nl/#kantoor"
+ },
+ "itemListElement": [
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling hypotheek, aankoop woning",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "2950",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief begeleiding tot het passeren"
+  },
+  {
+   "@type": "Offer",
+   "name": "Oversluiten of wijzigen bestaande hypotheek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1750",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bij een woning die u al bezit"
+  },
+  {
+   "@type": "Offer",
+   "name": "Verhoging of tweede hypotheek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1450",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bijvoorbeeld voor een verbouwing"
+  },
+  {
+   "@type": "Offer",
+   "name": "Onderhandse verhoging binnen de inschrijving",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "750",
+    "priceCurrency": "EUR"
+   },
+   "description": "Zonder notaris, als de ruimte er al is"
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies bij renteherziening of rentemiddeling",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   },
+   "description": "Einde rentevaste periode, met vergelijking"
+  },
+  {
+   "@type": "Offer",
+   "name": "Verhuis- of meeneemregeling toepassen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "950",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bestaande rente meenemen naar de nieuwe woning"
+  },
+  {
+   "@type": "Offer",
+   "name": "Losse overbruggingsfinanciering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "950",
+    "priceCurrency": "EUR"
+   },
+   "description": "Zonder dat wij uw hypotheek adviseren"
+  },
+  {
+   "@type": "Offer",
+   "name": "Bieden met zekerheid",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   },
+   "description": "Ons advies en de aanvraag; de premie van de verzekeraar komt daar bovenop"
+  },
+  {
+   "@type": "Offer",
+   "name": "Aflossen of aanpassen van een consumptief krediet",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "295",
+    "priceCurrency": "EUR"
+   },
+   "description": "Per krediet, in samenhang met uw hypotheekaanvraag"
+  },
+  {
+   "@type": "Offer",
+   "name": "Second opinion op een advies van een ander kantoor",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "595",
+    "priceCurrency": "EUR"
+   },
+   "description": "Schriftelijke beoordeling, geen bemiddeling"
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling overlijdensrisicoverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   },
+   "description": "Provisieverbod: u betaalt ons rechtstreeks"
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling arbeidsongeschiktheidsverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1450",
+    "priceCurrency": "EUR"
+   },
+   "description": "Provisieverbod: u betaalt ons rechtstreeks"
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling woonlasten- of betalingsbescherming",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "695",
+    "priceCurrency": "EUR"
+   },
+   "description": "Provisieverbod: u betaalt ons rechtstreeks"
+  },
+  {
+   "@type": "Offer",
+   "name": "Wijziging van een via ons lopende verzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "195",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bijvoorbeeld verzekerd bedrag of begunstiging"
+  },
+  {
+   "@type": "Offer",
+   "name": "Bemiddeling bankgarantie",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "250",
+    "priceCurrency": "EUR"
+   },
+   "description": "Niet onder het provisieverbod; de bank rekent zelf circa 1% van de garantiesom"
+  },
+  {
+   "@type": "Offer",
+   "name": "Controle opstalverzekering en doorgeven van de dekking",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief het doorgeven van wijzigingen aan uw verzekeraar"
+  },
+  {
+   "@type": "Offer",
+   "name": "Regelen van de taxatie",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "95",
+    "priceCurrency": "EUR"
+   },
+   "description": "De taxateur factureert zelf aan u"
+  },
+  {
+   "@type": "Offer",
+   "name": "Regelen van een bouwkundige keuring",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "95",
+    "priceCurrency": "EUR"
+   },
+   "description": "De keurder factureert zelf aan u"
+  },
+  {
+   "@type": "Offer",
+   "name": "Opvragen van een duurzaamheidsrapport",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "De energieadviseur factureert zelf aan u"
+  },
+  {
+   "@type": "Offer",
+   "name": "Regelen van een funderingscheck",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "Het onderzoeksbureau factureert zelf aan u"
+  },
+  {
+   "@type": "Offer",
+   "name": "Meegaan naar de notaris",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "295",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bij het passeren van de akte"
+  },
+  {
+   "@type": "Offer",
+   "name": "Uitstel van transport of verlenging ontbindende voorwaarden",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "195",
+    "priceCurrency": "EUR"
+   },
+   "description": "Per verzoek"
+  },
+  {
+   "@type": "Offer",
+   "name": "Starterslening of Duokoop begeleiden",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "450",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bovenop het hypotheekadvies"
+  },
+  {
+   "@type": "Offer",
+   "name": "Schenking uitwerken en doorrekenen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "395",
+    "priceCurrency": "EUR"
+   },
+   "description": "Notaris en fiscalist apart"
+  },
+  {
+   "@type": "Offer",
+   "name": "Familiehypotheek, volledig",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1450",
+    "priceCurrency": "EUR"
+   },
+   "description": "Advies, rekenwerk, modelovereenkomst en afstemming met de notaris"
+  },
+  {
+   "@type": "Offer",
+   "name": "Deel-familiehypotheek naast een bancaire hypotheek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "650",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bovenop het hypotheekadvies"
+  },
+  {
+   "@type": "Offer",
+   "name": "Draagplichtovereenkomst laten opstellen bij de notaris",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "345",
+    "priceCurrency": "EUR"
+   },
+   "description": "Ons deel; de notaris factureert zijn honorarium apart aan u"
+  },
+  {
+   "@type": "Offer",
+   "name": "Verlenging van de offerte of het bindend aanbod",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "Per verlenging"
+  },
+  {
+   "@type": "Offer",
+   "name": "Rentevoorstel vastzetten of dalrente claimen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "95",
+    "priceCurrency": "EUR"
+   },
+   "description": "V  r het passeren"
+  },
+  {
+   "@type": "Offer",
+   "name": "Bouwdepotverlenging of verrekening van depotrente",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "Per verzoek"
+  },
+  {
+   "@type": "Offer",
+   "name": "Herstel van een afgewezen aanvraag bij een andere geldverstrekker",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "695",
+    "priceCurrency": "EUR"
+   },
+   "description": "Nieuwe aanvraag, bestaand dossier"
+  },
+  {
+   "@type": "Offer",
+   "name": "Onderbouwing van een aanvraag buiten de leennormen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "395",
+    "priceCurrency": "EUR"
+   },
+   "description": "Alleen als uw situatie dat rechtvaardigt"
+  },
+  {
+   "@type": "Offer",
+   "name": "Inkomensverklaring ondernemer aanvragen en beoordelen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "295",
+    "priceCurrency": "EUR"
+   },
+   "description": "Het rekenbureau factureert zelf aan u"
+  },
+  {
+   "@type": "Offer",
+   "name": "Perspectiefverklaring aanvragen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "195",
+    "priceCurrency": "EUR"
+   },
+   "description": "Voor flexwerkers en uitzendkrachten"
+  },
+  {
+   "@type": "Offer",
+   "name": "Studieschuld herrekenen na aflossing",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "95",
+    "priceCurrency": "EUR"
+   },
+   "description": "Levert vaak direct leenruimte op"
+  },
+  {
+   "@type": "Offer",
+   "name": "Alimentatie- en partnerverklaringen verwerken",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "Per verklaring"
+  },
+  {
+   "@type": "Offer",
+   "name": "Erfpachtcanon afkopen of omzetten, doorgerekend",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "395",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief gevolgen voor uw financiering"
+  },
+  {
+   "@type": "Offer",
+   "name": "VvE-stukken opvragen en het reservefonds beoordelen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "245",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bij een appartement"
+  },
+  {
+   "@type": "Offer",
+   "name": "Woningwaarde laten herzien voor een lagere risicoklasse",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "195",
+    "priceCurrency": "EUR"
+   },
+   "description": "Kan uw rente verlagen"
+  },
+  {
+   "@type": "Offer",
+   "name": "Kluswoning, splitsing of recreatiewoning",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "450",
+    "priceCurrency": "EUR"
+   },
+   "description": "Toeslag; beperkte acceptatie"
+  },
+  {
+   "@type": "Offer",
+   "name": "Hypotheek herzien na overlijden, met de nabestaanden",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "650",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief afstemming met de geldverstrekker"
+  },
+  {
+   "@type": "Offer",
+   "name": "Emigratie of tijdelijke verhuur van uw woning",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief het verzoek om toestemming"
+  },
+  {
+   "@type": "Offer",
+   "name": "Begeleiding bij een betalingsachterstand",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   },
+   "description": "Kosteloos voor onze klanten"
+  },
+  {
+   "@type": "Offer",
+   "name": "Afstemming bij schuldhulpverlening of beslag",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   },
+   "description": "Kosteloos; wij verwijzen door"
+  },
+  {
+   "@type": "Offer",
+   "name": "Haalbaarheidstoets vooraf",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "395",
+    "priceCurrency": "EUR"
+   },
+   "description": "Wordt verrekend als u ons daarna opdracht geeft"
+  },
+  {
+   "@type": "Offer",
+   "name": "Ontslag hoofdelijke aansprakelijkheid",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1250",
+    "priceCurrency": "EUR"
+   },
+   "description": "Zonder wijziging van het leenbedrag"
+  },
+  {
+   "@type": "Offer",
+   "name": "Ontslag met verhoging of herfinanciering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "1950",
+    "priceCurrency": "EUR"
+   },
+   "description": "In plaats van het losse ontslag, niet daarbovenop"
+  },
+  {
+   "@type": "Offer",
+   "name": "Ontslag of tenaamstelling na overlijden",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "895",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief afstemming met verzekeraar en notaris"
+  },
+  {
+   "@type": "Offer",
+   "name": "Financieel rapport voor mediator, advocaat of rechter",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   },
+   "description": "Per rapport, inclusief   n herziening"
+  },
+  {
+   "@type": "Offer",
+   "name": "Doorrekening blijven of verkopen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "395",
+    "priceCurrency": "EUR"
+   },
+   "description": "Twee complete varianten naast elkaar"
+  },
+  {
+   "@type": "Offer",
+   "name": "Tweede aanvraag na een afwijzing",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "595",
+    "priceCurrency": "EUR"
+   },
+   "description": "Bij een andere geldverstrekker"
+  },
+  {
+   "@type": "Offer",
+   "name": "Second opinion op een voorstel van een ander kantoor",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   },
+   "description": "Schriftelijk, inclusief toelichtend gesprek"
+  },
+  {
+   "@type": "Offer",
+   "name": "Jaaropgave en renteoverzicht toelichten",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "95",
+    "priceCurrency": "EUR"
+   },
+   "description": "Met abonnementskorting, zoals alle losse diensten"
+  },
+  {
+   "@type": "Offer",
+   "name": "Gevolgen van uw eigenwoningreserve doorrekenen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "395",
+    "priceCurrency": "EUR"
+   },
+   "description": "U levert het bedrag aan, wij rekenen de gevolgen door"
+  },
+  {
+   "@type": "Offer",
+   "name": "Maandlasten doorrekenen bij scheiding of twee woningen",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "295",
+    "priceCurrency": "EUR"
+   },
+   "description": "U of uw adviseur geeft de aftrek op, wij rekenen de lasten door"
+  },
+  {
+   "@type": "Offer",
+   "name": "Royement regelen na volledige aflossing",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "145",
+    "priceCurrency": "EUR"
+   },
+   "description": "Inclusief afstemming met de notaris"
+  },
+  {
+   "@type": "Offer",
+   "name": "Inkomen uit onderneming of zzp",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "350",
+    "priceCurrency": "EUR"
+   },
+   "description": "Extra beoordeling van jaarcijfers en prognose"
+  },
+  {
+   "@type": "Offer",
+   "name": "Buitenlands inkomen of expatsituatie",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "450",
+    "priceCurrency": "EUR"
+   },
+   "description": "Beperktere acceptatie, meer uitzoekwerk"
+  },
+  {
+   "@type": "Offer",
+   "name": "Erfpacht, VvE-problematiek of funderingsherstel",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "295",
+    "priceCurrency": "EUR"
+   },
+   "description": "Alleen als dit extra onderzoek vraagt"
+  },
+  {
+   "@type": "Offer",
+   "name": "Overname van een lopend dossier van een ander kantoor",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "345",
+    "priceCurrency": "EUR"
+   },
+   "description": "Controle van wat er al ligt"
+  },
+  {
+   "@type": "Offer",
+   "name": "Overdracht van uw dossier naar een ander kantoor",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   },
+   "description": "Uw dossier is van u"
+  }
+ ]
 }
 </script>
 </head>

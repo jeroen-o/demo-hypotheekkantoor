@@ -101,13 +101,11 @@ def main():
             fouten.append(f"{f}: {len(re.findall(r'<h1', txt))} h1-koppen")
         if 'rel="alternate"' not in txt:
             fouten.append(f"{f}: geen hreflang in de head")
-        if f == "404.html":
-            if "noindex" not in txt:
-                fouten.append("404.html: hoort op noindex te staan")
-        elif 'content="index, follow' not in txt:
+        if 'content="index, follow' not in txt:
             fouten.append(f"{f}: staat niet op index, follow")
-        if f"{BASE}{f}" not in txt and f != "404.html":
-            fouten.append(f"{f}: canonical of og:url wijst niet naar {BASE}{f}")
+        verwacht = BASE if f == "index.html" else f"{BASE}{f}"
+        if f'rel="canonical" href="{verwacht}"' not in txt:
+            fouten.append(f"{f}: canonical wijst niet naar {verwacht}")
         if "og:image" not in txt:
             fouten.append(f"{f}: geen og:image")
 
@@ -197,7 +195,8 @@ def main():
     for f in paginas:
         if f == "404.html":
             continue
-        if f"{BASE}{f}" not in sitemap:
+        verwacht = f"<loc>{BASE}</loc>" if f == "index.html" else f"<loc>{BASE}{f}</loc>"
+        if verwacht not in sitemap:
             fouten.append(f"sitemap.xml mist {f}")
     if "jeroen-o.github.io" in sitemap:
         fouten.append("sitemap.xml verwijst nog naar het oude domein")

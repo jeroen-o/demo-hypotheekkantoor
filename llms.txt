@@ -28,7 +28,7 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
 
 ## Pagina's
 
-- [Home](https://demo-hypotheek-kantoor.nl/index.html): overzicht en situatiekiezer.
+- [Home](https://demo-hypotheek-kantoor.nl/): overzicht en situatiekiezer.
 - [Werkwijze](https://demo-hypotheek-kantoor.nl/werkwijze.html): het traject in vijf stappen.
 - [Zo komt ons advies tot stand](https://demo-hypotheek-kantoor.nl/adviesproces.html): consumptief besteedbaar inkomen, scenario's, aannames.
 - [Diensten](https://demo-hypotheek-kantoor.nl/diensten.html): wat wel en wat uitdrukkelijk niet.
@@ -54,6 +54,22 @@ Samenvattingen in [Engels](https://demo-hypotheek-kantoor.nl/en.html),
 [Pools](https://demo-hypotheek-kantoor.nl/pl.html),
 [Spaans](https://demo-hypotheek-kantoor.nl/es.html) en
 [Frans](https://demo-hypotheek-kantoor.nl/fr.html). De Nederlandse tekst is leidend.
+
+## Veelgestelde onderwerpen met een kort antwoord
+
+- **Wat kost een hypotheekadviseur?** Bij dit kantoor EUR 2.950 vast voor advies en bemiddeling bij een aankoop,
+  met toeslagen van 350, 450 of 295 euro voor ondernemersinkomen, buitenlands inkomen of erfpacht. Gaat het niet
+  door, dan geldt een staffel van vijf treden: 0, 750, 1.500, 2.500 en het volledige tarief.
+- **Mag een adviseur provisie ontvangen?** Niet voor producten onder het provisieverbod: hypothecair krediet,
+  overlijdensrisico-, arbeidsongeschiktheids- en woonlastenverzekeringen. De klant betaalt rechtstreeks.
+- **Wanneer krijg ik de vergelijkingskaart?** Voor het adviesgesprek. Die kaart verving per 1 april 2023 het
+  dienstverleningsdocument en heeft een wettelijk vastgesteld format.
+- **Houdt een adviseur mijn hypotheek in de gaten?** Bij dit kantoor niet. Alleen de wettelijke melding bij
+  wezenlijke wijzigingen in product of voorwaarden; de klant houdt zelf de einddatum van de rentevaste periode bij.
+- **Zijn netto maandlasten hard?** Nee. De bruto last wordt betaald; de teruggave hangt af van inkomen,
+  woningwaarde, vermogen en de regels van dat jaar. Ook de resterende duur van de renteaftrek is een schatting.
+- **Wie bewaakt de datum van mijn ontbindende voorwaarden?** De klant. Het kantoor wijst er schriftelijk op en
+  herinnert er eenmaal aan, uiterlijk een week vooraf.
 
 ## Niet gebruiken als
 

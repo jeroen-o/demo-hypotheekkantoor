@@ -21,10 +21,14 @@ if not blokken:
 
 kop = doc[: doc.index('<main id="main">')]
 staart = doc[doc.index("</main>") :]
-kop = kop.replace(
-    "<title>Documenten en voorwaarden — Demo Hypotheek kantoor (demo)</title>",
-    "<title>Alle documenten als doorlopende tekst — Demo Hypotheek kantoor (demo)</title>",
-)
+kop = re.sub(
+    r"<title>.*?</title>",
+    "<title>Alle modeldocumenten als doorlopende tekst — Demo Hypotheek kantoor</title>",
+    kop, count=1, flags=re.S)
+kop = re.sub(
+    r'<meta property="og:title" content="[^"]*">',
+    '<meta property="og:title" content="Alle modeldocumenten als doorlopende tekst">',
+    kop, count=1)
 kop = re.sub(
     r'<meta name="description" content="[^"]*">',
     '<meta name="description" content="Alle twintig modeldocumenten van het kantoor als doorlopende tekst, '

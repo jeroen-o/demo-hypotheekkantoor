@@ -74,4 +74,8 @@ Allow: /
 User-agent: Timpibot
 Allow: /
 
+# Geen enkele map of bestandstype is uitgesloten; ook de modeldocumenten en de
+# tarievenlijst mogen worden gelezen en geciteerd.
+
 Sitemap: https://demo-hypotheek-kantoor.nl/sitemap.xml
+Host: demo-hypotheek-kantoor.nl
