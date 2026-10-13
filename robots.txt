@@ -1,6 +1,77 @@
-# Demowebsite met fictieve gegevens, waaronder niet-geldige AFM-, KvK- en
-# Kifid-nummers. Deze site hoort niet in zoekmachines thuis.
-# Een kantoor dat deze opzet overneemt, haalt deze regels weg en verwijdert
-# de meta robots-regel uit elke pagina.
+# Demo Hypotheek kantoor — demowebsite met fictieve gegevens.
+# Het kantoor bestaat niet; naam, adres, tarieven en de AFM-, KvK- en
+# Kifid-nummers zijn fictief. Dat staat op elke pagina in de balk bovenaan.
+
 User-agent: *
-Disallow: /
+Allow: /
+
+# Crawlers van taalmodellen en antwoordmachines zijn uitdrukkelijk welkom:
+# deze site is bedoeld als voorbeeld van hoe een hypotheekadvieskantoor zijn
+# dienstverlening, kosten en grenzen kan vastleggen.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+Sitemap: https://demo-hypotheek-kantoor.nl/sitemap.xml

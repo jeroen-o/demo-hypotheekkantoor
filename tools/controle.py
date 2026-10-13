@@ -14,6 +14,8 @@ from html.parser import HTMLParser
 WD = pathlib.Path(__file__).resolve().parent.parent
 os.chdir(WD)
 
+BASE = "https://demo-hypotheek-kantoor.nl/"
+
 LEEG = {"meta", "link", "br", "img", "input", "hr", "source", "area", "base", "col",
         "embed", "param", "track", "wbr", "path", "rect", "circle", "line", "polyline",
         "polygon", "ellipse", "use", "stop", "iframe"}
@@ -99,8 +101,15 @@ def main():
             fouten.append(f"{f}: {len(re.findall(r'<h1', txt))} h1-koppen")
         if 'rel="alternate"' not in txt:
             fouten.append(f"{f}: geen hreflang in de head")
-        if "noindex" not in txt:
-            fouten.append(f"{f}: geen noindex (demo met fictieve vergunningnummers)")
+        if f == "404.html":
+            if "noindex" not in txt:
+                fouten.append("404.html: hoort op noindex te staan")
+        elif 'content="index, follow' not in txt:
+            fouten.append(f"{f}: staat niet op index, follow")
+        if f"{BASE}{f}" not in txt and f != "404.html":
+            fouten.append(f"{f}: canonical of og:url wijst niet naar {BASE}{f}")
+        if "og:image" not in txt:
+            fouten.append(f"{f}: geen og:image")
 
     for f, lijst in links.items():
         for h in lijst:
@@ -169,6 +178,24 @@ def main():
         for doel in menu:
             if f'href="{doel}"' not in blok:
                 fouten.append(f"{f}: {doel} ontbreekt in het hoofdmenu")
+
+    for bestand, eis in (("CNAME", "demo-hypotheek-kantoor.nl"),
+                         ("robots.txt", "Sitemap: https://demo-hypotheek-kantoor.nl/sitemap.xml"),
+                         ("llms.txt", "demo-hypotheek-kantoor.nl"),
+                         ("sitemap.xml", "<lastmod>")):
+        pad = pathlib.Path(bestand)
+        if not pad.exists():
+            fouten.append(f"{bestand} ontbreekt")
+        elif eis not in pad.read_text(encoding="utf-8"):
+            fouten.append(f"{bestand}: '{eis}' ontbreekt")
+    sitemap = pathlib.Path("sitemap.xml").read_text(encoding="utf-8")
+    for f in paginas:
+        if f == "404.html":
+            continue
+        if f"{BASE}{f}" not in sitemap:
+            fouten.append(f"sitemap.xml mist {f}")
+    if "jeroen-o.github.io" in sitemap:
+        fouten.append("sitemap.xml verwijst nog naar het oude domein")
 
     tarieven = pathlib.Path("kosten.html").read_text(encoding="utf-8")
     knoppen = re.findall(r'aria-controls="(t-[^"]+)"', tarieven)

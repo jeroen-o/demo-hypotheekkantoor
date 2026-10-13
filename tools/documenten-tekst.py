@@ -34,8 +34,8 @@ kop = re.sub(
 # het hoofdmenu moeten naar documenten.html blijven wijzen
 for _attr in ('rel="canonical" href', 'property="og:url" content'):
     kop = kop.replace(
-        f'{_attr}="https://jeroen-o.github.io/demo-hypotheekkantoor/documenten.html"',
-        f'{_attr}="https://jeroen-o.github.io/demo-hypotheekkantoor/documenten-tekst.html"')
+        f'{_attr}="https://demo-hypotheek-kantoor.nl/documenten.html"',
+        f'{_attr}="https://demo-hypotheek-kantoor.nl/documenten-tekst.html"')
 
 inh = "\n".join(
     f'        <li><a href="#t-{k}">{titels.get(k, k)}</a></li>' for k, _ in blokken)

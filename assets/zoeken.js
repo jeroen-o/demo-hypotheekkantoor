@@ -70,4 +70,15 @@
   veld.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { uitvoer.hidden = true; veld.blur(); }
   });
+
+  /* Een zoekopdracht in de url, zodat ?q=... rechtstreeks een resultaat toont.
+     Dat maakt de zoekfunctie ook bruikbaar vanuit een zoekmachine of een
+     antwoordmachine die een zoek-url volgt. */
+  try {
+    var vraag = new URLSearchParams(window.location.search).get("q");
+    if (vraag) {
+      veld.value = vraag;
+      laad(zoek);
+    }
+  } catch (e) {}
 })();

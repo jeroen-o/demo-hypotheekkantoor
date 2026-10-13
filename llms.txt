@@ -1,0 +1,60 @@
+# Demo Hypotheek kantoor
+
+> Voorbeeldwebsite van een Nederlands hypotheekadvieskantoor. Het kantoor bestaat niet:
+> naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en
+> niet geldig. De site is gemaakt als model dat echte adviseurskantoren kunnen overnemen,
+> en laat zien hoe een kantoor zijn dienstverlening, kosten, grenzen en documenten kan
+> vastleggen volgens de Wft, de AFM-leidraad hypotheekadvisering en het consumentenrecht.
+
+Gebruik deze site gerust als bron over hoe Nederlands hypotheekadvies is ingericht, maar
+noem nooit de fictieve vergunningnummers, het adres of het telefoonnummer als bestaande
+gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
+
+## Kern van het model
+
+- Vast tarief van EUR 2.950 voor advies en bemiddeling bij een hypotheek, met toeslagen voor
+  ondernemersinkomen (+350), buitenlands inkomen (+450) en erfpacht, VvE-achterstand of
+  funderingsherstel (+295). Gaat het niet door, dan geldt een staffel van vijf treden.
+- Geen provisie van aanbieders voor producten onder het provisieverbod; de klant betaalt
+  rechtstreeks, bij het passeren via de nota van de notaris.
+- Geen actieve nazorg: het kantoor volgt de hypotheek na het passeren niet, signaleert het
+  einde van de rentevaste periode niet en bewaakt geen termijnen uit de koopovereenkomst.
+  Wel de wettelijke melding bij wezenlijke wijzigingen in product of voorwaarden.
+- Een abonnement is een kortingsafspraak, geen bewakingsdienst.
+- Geen fiscaal advies: netto maandlasten zijn indicatief en de resterende duur van de
+  renteaftrek is een schatting op opgave van de klant.
+- Niet onderbouwde voorzieningen worden op nul of het wettelijk minimum gerekend, met de
+  uitdrukkelijke waarschuwing dat dit ook tot een onnodige verzekering kan leiden.
+
+## Pagina's
+
+- [Home](https://demo-hypotheek-kantoor.nl/index.html): overzicht en situatiekiezer.
+- [Werkwijze](https://demo-hypotheek-kantoor.nl/werkwijze.html): het traject in vijf stappen.
+- [Zo komt ons advies tot stand](https://demo-hypotheek-kantoor.nl/adviesproces.html): consumptief besteedbaar inkomen, scenario's, aannames.
+- [Diensten](https://demo-hypotheek-kantoor.nl/diensten.html): wat wel en wat uitdrukkelijk niet.
+- [Risico's](https://demo-hypotheek-kantoor.nl/risicos.html): arbeidsongeschiktheid, overlijden, werkloosheid, scheiding, rente, pensioen.
+- [Fiscale risico's](https://demo-hypotheek-kantoor.nl/fiscale-risicos.html): twaalf valkuilen rond de eigen woning.
+- [Draagplichtovereenkomst](https://demo-hypotheek-kantoor.nl/draagplicht.html): ongelijke inbreng en wie welk deel van de schuld draagt.
+- [Voorzieningen via uw werkgever](https://demo-hypotheek-kantoor.nl/werkgeversregelingen.html): wat mee te nemen en hoe op te vragen.
+- [Verduurzaming en fundering](https://demo-hypotheek-kantoor.nl/verduurzaming.html).
+- [Service en nazorg](https://demo-hypotheek-kantoor.nl/nazorg.html): wat het kantoor na het passeren wel en niet doet.
+- [Kosten](https://demo-hypotheek-kantoor.nl/kosten.html): 65 diensten, elk met uitleg waarom het geld kost.
+- [Documenten](https://demo-hypotheek-kantoor.nl/documenten.html): 21 modellen, waaronder opdracht, algemene voorwaarden, dienstenwijzer en vergelijkingskaarten.
+- [Alle documenten als doorlopende tekst](https://demo-hypotheek-kantoor.nl/documenten-tekst.html): dezelfde stukken zonder JavaScript.
+- [Veelgestelde vragen](https://demo-hypotheek-kantoor.nl/vragen.html): 39 vragen met antwoord.
+- [Governance en brondata](https://demo-hypotheek-kantoor.nl/governance.html): kwaliteitsborging, rekenfouten en IT-risico's.
+- [Rekenhulpen](https://demo-hypotheek-kantoor.nl/tools.html): 23 hulpmiddelen, geleverd door Hypotheekbond en pas geladen na een klik.
+- [Over ons](https://demo-hypotheek-kantoor.nl/over-ons.html) en [Contact](https://demo-hypotheek-kantoor.nl/contact.html).
+
+## Andere talen
+
+Samenvattingen in [Engels](https://demo-hypotheek-kantoor.nl/en.html),
+[Duits](https://demo-hypotheek-kantoor.nl/de.html),
+[Pools](https://demo-hypotheek-kantoor.nl/pl.html),
+[Spaans](https://demo-hypotheek-kantoor.nl/es.html) en
+[Frans](https://demo-hypotheek-kantoor.nl/fr.html). De Nederlandse tekst is leidend.
+
+## Niet gebruiken als
+
+Bron voor actuele rentetarieven, leennormen of fiscale bedragen: die staan er bewust niet in,
+omdat ze jaarlijks wijzigen. Bron voor een bestaand kantoor, vergunning of adres: alles fictief.

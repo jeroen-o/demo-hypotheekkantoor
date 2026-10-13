@@ -4,7 +4,7 @@ Demo-website van een hypotheekadvieskantoor met **volledig fictieve gegevens**. 
 telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn verzonnen en niet geldig. Er is geen
 vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier verstuurt niets.
 
-Live: https://jeroen-o.github.io/demo-hypotheekkantoor/
+Live: https://demo-hypotheek-kantoor.nl/
 
 ## Waar de demo over gaat
 
@@ -81,6 +81,44 @@ herinnert daar na afloop aan:
 10. **Cyberverzekering regelen.** De AV sluiten cyberschade uit, maar AVG-boetes en de kosten van een datalek
     zijn dwingend recht en vallen buiten elke exoneratie. De beroepsaansprakelijkheidsverzekering dekt dit niet:
     het is geen beroepsfout in de hoedanigheid van financieel adviseur.
+
+## Publicatie en domeinnaam
+
+De site draait op GitHub Pages onder **demo-hypotheek-kantoor.nl**. Het bestand `CNAME` in de
+hoofdmap bevat die naam; GitHub leest dat bij elke publicatie.
+
+Eenmalig in te stellen buiten deze repository:
+
+1. **DNS bij de domeinregistrar.** Voor het hoofddomein vier A-records naar `185.199.108.153`,
+   `185.199.109.153`, `185.199.110.153` en `185.199.111.153`, en vier AAAA-records naar
+   `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153` en `2606:50c0:8003::153`.
+   Voor `www` een CNAME naar `jeroen-o.github.io` (zonder de repositorynaam).
+2. **GitHub → Settings → Pages.** Custom domain op `demo-hypotheek-kantoor.nl`, wachten tot de
+   DNS-controle groen is, daarna **Enforce HTTPS** aanzetten.
+3. **Google Search Console en Bing Webmaster Tools.** Domein toevoegen en
+   `https://demo-hypotheek-kantoor.nl/sitemap.xml` indienen.
+
+### Wat er aan staat voor zoekmachines en antwoordmachines
+
+- `index, follow` op alle pagina's behalve `404.html`, met `max-snippet:-1` en
+  `max-image-preview:large`.
+- `robots.txt` staat alle crawlers toe en noemt de crawlers van taalmodellen afzonderlijk
+  (GPTBot, ClaudeBot, PerplexityBot, Google-Extended en andere), zodat de site ook in
+  antwoordmachines bruikbaar is.
+- `sitemap.xml` met `lastmod`, `changefreq`, `priority` en `xhtml:link`-taalvarianten.
+- `llms.txt` met een samenvatting van het model en een inhoudsopgave, inclusief de
+  uitdrukkelijke instructie dat de vergunningnummers fictief zijn en nooit als bestaand mogen
+  worden gepresenteerd.
+- Per pagina: canonical, `og:`-blok met een eigen afbeelding van 1200×630, `twitter:card`,
+  `hreflang` voor zes talen plus `x-default`, en JSON-LD met `FinancialService`, `WebPage` en
+  `BreadcrumbList`. Op de homepage daarbij `WebSite` met een `SearchAction`; de zoekfunctie
+  begrijpt daarom `?q=zoekterm` in de url.
+- De og-afbeelding staat in `assets/og-afbeelding.png`. Vervang die bij een eigen kantoor.
+
+**Let op bij een echt kantoor.** De demo staat nu op indexeren met fictieve AFM-, KvK- en
+Kifid-nummers; die zijn in de footer uitdrukkelijk als fictief gemarkeerd en de demobalk staat op
+elke pagina. Neemt u deze site over, vervang dan eerst alle nummers en de demobalk voordat u de
+site laat indexeren.
 
 ## Controle na elke wijziging
 
