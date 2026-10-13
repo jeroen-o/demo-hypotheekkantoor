@@ -82,6 +82,26 @@ herinnert daar na afloop aan:
     zijn dwingend recht en vallen buiten elke exoneratie. De beroepsaansprakelijkheidsverzekering dekt dit niet:
     het is geen beroepsfout in de hoedanigheid van financieel adviseur.
 
+## Controle na elke wijziging
+
+```bash
+python3 tools/controle.py            # structuur, verwijzingen en samenhang
+python3 tools/documenten-tekst.py    # documenten-tekst.html opnieuw opbouwen
+```
+
+`tools/controle.py` toetst de HTML-structuur, alle interne links en ankers, de JSON-LD,
+de zoekindex, de koppeling tussen `documenten.html` en `assets/docs.js` inclusief de
+versienummers — en de **samenhang** tussen publieksteksten en modeldocumenten. Dat laatste
+is de controle die in dit project het meeste heeft opgeleverd: de fout die steeds terugkwam,
+was dat een wijziging één kant raakte. De documenten werden dichtgezet terwijl een pagina de
+dienst bleef beloven, of een pagina werd aangepast terwijl het document de oude belofte nog
+droeg. In `SAMENHANG` in dat script staat per thema welke formulering waar niet mag staan en
+waarom. Voegt u een dienst of een uitsluiting toe, zet er dan een regel bij.
+
+`tools/documenten-tekst.py` bouwt `documenten-tekst.html`: alle modeldocumenten als
+doorlopende tekst, leesbaar en printbaar zonder JavaScript. Draai dit opnieuw na elke
+wijziging in een `<template>`-blok, anders loopt die pagina achter.
+
 ## Documenten in de demo
 
 `documenten.html` bevat twintig modellen, elk deeplinkbaar (`documenten.html#beheer`):
