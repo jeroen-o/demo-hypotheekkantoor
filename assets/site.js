@@ -168,9 +168,16 @@
       frame.style.border = "0";
       frame.src = plek.getAttribute("data-src");
       plek.replaceWith(frame);
-      if (window.iFrameResize) {
-        try { window.iFrameResize({ checkOrigin: false }, frame); } catch (e) { /* valt terug op vaste hoogte */ }
-      }
+
+      // Het meeschalen pas aanzetten zodra de tool geladen is; lukt dat niet,
+      // dan blijft de ruime vaste hoogte uit de stylesheet staan.
+      var schaalMee = function () {
+        if (!window.iFrameResize) return;
+        try { window.iFrameResize({ checkOrigin: false, heightCalculationMethod: "lowestElement" }, frame); }
+        catch (e) { /* vaste hoogte blijft gelden */ }
+      };
+      frame.addEventListener("load", schaalMee);
+      setTimeout(schaalMee, 1200);
     });
   });
 })();

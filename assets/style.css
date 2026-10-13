@@ -109,11 +109,18 @@ section.alt .step{background:#fff}
 .card p{font-size:15px;color:var(--text-l)}
 
 /* rekentools */
-.tool{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:20px}
+.toolspagina .wrap{max-width:1280px}
+.toolspagina header.pagehead .wrap,
+.toolspagina footer .wrap{max-width:1080px}
+.tool{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px 20px;margin-bottom:24px}
 section.alt .tool{background:#fff}
 .tool h3{margin-bottom:6px;font-size:19px}
 .tool p{font-size:15px;color:var(--text-l);margin-bottom:16px;max-width:70ch}
-.tool iframe{display:block;width:100%;min-height:420px;border:0}
+.tool iframe{display:block;width:100%;min-height:820px;border:0}
+@media (max-width:700px){
+  .tool{padding:18px 12px}
+  .tool iframe{min-height:900px}
+}
 
 /* logocarrousel aanbieders */
 .logo-carrousel{display:flex;flex-direction:column;gap:14px}
