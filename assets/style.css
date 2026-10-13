@@ -62,8 +62,6 @@ header.hero p{color:#c6d8e6;font-size:18px;max-width:58ch;margin-bottom:30px}
 .hero-cta .btn:hover{background:#f0b556}
 .hero-cta .btn.ghost{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.45)}
 .hero-cta .btn.ghost:hover{background:rgba(255,255,255,.1)}
-.badges{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:#9fbdd3;border-top:1px solid rgba(255,255,255,.15);padding-top:20px}
-.badges b{color:#fff;display:block;font-size:14px;font-weight:700}
 
 /* paginakop (binnenpagina's) */
 header.pagehead{background:linear-gradient(160deg,#003057 0%,#024876 100%);color:#fff;padding:52px 0 56px}
