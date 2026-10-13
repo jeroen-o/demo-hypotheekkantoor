@@ -390,3 +390,14 @@ section.slot .btn.ghost:hover{background:rgba(255,255,255,.1)}
   .zoekvorm{flex:1 1 100%}
   #zoekuitvoer{min-width:0}
 }
+
+/* ---- losse rekenhulppagina ---- */
+section.rekenhulp{padding-top:34px;padding-bottom:10px}
+section.rekenhulp .wrap{max-width:1180px}
+.rekenhulp iframe{display:block;width:100%;min-height:900px;border:0;background:#fff;
+  border:1px solid var(--line);border-radius:12px}
+.rekenhulp .hint{margin-top:14px;max-width:80ch}
+.buren{margin-top:26px;font-size:14px;color:var(--muted)}
+.buren a{color:var(--primary-l);text-decoration:none;font-weight:600}
+.buren a:hover{text-decoration:underline}
+@media (max-width:700px){ .rekenhulp iframe{min-height:1000px} }

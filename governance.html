@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Governance en brondata — Demo Hypotheek kantoor (demo)</title>
+<meta name="description" content="Hoe wij sturen op kwaliteit: beloningsbeleid, integriteit, gebruik van brondata, klachten en incidenten, en wat wij anders doen dan gebruikelijk. Voorbeeldwebsite met fictieve gegevens.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeroen-o.github.io/demo-hypotheekkantoor/governance.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Demo Hypotheek kantoor">
+<meta property="og:title" content="Over ons — Demo Hypotheek kantoor (demo)">
+<meta property="og:description" content="Wie wij zijn, onder welk toezicht wij staan, hoe wij met uw gegevens omgaan en wat u kunt doen bij een klacht. Voorbeeldwebsite met fictieve gegevens.">
+<meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/over-ons.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FinancialService",
+ "@id": "https://jeroen-o.github.io/demo-hypotheekkantoor/#kantoor",
+ "name": "Demo Hypotheek kantoor",
+ "alternateName": "Demo Hypotheek kantoor B.V.",
+ "description": "Voorbeeldwebsite van een hypotheekadvieskantoor. Alle gegevens zijn fictief.",
+ "url": "https://jeroen-o.github.io/demo-hypotheekkantoor/",
+ "telephone": "+31850000000",
+ "email": "info@demohypotheekkantoor.nl",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Demostraat 12",
+  "postalCode": "1234 AB",
+  "addressLocality": "Demostad",
+  "addressCountry": "NL"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "Nederland"
+ },
+ "availableLanguage": [
+  "nl",
+  "en",
+  "de",
+  "pl",
+  "es",
+  "fr"
+ ],
+ "priceRange": "€€",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "17:30"
+  }
+ ],
+ "knowsAbout": [
+  "hypotheekadvies",
+  "oversluiten",
+  "overlijdensrisicoverzekering",
+  "arbeidsongeschiktheid",
+  "verduurzaming",
+  "erfpacht",
+  "ontslag hoofdelijke aansprakelijkheid",
+  "NHG"
+ ],
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "name": "Hypotheekadvies en bemiddeling",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "2950",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Advies en bemiddeling overlijdensrisicoverzekering",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "495",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Kennismakingsgesprek",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  }
+ ],
+ "disambiguatingDescription": "Fictief demonstratiekantoor; geen AFM-vergunning en geen dienstverlening."
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Naar de hoofdinhoud</a>
+
+<div class="demobar">
+  <b>Demo-omgeving.</b> Deze website is een voorbeeld. <b>Demo Hypotheek kantoor</b> bestaat niet:
+  naam, adres, telefoonnummer, tarieven en de AFM-, KvK- en Kifid-nummers zijn fictief en niet geldig.
+  Er is geen vergunning, geen Kifid-aansluiting en geen dienstverlening. Het contactformulier opent uw eigen
+  e-mailprogramma en stuurt een bericht aan de beheerder van deze demo, niet aan een adviseur.
+</div>
+
+<div class="topbalk">
+  <div class="wrap">
+    <div class="snel">
+      <a href="tools.html">Rekenhulpen</a>
+      <a href="kosten.html">Tarieven</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="vragen.html">Veelgestelde vragen</a>
+    </div>
+    <form class="zoekvorm" role="search">
+      <label class="visually-hidden" for="zoekveld">Zoek op de hele site</label>
+      <input id="zoekveld" type="search" placeholder="Zoek op de hele site" autocomplete="off">
+      <button type="submit" aria-label="Zoeken">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <div id="zoekuitvoer" role="region" aria-live="polite" aria-label="Zoekresultaten" hidden></div>
+    </form>
+  </div>
+</div>
+
+<nav aria-label="Hoofdmenu">
+  <div class="wrap">
+    <a href="index.html" class="logo">Demo Hypotheek<span> kantoor</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="risicos.html">Risico&#39;s</a>
+      <a href="tools.html">Rekentools</a>
+      <a href="nazorg.html">Nazorg</a>
+      <a href="kosten.html">Kosten</a>
+      <a href="documenten.html">Documenten</a>
+      <a href="contact.html" class="btn">Afspraak maken</a>
+    </div>
+    <button id="burger" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+    <div class="taalkiezer" role="group" aria-label="Taal kiezen / Choose language">
+      <span aria-current="true">NL</span>
+      <a href="en.html" hreflang="en" lang="en">EN</a>
+      <a href="de.html" hreflang="de" lang="de">DE</a>
+      <a href="pl.html" hreflang="pl" lang="pl">PL</a>
+      <a href="es.html" hreflang="es" lang="es">ES</a>
+      <a href="fr.html" hreflang="fr" lang="fr">FR</a>
+    </div>
+
+<main id="main">
+
+<header class="pagehead">
+  <div class="wrap">
+    <div class="eyebrow">Governance</div>
+    <h1>Hoe wij sturen op de kwaliteit van ons advies</h1>
+    <p>Een vergunning zegt dat een kantoor mág adviseren. Deze pagina gaat over hoe wij bewaken dat het ook goed
+       gebeurt: hoe wij belonen, hoe wij fouten opsporen, welke gegevens wij gebruiken en wat wij anders doen dan
+       gebruikelijk is.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Wat wij anders doen</div>
+    <h2>Zes keuzes die afwijken van het gangbare</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Wij beloven geen nazorg die wij niet leveren</h3>
+        <p>Veel kantoren verkopen abonnementen met periodieke controles. Wij volgen uw hypotheek niet en zeggen dat
+           ook. Ons abonnement is een kortingsafspraak, geen bewakingsdienst.</p>
+      </div>
+      <div class="card">
+        <h3>Wij rekenen voor wanneer iets níét loont</h3>
+        <p>Bij ons abonnement staat een rekenvoorbeeld met de grens waarboven het pas voordelig wordt. Komt u daar
+           niet aan, dan adviseren wij het niet af te sluiten.</p>
+      </div>
+      <div class="card">
+        <h3>Onze aannames staan in het rapport</h3>
+        <p>Een voorziening die u niet kunt onderbouwen, rekenen wij op nul. In uw adviesrapport ziet u per regeling
+           welke aanname is gebruikt, zodat u weet waarop het advies rust.</p>
+      </div>
+      <div class="card">
+        <h3>Wij sturen een afrondingsbericht</h3>
+        <p>Bij het passeren krijgt u een brief waarin staat dat onze opdracht eindigt en welke datums u zelf moet
+           bijhouden. Dat is onprettig om te schrijven en nuttig om te hebben.</p>
+      </div>
+      <div class="card">
+        <h3>Onze tarieven staan compleet online</h3>
+        <p>Niet alleen het adviestarief, maar alle diensten, met per dienst de uitleg wat het is en waarom het geld
+           kost. Ook de diensten die u hopelijk nooit nodig heeft.</p>
+      </div>
+      <div class="card">
+        <h3>Uw dossier is van u</h3>
+        <p>Opvragen kost niets, ook bij vertrek naar een ander kantoor. Overstappen hoort niet te worden
+           bemoeilijkt met een drempel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="brondata">
+  <div class="wrap">
+    <div class="eyebrow">Brondata</div>
+    <h2>Gegevens bij de bron ophalen in plaats van overtypen</h2>
+    <div class="prose">
+      <p>Een adviesdossier bestond lang uit papieren die u aanleverde en die wij overnamen. Elke overstap van papier
+         naar systeem is een kans op een fout, en een fout in het inkomen werkt door in de hele berekening. Daarom
+         halen wij gegevens waar mogelijk rechtstreeks bij de bron op, met uw toestemming.</p>
+      <h3>Welke bronnen dat zijn</h3>
+      <ul>
+        <li><b>Inkomensgegevens</b> via het verzekeringsbericht van UWV of een digitale inkomensverklaring, in plaats
+            van losse loonstroken.</li>
+        <li><b>Pensioenoverzicht</b> via mijnpensioenoverzicht.nl, zodat uw nabestaanden- en ouderdomspensioen met
+            actuele bedragen in de berekening komt.</li>
+        <li><b>Kredietregistratie</b> bij het BKR, zodat uw leenruimte klopt voordat wij een aanvraag indienen.</li>
+        <li><b>Woninggegevens</b> uit het Kadaster en de WOZ-beschikking voor waarde, oppervlakte en bouwjaar.</li>
+        <li><b>Energielabel</b> uit het landelijke register, omdat dat uw leenruimte beïnvloedt.</li>
+        <li><b>Banktransacties</b> met uw uitdrukkelijke toestemming, als beeld van uw werkelijke uitgavenpatroon.</li>
+      </ul>
+      <h3>Wat dat voor u betekent</h3>
+      <ul>
+        <li>Minder documenten verzamelen en minder overtypwerk, dus minder fouten.</li>
+        <li>Een snellere aanvraag: geldverstrekkers accepteren brongegevens vaak zonder aanvullende stukken.</li>
+        <li>Een advies dat op actuele cijfers rust in plaats van op een loonstrook van maanden geleden.</li>
+      </ul>
+      <div class="note">
+        <b>Wat wij daarbij afspreken.</b> Wij halen alleen op wat nodig is voor uw advies, en alleen met uw
+        toestemming. U ziet wat wij hebben opgehaald en kunt het corrigeren voordat wij gaan rekenen. Geeft u geen
+        toestemming, dan werken wij gewoon met de stukken die u zelf aanlevert; dat kost wat meer tijd maar
+        verandert niets aan de kwaliteit van het advies. Toestemming voor één bron geldt niet automatisch voor de
+        volgende, en wij gebruiken deze gegevens niet voor marketing.
+      </div>
+      <p>Brondata vervangt het gesprek niet. Cijfers vertellen wat er is, niet wat u wilt. Wat u met de woning van
+         plan bent en hoeveel onzekerheid u aankunt, staat in geen enkel register.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Beloning</div>
+    <h2>Hoe onze mensen worden betaald</h2>
+    <div class="prose">
+      <p>Onze adviseurs hebben een vast salaris. Er is geen bonus die afhangt van het aantal afgesloten hypotheken,
+         van de gekozen geldverstrekker of van het aantal verkochte verzekeringen of abonnementen. Dat is geen
+         belofte over goede bedoelingen maar een inrichting: er valt bij ons niets te verdienen aan úw keuze.</p>
+      <p>Voor hypotheken en overlijdensrisicoverzekeringen is provisie van aanbieders wettelijk verboden. Waar
+         provisie wél is toegestaan, bijvoorbeeld bij een bankgarantie, melden wij dat vooraf en verrekenen wij het
+         met ons tarief.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Kwaliteit en integriteit</div>
+    <h2>Hoe wij fouten opsporen</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Vierogenprincipe</h3>
+        <p>Elk adviesrapport wordt vóór verzending gelezen door een tweede adviseur, die vooral kijkt naar de
+           onderbouwing en de gebruikte aannames.</p>
+      </div>
+      <div class="card">
+        <h3>Dossiertoetsing</h3>
+        <p>Periodiek wordt een steekproef uit de afgeronde dossiers getoetst aan onze eigen norm. Uitkomsten worden
+           besproken, niet weggelegd.</p>
+      </div>
+      <div class="card">
+        <h3>Permanente educatie</h3>
+        <p>Vakbekwaamheid wordt bijgehouden binnen de wettelijke termijnen, aangevuld met interne sessies over
+           wijzigingen in regelgeving en fiscaliteit.</p>
+      </div>
+      <div class="card">
+        <h3>Incidentenregister</h3>
+        <p>Gaat er iets mis, dan leggen wij dat vast met oorzaak en herstelactie. Een incident dat nergens staat,
+           herhaalt zich.</p>
+      </div>
+      <div class="card">
+        <h3>Klachtenregister</h3>
+        <p>Elke klacht wordt geregistreerd en behandeld door iemand die niet bij het dossier betrokken was. Zie
+           <a href="over-ons.html#klachten">klachten</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Integriteit en Wwft</h3>
+        <p>Wij stellen uw identiteit vast en doen onderzoek dat past bij het risico. Zie het model
+           <a href="documenten.html#wwft">identificatie en Wwft</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Uitbesteding</div>
+    <h2>Partijen die voor ons werken</h2>
+    <div class="prose">
+      <p>Wij besteden een deel van onze werkzaamheden uit, bijvoorbeeld dossierbewerking, onze advies- en
+         dossiersoftware en de opslag van documenten. Met elke partij sluiten wij een overeenkomst waarin staat wat
+         zij doen, aan welke eisen zij voldoen en hoe zij met uw gegevens omgaan.</p>
+      <p>Uitbesteden verandert niets aan onze verantwoordelijkheid: u spreekt ons aan, niet die partij. Gaat er iets
+         mis bij een leverancier, dan is dat ons probleem om op te lossen.</p>
+    </div>
+    <p style="margin-top:22px"><a href="contact.html" class="btn">Vragen hierover? Neem contact op</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h2>Demo Hypotheek kantoor</h2>
+        <p>Advies en bemiddeling bij hypotheken.<br>Demostraat 12, 1234 AB Demostad</p>
+      </div>
+      <div><h2>Dienstverlening</h2>
+        <a href="werkwijze.html">Werkwijze</a><a href="adviesproces.html">Zo komt ons advies tot stand</a>
+        <a href="diensten.html">Diensten</a><a href="risicos.html">Risico&#39;s rond uw hypotheek</a>
+        <a href="tools.html">Rekentools</a>
+        <a href="verduurzaming.html">Verduurzaming en fundering</a>
+        <a href="nazorg.html">Onderhoud en nazorg</a><a href="kosten.html">Kosten</a>
+        <a href="vragen.html">Veelgestelde vragen</a></div>
+      <div><h2>Transparantie</h2>
+        <a href="documenten.html#dw">Dienstenwijzer</a>
+        <a href="documenten.html#av">Algemene voorwaarden</a>
+        <a href="documenten.html#beheer">Beheerovereenkomst</a>
+        <a href="documenten.html#vgk">Vergelijkingskaart</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="governance.html">Governance en brondata</a>
+        <a href="over-ons.html#privacy">Privacy en klachten</a></div>
+      <div><h2>Toezicht</h2>
+        <a href="https://www.afm.nl/registers" target="_blank" rel="noopener">AFM-register</a>
+        <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>
+        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a></div>
+    </div>
+    <div class="social" role="group" aria-label="Volg ons en neem contact op">
+      <a href="https://www.linkedin.com/company/demo-hypotheek-kantoor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> LinkedIn</a>
+      <a href="https://www.facebook.com/demohypotheekkantoor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> Facebook</a>
+      <a href="https://www.instagram.com/demohypotheekkantoor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> Instagram</a>
+      <a href="https://wa.me/31850000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20.5l1.6-4.9A8.4 8.4 0 0 1 3.6 11 8.5 8.5 0 0 1 12 3h.5a8.4 8.4 0 0 1 8.5 8z"/></svg> WhatsApp</a>
+      <a href="tel:+31850000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> Bellen</a>
+      <a href="mailto:info@demohypotheekkantoor.nl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> E-mail</a>
+    </div>
+    <div class="f-licenties">
+      <div><b>AFM 99999999</b>Vergunning adviseren en bemiddelen</div>
+      <div><b>Kifid 999.999999</b>Aangesloten bij de geschilleninstantie</div>
+      <div><b>KvK 99999999</b>Ingeschreven te Demostad</div>
+      <div><b>Beroepsaansprakelijkheid</b>Verzekerd conform wettelijke eisen</div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="jaar"></span> Demo Hypotheek kantoor B.V. &middot; KvK 99999999 &middot; AFM 99999999 &middot; Kifid 999.999999</span>
+      <span>Voorbeeldwebsite met fictieve gegevens &mdash; geen bestaande onderneming, geen dienstverlening.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie" hidden>
+  <p>Deze website gebruikt alleen functionele opslag die nodig is om de site te laten werken. Er worden geen
+     analyse- of advertentiecookies geplaatst en uw surfgedrag wordt niet gevolgd.</p>
+  <div class="row">
+    <button class="btn" type="button" data-cookie-ok>Begrepen</button>
+    <a href="over-ons.html#privacy" class="btn ghost" data-cookie-ok>Lees meer</a>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+<script src="assets/zoeken.js"></script>
+</body>
+</html>
