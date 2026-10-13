@@ -202,6 +202,23 @@ def main():
     if "jeroen-o.github.io" in sitemap:
         fouten.append("sitemap.xml verwijst nog naar het oude domein")
 
+    # alle Nederlandse pagina's horen exact hetzelfde hoofdmenu te hebben; de vijf
+    # taalpagina's hebben bewust een eigen, kort menu
+    navs = {}
+    for f in paginas:
+        if f in ("en.html", "de.html", "pl.html", "es.html", "fr.html"):
+            continue
+        txt = pathlib.Path(f).read_text(encoding="utf-8")
+        m = re.search(r'<div class="nav-links" id="navlinks">.*?</div>', txt, re.S)
+        if m:
+            navs.setdefault(m.group(0), []).append(f)
+    if len(navs) > 1:
+        grootste = max(navs.values(), key=len)
+        for blok, bestanden in navs.items():
+            if bestanden is grootste:
+                continue
+            fouten.append(f"afwijkend hoofdmenu op: {', '.join(bestanden)}")
+
     # de twee risicocategorieen staan niet in de header maar als kaart op de risicopagina;
     # die route moet dan wel blijven bestaan
     risicos = pathlib.Path("risicos.html").read_text(encoding="utf-8")
