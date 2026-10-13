@@ -32,3 +32,18 @@ met welke partijen wordt samengewerkt.
   anders dan "wij werken met alle geldverstrekkers"; het tweede moet u kunnen
   aantonen en moet overeenkomen met uw vergelijkingskaart en dienstenwijzer.
 - Logo's zijn geen vervanging van de vergelijkingskaart. Die blijft verplicht.
+
+## Social-mediaknoppen
+
+De knoppen in de footer zijn tekstknoppen met een neutraal icoon, en verwijzen naar
+placeholder-adressen met het fictieve kantoor erin. Pas twee dingen aan:
+
+1. Vervang de URL's in het blok met klasse `social` (in elke pagina) door uw eigen
+   profielen, en het WhatsApp- en telefoonnummer door uw eigen nummer.
+2. Haal de kanalen weg die u niet gebruikt. Een knop die naar een leeg of verlaten
+   profiel leidt, doet meer kwaad dan goed.
+
+De officiële merklogo's van LinkedIn, Facebook, Instagram en WhatsApp staan hier
+bewust niet. Elk platform stelt die zelf beschikbaar met eigen voorwaarden over
+kleur, vorm en minimale afmeting; download ze daar als u ze wilt gebruiken, en
+vervang dan de `<svg>` in de knop.
