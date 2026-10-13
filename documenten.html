@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Documenten — Demo Hypotheek kantoor (demo)</title>
-<meta name="description" content="Opdracht tot dienstverlening, algemene voorwaarden, dienstenwijzer, vergelijkingskaarten en beheerovereenkomst. Voorbeeldwebsite met fictieve gegevens.">
+<meta name="description" content="Opdracht tot dienstverlening, algemene voorwaarden, dienstenwijzer, vergelijkingskaarten en servicekortingsovereenkomst. Voorbeeldwebsite met fictieve gegevens.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://jeroen-o.github.io/demo-hypotheekkantoor/documenten.html">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Demo Hypotheek kantoor">
 <meta property="og:title" content="Documenten — Demo Hypotheek kantoor (demo)">
-<meta property="og:description" content="Opdracht tot dienstverlening, algemene voorwaarden, dienstenwijzer, vergelijkingskaarten en beheerovereenkomst. Voorbeeldwebsite met fictieve gegevens.">
+<meta property="og:description" content="Opdracht tot dienstverlening, algemene voorwaarden, dienstenwijzer, vergelijkingskaarten en servicekortingsovereenkomst. Voorbeeldwebsite met fictieve gegevens.">
 <meta property="og:url" content="https://jeroen-o.github.io/demo-hypotheekkantoor/documenten.html">
 <meta name="twitter:card" content="summary">
 <link rel="alternate" hreflang="nl" href="https://jeroen-o.github.io/demo-hypotheekkantoor/index.html">
@@ -181,18 +181,24 @@
   <div class="wrap">
     <div class="eyebrow">Documenten</div>
     <h1>Eerst lezen, dan pas tekenen</h1>
-    <p>Alle documenten die u van ons krijgt, staan hier. Open ze, lees ze rustig door en print ze desgewenst. Er zit niets achter een inlog. Alle twintig stukken staan ook als <a href="documenten-tekst.html">doorlopende tekst op &eacute;&eacute;n pagina</a>, printbaar en leesbaar zonder JavaScript.</p>
+    <p>Alle documenten die u van ons krijgt, staan hier. Open ze, lees ze rustig door en print ze desgewenst. Er zit niets achter een inlog. Alle eenentwintig stukken staan ook als <a href="documenten-tekst.html">doorlopende tekst op &eacute;&eacute;n pagina</a>, printbaar en leesbaar zonder JavaScript.</p>
   </div>
 </header>
 
 <section>
   <div class="wrap">
     <div class="eyebrow">Modellen</div>
-    <h2>Zes documenten, vooraf in te zien</h2>
+    <h2>Zeven documenten, vooraf in te zien</h2>
     <p class="sub">U krijgt deze stukken van ons voordat u iets ondertekent. Ze staan hier zodat u ze rustig kunt
        lezen op een moment dat het u uitkomt. Elk document is te lezen op het scherm en te printen of op te slaan
        als PDF. U kunt er ook rechtstreeks naar linken.</p>
     <div class="dlist">
+      <div class="dcard" id="kernblad">
+        <div class="kind">Model &middot; &eacute;&eacute;n pagina</div>
+        <h3>Kernblad</h3>
+        <p>Op &eacute;&eacute;n pagina: dit krijgt u, dit kost het, dit doen wij niet en dit moet u zelf doen. Bedoeld om v&oacute;&oacute;r het adviesgesprek door te nemen, niet in plaats van de andere stukken.</p>
+        <button class="btn ghost" type="button" data-doc="kernblad">Bekijken</button>
+      </div>
       <div class="dcard" id="otd">
         <div class="kind">Model &middot; v&oacute;&oacute;r het advies</div>
         <h3>Opdracht tot dienstverlening</h3>
@@ -225,7 +231,7 @@
       </div>
       <div class="dcard" id="beheer">
         <div class="kind">Optioneel &middot; apart af te sluiten</div>
-        <h3>Beheerovereenkomst</h3>
+        <h3>Servicekortingsovereenkomst</h3>
         <p>De kortingsafspraak voor na het passeren: wat u per maand betaalt, welke korting daar tegenover staat en hoe u opzegt. Er zit geen signalering in; het initiatief ligt bij u.</p>
         <button class="btn ghost" type="button" data-doc="beheer">Bekijken</button>
       </div>
@@ -359,7 +365,7 @@
           <tr><td>V&oacute;&oacute;r de start van het werk</td><td>Opdracht tot dienstverlening en algemene voorwaarden</td><td>Zodat u weet wat u tekent en wat het kost</td></tr>
           <tr><td>Bij het advies</td><td>Adviesrapport en aanbiedersoverzicht</td><td>Zodat u ziet wat is vergeleken en waarom</td></tr>
           <tr><td>Bij de afronding</td><td>Bericht dat de opdracht eindigt</td><td>Zodat u weet dat wij uw hypotheek niet meer volgen</td></tr>
-          <tr><td>Alleen als u dat wilt</td><td>Beheerovereenkomst</td><td>Zodat de kortingsafspraak een bewuste keuze is</td></tr>
+          <tr><td>Alleen als u dat wilt</td><td>Servicekortingsovereenkomst</td><td>Zodat de kortingsafspraak een bewuste keuze is</td></tr>
         </tbody>
       </table>
     </div>
@@ -384,6 +390,76 @@
   </div>
 </div>
 
+<template id="doc-kernblad">
+  <p class="lead">Eén pagina met de kern van onze dienstverlening. Dit blad vervangt de opdracht, de algemene
+     voorwaarden en de vergelijkingskaart niet, maar maakt vooraf duidelijk waar u aan toe bent. De uitgebreide
+     versie van elk punt staat in het stuk waarnaar wordt verwezen.</p>
+
+  <h3>1. Dit krijgt u</h3>
+  <ul>
+    <li>Een kosteloze kennismaking, zonder verplichtingen.</li>
+    <li>Een schriftelijk advies met de vergeleken oplossingen, onze aanbeveling en de reden waarom de alternatieven
+      afvielen, plus de aannames waarop het rust.</li>
+    <li>De aanvraag bij de aanbieder van uw keuze, de dossieropbouw en de begeleiding tot en bij het passeren.</li>
+    <li>Een afrondingsbericht met de data die u zelf moet bijhouden.</li>
+    <li>Kosteloos, onbeperkt in de tijd: bericht bij wezenlijke wijzigingen in uw product of de voorwaarden. Dat is
+      een wettelijke verplichting en staat los van elk abonnement.</li>
+  </ul>
+
+  <h3>2. Dit kost het</h3>
+  <table class="kv">
+    <tr><td>Advies en bemiddeling hypotheek</td><td>&euro; 2.950,&ndash;, vrijgesteld van btw</td></tr>
+    <tr><td>Mogelijke toeslag</td><td>Onderneming of zzp + &euro; 350,&ndash; &middot; buitenlands inkomen + &euro; 450,&ndash; &middot; erfpacht, VvE met onderhoudsachterstand of funderingsherstel + &euro; 295,&ndash;</td></tr>
+    <tr><td>Overlijdensrisicoverzekering</td><td>&euro; 495,&ndash; (alleen als u daarover advies wilt)</td></tr>
+    <tr><td>Wanneer</td><td>Bij het passeren, via de nota van de notaris</td></tr>
+    <tr><td>Gaat het niet door</td><td>Naar de afgeronde fase: &euro; 0,&ndash; / &euro; 750,&ndash; / &euro; 1.500,&ndash; / &euro; 2.500,&ndash; / &euro; 2.950,&ndash;</td></tr>
+    <tr><td>Meerwerk</td><td>Alleen na een schriftelijke opdracht met prijsopgave vooraf</td></tr>
+  </table>
+  <p>De volledige lijst van 65 diensten staat op onze tarievenpagina, elk met uitleg over wat het is en waarom het
+     geld kost.</p>
+
+  <h3>3. Dit doen wij niet</h3>
+  <ul>
+    <li><b>Geen nazorg buiten de wettelijke melding.</b> Wij volgen uw hypotheek niet, bewaken geen einddatum van uw
+      rentevaste periode en controleren niet of uw hypotheek nog bij u past. Een abonnement is een kortingsafspraak,
+      geen bewakingsdienst.</li>
+    <li><b>Geen termijnbewaking.</b> Wij wijzen u schriftelijk op de datum waarop uw ontbindende voorwaarden
+      verlopen en herinneren u daar eenmaal aan, uiterlijk een week vooraf. De datum zelf houdt u in de gaten.</li>
+    <li><b>Geen fiscaal advies.</b> Wij stellen uw fiscale positie niet vast, verzorgen geen aangifte en bepalen uw
+      eigenwoningreserve en resterende aftrekduur niet. Netto maandlasten zijn bij ons altijd een indicatie.</li>
+    <li><b>Geen beoordeling van bestaande polissen.</b> Wij nemen bedragen en looptijden over zoals u ze opgeeft.
+      Het beoordelen van voorwaarden is apart werk met een eigen prijs.</li>
+    <li><b>Geen draagplicht, erfrecht, alimentatie of juridisch werk.</b> Dat regelt u bij uw notaris, mediator of
+      advocaat.</li>
+  </ul>
+
+  <h3>4. Dit moet u zelf doen</h3>
+  <ul>
+    <li>Gegevens volledig en juist aanleveren, en wijzigingen onverwijld melden.</li>
+    <li>Polisbladen en reglementen aanleveren van voorzieningen die u heeft. Wat u niet onderbouwt, rekenen wij op
+      nul &mdash; voorzichtig, maar dat kan u een premie kosten voor iets dat al geregeld is.</li>
+    <li>Opgave doen van uw eigenwoningverleden: eerder eigenwoningbezit, eerder genoten aftrek, een
+      eigenwoningreserve en het deel van de lening dat niet voor de eigen woning is.</li>
+    <li>De termijnen uit uw koopovereenkomst bijhouden, in het bijzonder de datum van uw ontbindende voorwaarden.</li>
+    <li>Elke betaalinstructie telefonisch bij ons controleren. Wij wijzigen een rekeningnummer nooit per e-mail,
+      WhatsApp of sms.</li>
+    <li>De stukken die u van ons en van de aanbieder krijgt zelf lezen, en aan de bel trekken als iets niet klopt.</li>
+  </ul>
+
+  <h3>5. Als u het ergens niet mee eens bent</h3>
+  <p>Meld het bij ons: u krijgt binnen vijf werkdagen een bevestiging en binnen vier weken een gemotiveerde reactie.
+     Komen wij er niet uit, dan kunt u naar het Kifid (nummer 999.999999), binnen drie maanden na ons definitieve
+     standpunt en in ieder geval binnen een jaar na uw klacht bij ons. De weg naar de rechter blijft open. Heeft u op
+     afstand getekend, dan heeft u veertien dagen bedenktijd.</p>
+
+  <div class="box"><p><b>Lees ook de volledige stukken.</b> Dit blad is een samenvatting en geen contract. Bindend
+    zijn de <a href="#otd">opdracht tot dienstverlening</a>, de <a href="#av">algemene voorwaarden</a> en de
+    <a href="#dvd">vergelijkingskaart</a>. Staat hier iets anders dan daarin, dan geldt het volledige stuk.</p></div>
+
+  <div class="meta">Demo Hypotheek kantoor B.V. &middot; Demostraat 12, Demostad &middot; KvK 99999999 &middot;
+    AFM 99999999 &middot; Kifid 999.999999 &middot; modelversie 1.0, 13 oktober 2026 &middot; fictief
+    voorbeelddocument</div>
+</template>
 <template id="doc-otd"><p class="lead">Modelversie. U ontvangt een op uw situatie ingevulde en ondertekende
      versie voordat wij met het advies beginnen. Ingevulde gegevens zijn hier weergegeven als &#10216;tussen punthaken&#10217;.</p>
 
@@ -431,7 +507,7 @@
      <b>niet</b> onder, tenzij wij daarover een aparte schriftelijke afspraak maken:</p>
   <ul>
     <li>het volgen van uw hypotheek, verzekeringen of rente nadat de akte is gepasseerd. Hierop geldt &eacute;&eacute;n
-      wettelijke uitzondering die altijd blijft gelden, ook zonder beheerovereenkomst: wij informeren u over
+      wettelijke uitzondering die altijd blijft gelden, ook zonder servicekortingsovereenkomst: wij informeren u over
       wezenlijke wijzigingen in een via ons gesloten product of in de voorwaarden die bij het afsluiten voor uw
       situatie van belang waren;</li>
     <li>u waarschuwen bij het einde van uw rentevaste periode, bij rentedalingen of bij wetswijzigingen;</li>
@@ -512,7 +588,8 @@
      vergoeding van aanbieders; dat is wettelijk niet toegestaan.</p>
   <p><b>Als het niet doorgaat.</b> Gaat de hypotheek niet door, om welke reden ook, dan brengen wij in rekening: na
      afronding van de inventarisatie en het adviesgesprek € 750,–; na het uitbrengen van het schriftelijke advies
-     € 1.500,–; na indiening van de aanvraag het volledige tarief. Beëindigt u de opdracht eerder, dan betaalt u voor
+     € 1.500,–; na indiening van de aanvraag en het binnenhalen van het bindend aanbod € 2.500,–; het volledige
+     tarief pas wanneer wij u tot en bij het passeren hebben begeleid. Beëindigt u de opdracht eerder, dan betaalt u voor
      de fase die op dat moment is afgerond.</p>
 
   <h3>8. Uw bedenktijd</h3>
@@ -539,13 +616,13 @@
      passeert</b>. Gaat de hypotheek niet door, dan eindigt de opdracht zodra wij u schriftelijk laten weten dat wij
      onze werkzaamheden afronden.</p>
   <p>Na afloop van de opdracht volgen wij uw hypotheek niet meer. U ontvangt van ons geen signalen over rente,
-     wetswijzigingen of de vraag of uw hypotheek nog bij uw situatie past, en ook een beheerovereenkomst verandert
+     wetswijzigingen of de vraag of uw hypotheek nog bij uw situatie past, en ook een servicekortingsovereenkomst verandert
      dat niet.</p>
   <p><b>Wat wij w&eacute;l blijven doen, kosteloos.</b> Wij informeren u over wezenlijke wijzigingen in een via ons
      gesloten product of in de voorwaarden die bij het afsluiten voor uw situatie van belang waren. Dat is een
      wettelijke verplichting; daarvoor hoeft u niets af te nemen en wij brengen er niets voor in rekening.</p>
   <div class="box"><p><b>Wilt u dat wij uw situatie blijven volgen?</b> Dan sluiten wij daarvoor een aparte
-    beheerovereenkomst. Let op: ook dan nemen wij niet uit onszelf contact op. U krijgt korting op alles wat u bij ons
+    servicekortingsovereenkomst. Let op: ook dan nemen wij niet uit onszelf contact op. U krijgt korting op alles wat u bij ons
     afneemt en u kunt ons kosteloos korte vragen stellen; het initiatief ligt bij u.</p></div>
 
   <h3>10. Uw gegevens</h3>
@@ -645,6 +722,10 @@
       een week voor die datum eenmaal schriftelijk aan. Dreigt de financiering niet tijdig rond te komen, dan meldt
       opdrachtnemer dat onverwijld en wijst zij opdrachtgever op de mogelijkheid van uitstel of een beroep op de
       ontbindende voorwaarde.</li>
+    <li>Verricht opdrachtnemer in een concreet geval meer dan in het vorige lid is omschreven, bijvoorbeeld een
+      tweede herinnering of een extra telefonische waarschuwing, dan is dat een dienst in dat ene geval. Daaruit
+      ontstaat geen verplichting voor het verdere verloop van die opdracht, voor andere opdrachten of voor andere
+      opdrachtgevers, en evenmin een gewoonte waarop opdrachtgever zich kan beroepen.</li>
     <li>Het inroepen of laten verstrijken van een ontbindende voorwaarde, het aangaan van een boeteclausule en de
       keuze om de leveringsdatum te laten staan, zijn beslissingen van opdrachtgever zelf. Opdrachtnemer treedt niet
       op als bewaker van de uit de koopovereenkomst voortvloeiende termijnen en is niet aansprakelijk voor het
@@ -718,7 +799,7 @@
       door bemiddeling tot stand gekomen producten, noch tot het informeren van opdrachtgever over wijzigingen in
       rente, wet- en regelgeving, fiscaliteit of productvoorwaarden.</li>
     <li>Een doorlopende verplichting als bedoeld in het vorige lid ontstaat uitsluitend door het sluiten van een
-      afzonderlijke, schriftelijke beheerovereenkomst, en uitsluitend voor de daarin limitatief omschreven
+      afzonderlijke, schriftelijke servicekortingsovereenkomst, en uitsluitend voor de daarin limitatief omschreven
       werkzaamheden.</li>
     <li>Het vorige lid laat onverlet de wettelijke verplichting van opdrachtnemer om opdrachtgever gedurende de
       looptijd van een door haar bemiddelde verzekering te informeren over wezenlijke wijzigingen in de eerder
@@ -1024,7 +1105,7 @@
   <h3>Wat onze opdracht omvat — en wat niet</h3>
   <p>Voordat wij beginnen ontvangt u een opdracht tot dienstverlening met daarin de omvang van onze werkzaamheden, de
      kosten en het moment waarop onze opdracht eindigt. Onze opdracht eindigt in beginsel bij het passeren van de
-     hypotheekakte. Daarna volgen wij uw hypotheek niet meer, tenzij u een aparte beheerovereenkomst met ons sluit.</p>
+     hypotheekakte. Daarna volgen wij uw hypotheek niet meer, tenzij u een aparte servicekortingsovereenkomst met ons sluit.</p>
 
   <h3>Hoe wij met uw gegevens omgaan</h3>
   <p>Voor ons advies verwerken wij persoonsgegevens: naam en contactgegevens, inkomens- en vermogensgegevens, gegevens
@@ -1143,14 +1224,16 @@
      U legt hem naast de kaarten van andere kantoren om dienstverlening en kosten te vergelijken.</p>
   <div class="box"><p>Sinds 1 april 2023 vervangt de vergelijkingskaart het dienstverleningsdocument. Er zijn vier
     kaarten: hypotheekvraag, risico&#39;s afdekken, vermogen opbouwen en pensioenvraag werkgever. Wij voeren de eerste
-    twee.</p></div>
+    twee. <b>Let op:</b> de kaart kent een wettelijk vastgesteld format met vaste vragen en een vaste indeling. Dit
+    model laat zien welke inhoud erin hoort; een kantoor vult de kaart in het offici&euml;le format van de AFM in en
+    niet in een eigen opmaak.</p></div>
 
   <h3>Wat doen wij voor u?</h3>
   <table class="kv">
     <tr><td>Ori&euml;ntatie</td><td>Wij brengen uw situatie, wensen en risico&#39;s in kaart en bespreken wat haalbaar is.</td></tr>
     <tr><td>Advies</td><td>Voor hypotheken vergelijken wij alle geldverstrekkers die via het intermediair beschikbaar zijn; wij adviseren schriftelijk, met onderbouwing waarom de alternatieven afvielen.</td></tr>
     <tr><td>Bemiddeling</td><td>Wij dienen de aanvraag in, verzamelen de stukken en begeleiden u tot het passeren van de akte. Wij wijzen u schriftelijk op de datum waarop uw ontbindende voorwaarden verlopen en herinneren u daar eenmaal aan; het bewaken van die datum blijft bij u.</td></tr>
-    <tr><td>Nazorg</td><td>Wettelijke nazorg is kosteloos: wij melden u wezenlijke wijzigingen in uw product of de voorwaarden. Verder volgen wij uw hypotheek niet. Een beheerovereenkomst geeft u korting op losse diensten en kosteloze korte vragen; het is geen bewakingsdienst.</td></tr>
+    <tr><td>Nazorg</td><td>Wettelijke nazorg is kosteloos: wij melden u wezenlijke wijzigingen in uw product of de voorwaarden. Verder volgen wij uw hypotheek niet. Een servicekortingsovereenkomst geeft u korting op losse diensten en kosteloze korte vragen; het is geen bewakingsdienst.</td></tr>
   </table>
 
   <h3>Wat kost het?</h3>
@@ -1159,7 +1242,7 @@
     <tr><td>Mogelijke toeslagen</td><td>Inkomen uit onderneming of als zzp&#39;er + &euro; 350,&ndash;; buitenlands inkomen of expatregeling + &euro; 450,&ndash;; erfpacht, een VvE met onderhoudsachterstand of funderingsherstel + &euro; 295,&ndash;. In uw opdracht staat welke toeslag voor u geldt, of dat er geen geldt</td></tr>
     <tr><td>Advies en bemiddeling overlijdensrisicoverzekering</td><td>&euro; 495,&ndash;</td></tr>
     <tr><td>Wanneer betaalt u</td><td>Bij het passeren van de akte, via de nota van de notaris</td></tr>
-    <tr><td>Als het niet doorgaat</td><td>Naar rato van de afgeronde fase: &euro; 750,&ndash; na het adviesgesprek, &euro; 1.500,&ndash; na het schriftelijke advies, het volledige bedrag na indiening</td></tr>
+    <tr><td>Als het niet doorgaat</td><td>Naar rato van de afgeronde fase: &euro; 750,&ndash; na het adviesgesprek, &euro; 1.500,&ndash; na het schriftelijke advies, &euro; 2.500,&ndash; na de aanvraag en het bindend aanbod, en het volledige bedrag pas na de begeleiding tot het passeren</td></tr>
   </table>
 
   <h3>Hoe worden wij beloond?</h3>
@@ -1322,7 +1405,7 @@
     <tr><td>Naam rekeninghouder</td><td>&#10216;naam&#10217;</td></tr>
     <tr><td>Adres</td><td>&#10216;adres, postcode en plaats&#10217;</td></tr>
     <tr><td>IBAN</td><td>&#10216;rekeningnummer&#10217;</td></tr>
-    <tr><td>Waarvoor</td><td>&#10216;Onderhoud Basis / Plus / Compleet&#10217;, eventueel met de modules
+    <tr><td>Waarvoor</td><td>&#10216;Servicekorting Basis / Plus / Compleet&#10217;, eventueel met de modules
       &#10216;digitaal dossier&#10217; en &#10216;belastingaangifte&#10217;</td></tr>
     <tr><td>Bedrag per maand</td><td>&euro; &#10216;bedrag&#10217;, inclusief btw</td></tr>
     <tr><td>Eerste incasso</td><td>&#10216;datum&#10217;, daarna telkens rond de eerste van de maand</td></tr>
@@ -1364,7 +1447,7 @@
     <tr><td>Analyse</td><td>Wij rekenen door wat u overhoudt bij overlijden, bij 50% arbeidsongeschiktheid en bij werkloosheid, en zetten dat naast uw woonlasten.</td></tr>
     <tr><td>Advies</td><td>Blijkt er een tekort, dan adviseren wij of en hoe u dat afdekt, met een onderbouwing van het verzekerde bedrag en de looptijd.</td></tr>
     <tr><td>Bemiddeling</td><td>Wij vragen de verzekering aan, begeleiden de medische acceptatie en controleren de polis.</td></tr>
-    <tr><td>Nazorg</td><td>Wettelijke nazorg is kosteloos: wij informeren u gedurende de looptijd over wezenlijke wijzigingen. Verder volgen wij uw polis niet. Een beheerovereenkomst geeft korting, geen bewaking.</td></tr>
+    <tr><td>Nazorg</td><td>Wettelijke nazorg is kosteloos: wij informeren u gedurende de looptijd over wezenlijke wijzigingen. Verder volgen wij uw polis niet. Een servicekortingsovereenkomst geeft korting, geen bewaking.</td></tr>
   </table>
 
   <h3>Wat kost het?</h3>
@@ -1427,7 +1510,7 @@
   <h3>Verklaring</h3>
   <p>Hierbij deel ik u mee dat ik onze overeenkomst betreffende de volgende dienst herroep:</p>
   <table class="kv">
-    <tr><td>Welke overeenkomst</td><td>&#10216;opdracht tot dienstverlening / beheerovereenkomst / module&#10217;</td></tr>
+    <tr><td>Welke overeenkomst</td><td>&#10216;opdracht tot dienstverlening / servicekortingsovereenkomst / module&#10217;</td></tr>
     <tr><td>Gesloten op</td><td>&#10216;datum&#10217;</td></tr>
     <tr><td>Naam consument</td><td>&#10216;naam&#10217;</td></tr>
     <tr><td>Adres consument</td><td>&#10216;adres&#10217;</td></tr>
@@ -1477,6 +1560,7 @@
   <table>
     <tr><th>Onderwerp</th><th>Aanname</th><th>Reden</th></tr>
     <tr><td>Niet onderbouwde voorziening</td><td>&#10216;op nul gerekend&#10217;</td><td>Geen polisblad ontvangen</td></tr>
+    <tr><td>Gevolg van die aanname</td><td>&#10216;berekend tekort van &euro; X per maand&#10217;</td><td>Benoem hier uitdrukkelijk dat het tekort kan vervallen als de klant de onderbouwing alsnog aanlevert, en dat een daarop gebaseerde verzekering dan niet nodig is</td></tr>
     <tr><td>Arbeidsongeschiktheid</td><td>50%, met en zonder passend werk</td><td>Standaardscenario van ons kantoor</td></tr>
     <tr><td>Restverdiencapaciteit</td><td>50% van het inkomen, gemaximeerd op het maximumdagloon</td><td>Vast uitgangspunt; sluit aan op de wettelijke systematiek</td></tr>
     <tr><td>Rente na rentevaste periode</td><td>&#10216;percentage&#10217;</td><td>Scenarioberekening, geen voorspelling</td></tr>
@@ -1518,7 +1602,7 @@
 
   <h3>9. Vervolgstappen en einde van de opdracht</h3>
   <p>Wat gebeurt er nu, welke termijnen gelden, en de bevestiging dat onze opdracht eindigt bij het passeren tenzij
-     een beheerovereenkomst wordt gesloten.</p>
+     een servicekortingsovereenkomst wordt gesloten.</p>
   <div class="meta">Demo Hypotheek kantoor B.V. &middot; Demostraat 12, Demostad &middot; KvK 99999999 &middot; AFM 99999999 &middot; Kifid 999.999999 &middot; modelversie 1.0, 13 oktober 2026 &middot; fictief voorbeelddocument</div></template>
 <template id="doc-afwijking">
   <p class="lead">Te gebruiken wanneer de klant bewust kiest voor iets anders dan wij adviseren. Zonder dit stuk is
@@ -1558,7 +1642,7 @@
   <div class="meta">Demo Hypotheek kantoor B.V. &middot; Demostraat 12, Demostad &middot; KvK 99999999 &middot; AFM 99999999 &middot; Kifid 999.999999 &middot; modelversie 1.0, 13 oktober 2026 &middot; fictief voorbeelddocument</div></template>
 <template id="doc-afronding">
   <p class="lead">Modelbrief waarmee de opdracht wordt afgerond. Verstuur deze altijd, ook als de klant tevreden is
-     en zeker wanneer er g&eacute;&eacute;n beheerovereenkomst volgt.</p>
+     en zeker wanneer er g&eacute;&eacute;n servicekortingsovereenkomst volgt.</p>
 
   <p>Beste &#10216;naam&#10217;,</p>
 
@@ -1590,7 +1674,7 @@
     <p>Wat wij w&eacute;l blijven doen, kosteloos: u informeren over wezenlijke wijzigingen in een via ons gesloten
       product of de voorwaarden daarvan, voor zover de aanbieder u daarover niet zelf informeert en de informatie bij
       ons bekend is.</p>
-    <p>Wilt u dat wij uw situatie wel blijven volgen, dan sluit u daarvoor een beheerovereenkomst. U bent daartoe
+    <p>Wilt u dat wij uw situatie wel blijven volgen, dan sluit u daarvoor een servicekortingsovereenkomst. U bent daartoe
       niet verplicht en wij benaderen u daar niet ongevraagd over.</p>
   </div>
 
@@ -1614,6 +1698,11 @@
     <li>het overzicht van bestaande verzekeringen en voorzieningen te hebben gecontroleerd;</li>
     <li>te hebben gezien welke voorzieningen door het kantoor op nul of op het wettelijk minimum zijn gerekend omdat
       daarvan geen onderbouwing is aangeleverd, en daarmee akkoord te gaan;</li>
+    <li>erop te zijn gewezen dat die voorzichtige aanname twee kanten op kan werken: een op papier berekend tekort
+      kan leiden tot een verzekering die bij nadere onderbouwing niet nodig blijkt, en dat ondergetekende ervoor kiest
+      het advies op deze aanname te baseren in plaats van de onderbouwing alsnog aan te leveren;</li>
+    <li>dat deze verklaring met ondergetekende is doorgenomen en dat hij de gelegenheid heeft gehad vragen te stellen
+      voordat hij ondertekende;</li>
     <li>ermee bekend te zijn dat het advies op deze gegevens is gebaseerd en dat onjuiste of onvolledige informatie
       de uitkomst van het advies kan veranderen.</li>
   </ul>
@@ -1650,6 +1739,7 @@
   </table>
 
   <table class="kv">
+    <tr><td>Doorgenomen op</td><td>&#10216;datum&#10217;, met &#10216;naam adviseur&#10217;, &#10216;telefonisch / op kantoor / videogesprek&#10217;</td></tr>
     <tr><td>Plaats en datum</td><td>&#10216;plaats&#10217;, &#10216;datum&#10217;</td></tr>
     <tr><td>Handtekening(en)</td><td>&#10216;handtekening&#10217;</td></tr>
   </table>
@@ -1684,7 +1774,7 @@
      klantdossier.</p>
   <div class="meta">Demo Hypotheek kantoor B.V. &middot; Demostraat 12, Demostad &middot; KvK 99999999 &middot; AFM 99999999 &middot; Kifid 999.999999 &middot; modelversie 1.0, 13 oktober 2026 &middot; fictief voorbeelddocument</div></template>
 <template id="doc-nazorglog">
-  <p class="lead">Vastlegging van het contact binnen een beheerovereenkomst: wat de klant heeft gevraagd, wat daarop
+  <p class="lead">Vastlegging van het contact binnen een servicekortingsovereenkomst: wat de klant heeft gevraagd, wat daarop
      is gedaan, en welke wettelijke meldingen zijn verstuurd. Het kantoor voert geen periodieke controle uit, dus
      dit is geen signaleringslogboek.</p>
 
@@ -1713,7 +1803,7 @@
   <div class="box"><p><b>Wat hier niet in staat, en waarom.</b> Geen periodieke check, geen verstuurde vragenlijst
     en geen signaal bij een naderende einddatum: het kantoor verricht die werkzaamheden niet en belooft ze nergens.
     Staat er in een dossier w&eacute;l een signaal, dan is daarmee een verplichting aangegaan die de
-    beheerovereenkomst uitsluit. Houd het logboek dus leeg op die punten.</p></div>
+    servicekortingsovereenkomst uitsluit. Houd het logboek dus leeg op die punten.</p></div>
 
   <h3>Jaarlijkse afsluiting</h3>
   <p>Leg per jaar vast welke vragen zijn binnengekomen, welke korting is toegepast en welke wettelijke meldingen zijn
@@ -1813,12 +1903,12 @@
         <a href="fiscale-risicos.html">Fiscale risico&#39;s</a>
         <a href="tools.html">Rekentools</a>
         <a href="verduurzaming.html">Verduurzaming en fundering</a>
-        <a href="nazorg.html">Onderhoud en nazorg</a><a href="kosten.html">Kosten</a>
+        <a href="nazorg.html">Service en nazorg</a><a href="kosten.html">Kosten</a>
         <a href="vragen.html">Veelgestelde vragen</a></div>
       <div><h2>Transparantie</h2>
         <a href="documenten.html#dw">Dienstenwijzer</a>
         <a href="documenten.html#av">Algemene voorwaarden</a>
-        <a href="documenten.html#beheer">Beheerovereenkomst</a>
+        <a href="documenten.html#beheer">Servicekortingsovereenkomst</a>
         <a href="documenten.html#dvd">Vergelijkingskaart</a>
         <a href="over-ons.html">Over ons</a>
         <a href="governance.html">Governance en brondata</a>

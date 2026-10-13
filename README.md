@@ -104,7 +104,7 @@ wijziging in een `<template>`-blok, anders loopt die pagina achter.
 
 ## Documenten in de demo
 
-`documenten.html` bevat twintig modellen, elk deeplinkbaar (`documenten.html#beheer`):
+`documenten.html` bevat eenentwintig modellen, elk deeplinkbaar (`documenten.html#beheer`):
 
 | Categorie | Documenten |
 | --- | --- |

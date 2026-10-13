@@ -6,10 +6,11 @@
   "use strict";
 
   var DOCS = {
+    kernblad:{titel: "Kernblad — modelversie",                  versie: "modelversie 1.0, 13 oktober 2026" },
     otd:   { titel: "Opdracht tot dienstverlening — modelversie", versie: "modelversie 1.0, 13 oktober 2026" },
     av:    { titel: "Algemene voorwaarden",                       versie: "versie 1.3, 13 oktober 2026" },
     dw:    { titel: "Dienstenwijzer",                             versie: "versie 1.0, 13 oktober 2026" },
-    beheer:{ titel: "Beheerovereenkomst — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
+    beheer:{ titel: "Servicekortingsovereenkomst — modelversie",           versie: "modelversie 1.0, 13 oktober 2026" },
     dvd:   { titel: "Vergelijkingskaart hypotheekvraag — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },
     vgk:   { titel: "Overzicht van onze geldverstrekkers",        versie: "versie 1.0, 13 oktober 2026" },
     dvdr:  { titel: "Vergelijkingskaart risico's afdekken — voorbeeld", versie: "voorbeeldversie 1.0, 13 oktober 2026" },

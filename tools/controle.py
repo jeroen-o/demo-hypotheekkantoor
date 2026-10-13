@@ -66,6 +66,12 @@ SAMENHANG = [
      "instructie aan een implementerend kantoor in een consumententekst"),
     (r"Gebruikt u de tools niet, dan wordt er niets geladen", "publiek",
      "onjuist zolang een rekenhulp automatisch laadt"),
+    (r"Onderhoud Basis|Onderhoud Plus|Onderhoud Compleet|onderhoudsabonnement", "beide",
+     "de pakketnaam belooft onderhoud; het product is een kortingsafspraak"),
+    (r"[Bb]eheerovereenkomst", "beide",
+     "de naam belooft beheer; het product is een servicekortingsovereenkomst"),
+    (r"na indiening van de aanvraag het volledige tarief", "beide",
+     "de klant betaalt dan 100% voordat de begeleiding tot het passeren is geleverd"),
 ]
 
 
@@ -140,6 +146,14 @@ def main():
             txt = pathlib.Path(f).read_text(encoding="utf-8")
             if re.search(patroon, txt):
                 fouten.append(f"SAMENHANG {f}: '{patroon}' — {waarom}")
+
+    telwoord = {19: "negentien", 20: "twintig", 21: "eenentwintig", 22: "tweeentwintig"}.get(len(templates))
+    if telwoord:
+        for f in ("index.html", "documenten.html", "README.md"):
+            txt = pathlib.Path(f).read_text(encoding="utf-8").lower()
+            for mis, woord in {19: "negentien", 20: "twintig", 21: "eenentwintig"}.items():
+                if mis != len(templates) and re.search(rf"(?<![a-z]){woord} model", txt):
+                    fouten.append(f"{f}: noemt '{woord} modellen' terwijl er {len(templates)} zijn")
 
     tarieven = pathlib.Path("kosten.html").read_text(encoding="utf-8")
     knoppen = re.findall(r'aria-controls="(t-[^"]+)"', tarieven)
