@@ -1,20 +1,20 @@
 # Logo's van geldverstrekkers
 
-Deze map is leeg. In de demo staan bewust geen logo's van echte geldverstrekkers:
-het kantoor op deze website is fictief, en logo's van bestaande partijen zouden
-een samenwerking suggereren die niet bestaat.
+Deze map bevat de logo's van de geldverstrekkers die op de homepage worden getoond.
+De bestanden zijn overgenomen uit het aanbiedersoverzicht van fierhypotheken.nl.
 
-## Zelf logo's plaatsen
+De logo's zijn eigendom van de betreffende aanbieders. Ze staan hier om te laten zien
+met welke partijen wordt samengewerkt.
 
-Een kantoor dat deze opzet overneemt, kan hier zijn eigen bestanden neerzetten:
+## Zelf logo's beheren
 
 1. Zet per aanbieder een bestand in deze map, bij voorkeur SVG of PNG met een
    transparante achtergrond. Gebruik een nette bestandsnaam zonder spaties,
-   bijvoorbeeld `aanbieder-naam.svg`.
-2. Vervang in `index.html` het blok met de placeholders door `<img>`-elementen:
+   bijvoorbeeld `aanbieder-naam.png`.
+2. Voeg in `index.html` een regel toe aan de lijst met klasse `logos`:
 
    ```html
-   <li><img src="logos/aanbieder-naam.svg" alt="Aanbieder Naam" loading="lazy"></li>
+   <li><img src="logos/aanbieder-naam.png" alt="Aanbieder Naam" loading="lazy" width="120" height="40"></li>
    ```
 
 3. Geef elk logo een `alt` met de naam van de aanbieder, zodat de strook ook
@@ -26,6 +26,8 @@ Een kantoor dat deze opzet overneemt, kan hier zijn eigen bestanden neerzetten:
   merkhandboek beschikbaar met regels over kleur, witruimte en minimale afmeting.
 - Toon geen logo's van partijen waar u feitelijk niet mee werkt. Dat is misleidend
   en kan worden gelezen als een onjuiste voorstelling van uw dienstverlening.
+- Houd de strook actueel. Stopt de samenwerking met een aanbieder, haal het logo
+  dan weg.
 - Zet bij de strook welke claim u maakt. "Een selectie van onze aanbieders" is iets
   anders dan "wij werken met alle geldverstrekkers"; het tweede moet u kunnen
   aantonen en moet overeenkomen met uw vergelijkingskaart en dienstenwijzer.
