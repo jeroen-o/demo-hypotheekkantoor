@@ -165,8 +165,10 @@ def main():
                     fouten.append(f"{f}: noemt '{woord} modellen' terwijl er {len(templates)} zijn")
 
     # elke inhoudelijke hoofdpagina hoort in het hoofdmenu te staan
-    menu = ("werkwijze.html", "diensten.html", "risicos.html", "fiscale-risicos.html", "tools.html",
-            "nazorg.html", "kosten.html", "documenten.html")
+    # elke inhoudelijke hoofdpagina hoort in de header te staan: in het hoofdmenu of,
+    # voor de stukken die daar niet meer bij passen, in de snelkoppelingen van de topbalk
+    menu = ("werkwijze.html", "diensten.html", "risicos.html", "woning-risicos.html", "fiscale-risicos.html",
+            "tools.html", "nazorg.html", "kosten.html", "documenten.html", "vragen.html")
     for f in paginas:
         if f.startswith("rekenhulp-") or f in ("404.html", "en.html", "de.html", "pl.html", "es.html", "fr.html"):
             continue
@@ -175,9 +177,12 @@ def main():
             continue
         begin = txt.index('<div class="nav-links"')
         blok = txt[begin:txt.index("</div>", begin)]
+        if '<div class="snel">' in txt:
+            top = txt.index('<div class="snel">')
+            blok += txt[top:txt.index("</div>", top)]
         for doel in menu:
             if f'href="{doel}"' not in blok:
-                fouten.append(f"{f}: {doel} ontbreekt in het hoofdmenu")
+                fouten.append(f"{f}: {doel} ontbreekt in de header")
 
     for bestand, eis in (("CNAME", "demo-hypotheek-kantoor.nl"),
                          ("robots.txt", "Sitemap: https://demo-hypotheek-kantoor.nl/sitemap.xml"),
