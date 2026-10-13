@@ -8,6 +8,9 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+/* De navigatie blijft bovenaan staan; een anker moet daar onderuit komen. */
+:target{scroll-margin-top:86px}
+section[id],div[id].card,div[id].dcard{scroll-margin-top:86px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
