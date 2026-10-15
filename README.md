@@ -36,6 +36,7 @@ expliciet uitgewerkt op `nazorg.html`.
 | `assets/favicon.svg` | Browser-icoon |
 | `tools/kantoor.json` | Gegevens van uw eigen kantoor |
 | `tools/personaliseer.py` | Vervangt de demowaarden door die uit `kantoor.json` |
+| `_kennis/` | Achtergrondkennis wet- en regelgeving (WFT Bieb, Bureau DFO); niet gepubliceerd |
 
 ## Technische uitgangspunten
 
