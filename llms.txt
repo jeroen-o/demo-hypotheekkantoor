@@ -45,7 +45,7 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
 - [Alle documenten als doorlopende tekst](https://demo-hypotheek-kantoor.nl/documenten-tekst.html): dezelfde stukken zonder JavaScript.
 - [Veelgestelde vragen](https://demo-hypotheek-kantoor.nl/vragen.html): 39 vragen met antwoord.
 - [Governance en brondata](https://demo-hypotheek-kantoor.nl/governance.html): kwaliteitsborging, rekenfouten en IT-risico's.
-- [Rekenhulpen](https://demo-hypotheek-kantoor.nl/tools.html): 23 hulpmiddelen, geleverd door Hypotheekbond en pas geladen na een klik.
+- [Rekenhulpen](https://demo-hypotheek-kantoor.nl/tools.html): 24 hulpmiddelen, waarvan 23 geleverd door Hypotheekbond; alle pas geladen na een klik.
 - [Over ons](https://demo-hypotheek-kantoor.nl/over-ons.html) en [Contact](https://demo-hypotheek-kantoor.nl/contact.html).
 
 ## Andere talen

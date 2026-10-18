@@ -178,12 +178,12 @@
     f.setAttribute("scrolling", "no");
     f.setAttribute("referrerpolicy", "origin");
     f.src = knop.getAttribute("data-src");
-    f.addEventListener("load", function () { resizer(f); });
+    if (knop.getAttribute("data-resizer") !== "nee") f.addEventListener("load", function () { resizer(f); });
 
     var hint = document.createElement("p");
     hint.className = "hint";
-    hint.innerHTML = "Deze rekenhulp is geladen vanaf de servers van Hypotheekbond. Wat u invult, gaat naar die " +
-      "partij en niet naar ons, tenzij u het resultaat zelf naar ons stuurt.";
+    hint.textContent = (knop.getAttribute("data-hint") || "Deze rekenhulp is geladen vanaf de servers van Hypotheekbond.") +
+      " Wat u invult, gaat naar die partij en niet naar ons, tenzij u het resultaat zelf naar ons stuurt.";
 
     var wrap = houder.parentNode;
     wrap.replaceChild(f, houder);
