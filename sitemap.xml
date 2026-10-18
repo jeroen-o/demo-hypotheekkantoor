@@ -303,6 +303,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://demo-hypotheek-kantoor.nl/regels-nu-en-straks.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://demo-hypotheek-kantoor.nl/tools.html</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>

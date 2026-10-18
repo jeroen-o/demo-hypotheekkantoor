@@ -47,6 +47,7 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
 - [Risico's rond de woning](https://demo-hypotheek-kantoor.nl/woning-risicos.html): bouwkundige staat, waarde, onderhoud, fundering, klimaat (water, droogte, hitte) en wat de geldverstrekker volgens EBA/GL/2020/06 met de woning moet doen.
 - [Draagplichtovereenkomst](https://demo-hypotheek-kantoor.nl/draagplicht.html): ongelijke inbreng en wie welk deel van de schuld draagt.
 - [Voorzieningen via uw werkgever](https://demo-hypotheek-kantoor.nl/werkgeversregelingen.html): wat mee te nemen en hoe op te vragen.
+- [Hypotheekregels nu en straks](https://demo-hypotheek-kantoor.nl/regels-nu-en-straks.html): vergelijking oude en nieuwe regels per 18 oktober 2026: aflossingsvrij maximaal 30% bij Rabobank/Obvion (11 mei 2026) en ABN AMRO/Florius (1 juni 2026), schuldgrens op 85 jaar (ABN AMRO 50% vanaf december 2026, Rabobank/Obvion 70% vanaf maart 2027), renteaftrek en eigenwoningforfait 2027, salderingsregeling, energielabel en fundering.
 - [Verduurzaming en fundering](https://demo-hypotheek-kantoor.nl/verduurzaming.html): energielabel en leenruimte, de herziening van het label onder EPBD IV (aanvullend label A0 sinds mei 2026; de leennormen 2026 gebruiken nog G tot en met A++++), renovatiepaspoort en de financiering van maatregelen.
 - [Service en nazorg](https://demo-hypotheek-kantoor.nl/nazorg.html): wat het kantoor na het passeren wel en niet doet.
 - [Kosten](https://demo-hypotheek-kantoor.nl/kosten.html): 65 diensten, elk met uitleg waarom het geld kost.
