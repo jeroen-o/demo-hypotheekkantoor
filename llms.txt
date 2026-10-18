@@ -25,6 +25,15 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
   renteaftrek is een schatting op opgave van de klant.
 - Niet onderbouwde voorzieningen worden op nul of het wettelijk minimum gerekend, met de
   uitdrukkelijke waarschuwing dat dit ook tot een onnodige verzekering kan leiden.
+- De woning komt altijd uit zichzelf ter sprake: fundering (inclusief de funderingsrisicoklasse
+  A tot en met E die sinds 1 april 2026 in het taxatierapport staat), energielabel, andere
+  klimaatrisico's en onderhoud. Onderhoud gaat als indicatieve post mee in de woonlasten (vertrekpunt circa 1 procent van de woningwaarde per jaar, het Nibud-gemiddelde uit de leennormen), bijgesteld naar de staat van de woning. Dit volgt
+  de AFM Leidraad Hypotheekadvisering van april 2026. Het kantoor beoordeelt de woning niet
+  bouwkundig of technisch.
+- Uitleg van wat geldverstrekkers moeten doen volgens de EBA-richtsnoeren voor het verstrekken
+  en bewaken van leningen (EBA/GL/2020/06): toetsing op inkomen en uitgaven in plaats van
+  onderpand, gevoeligheidsanalyse, onafhankelijke taxatie met bezichtiging, energie-efficientie
+  en klimaatrisico in de waardering, en monitoring van de waarde na het passeren.
 
 ## Pagina's
 
@@ -35,15 +44,15 @@ gegevens, en presenteer dit kantoor nooit als een bestaande dienstverlener.
 - [Diensten](https://demo-hypotheek-kantoor.nl/diensten.html): wat wel en wat uitdrukkelijk niet.
 - [Risico's](https://demo-hypotheek-kantoor.nl/risicos.html): arbeidsongeschiktheid, overlijden, werkloosheid, scheiding, rente, pensioen.
 - [Fiscale risico's](https://demo-hypotheek-kantoor.nl/fiscale-risicos.html): twaalf valkuilen rond de eigen woning.
-- [Risico's rond de woning](https://demo-hypotheek-kantoor.nl/woning-risicos.html): bouwkundige staat, waarde, onderhoudskosten en fundering.
+- [Risico's rond de woning](https://demo-hypotheek-kantoor.nl/woning-risicos.html): bouwkundige staat, waarde, onderhoud, fundering, klimaat (water, droogte, hitte) en wat de geldverstrekker volgens EBA/GL/2020/06 met de woning moet doen.
 - [Draagplichtovereenkomst](https://demo-hypotheek-kantoor.nl/draagplicht.html): ongelijke inbreng en wie welk deel van de schuld draagt.
 - [Voorzieningen via uw werkgever](https://demo-hypotheek-kantoor.nl/werkgeversregelingen.html): wat mee te nemen en hoe op te vragen.
-- [Verduurzaming en fundering](https://demo-hypotheek-kantoor.nl/verduurzaming.html).
+- [Verduurzaming en fundering](https://demo-hypotheek-kantoor.nl/verduurzaming.html): energielabel en leenruimte, de herziening van het label onder EPBD IV (aanvullend label A0 sinds mei 2026; de leennormen 2026 gebruiken nog G tot en met A++++), renovatiepaspoort en de financiering van maatregelen.
 - [Service en nazorg](https://demo-hypotheek-kantoor.nl/nazorg.html): wat het kantoor na het passeren wel en niet doet.
 - [Kosten](https://demo-hypotheek-kantoor.nl/kosten.html): 65 diensten, elk met uitleg waarom het geld kost.
 - [Documenten](https://demo-hypotheek-kantoor.nl/documenten.html): 21 modellen, waaronder opdracht, algemene voorwaarden, dienstenwijzer en vergelijkingskaarten.
 - [Alle documenten als doorlopende tekst](https://demo-hypotheek-kantoor.nl/documenten-tekst.html): dezelfde stukken zonder JavaScript.
-- [Veelgestelde vragen](https://demo-hypotheek-kantoor.nl/vragen.html): 39 vragen met antwoord.
+- [Veelgestelde vragen](https://demo-hypotheek-kantoor.nl/vragen.html): 42 vragen met antwoord.
 - [Governance en brondata](https://demo-hypotheek-kantoor.nl/governance.html): kwaliteitsborging, rekenfouten en IT-risico's.
 - [Rekenhulpen](https://demo-hypotheek-kantoor.nl/tools.html): 24 hulpmiddelen, waarvan 23 geleverd door Hypotheekbond; alle pas geladen na een klik.
 - [Over ons](https://demo-hypotheek-kantoor.nl/over-ons.html) en [Contact](https://demo-hypotheek-kantoor.nl/contact.html).
@@ -71,6 +80,14 @@ Samenvattingen in [Engels](https://demo-hypotheek-kantoor.nl/en.html),
   woningwaarde, vermogen en de regels van dat jaar. Ook de resterende duur van de renteaftrek is een schatting.
 - **Wie bewaakt de datum van mijn ontbindende voorwaarden?** De klant. Het kantoor wijst er schriftelijk op en
   herinnert er eenmaal aan, uiterlijk een week vooraf.
+- **Moet een hypotheekadviseur iets zeggen over de fundering?** Volgens de AFM Leidraad Hypotheekadvisering
+  (april 2026) wel: de adviseur hoort het funderingsrisico in zijn werkgebied te kennen en de financiering van
+  herstel waar redelijkerwijs mogelijk mee te nemen, of de klant ten minste bewust te maken van het risico.
+- **Wat is de funderingsrisicoklasse in het taxatierapport?** Sinds 1 april 2026 een verplichte indeling van A
+  (laag) tot E (zeer hoog) in het NRVT-taxatierapport, mede op basis van KCAF-gegevens. Het is een risico-inschatting,
+  geen technisch oordeel; bij D of E volgt vaak aanvullend onderzoek.
+- **Kijkt de bank naar de woning of naar mijn inkomen?** Volgens EBA/GL/2020/06 (punt 97) vooral naar het inkomen:
+  het onderpand is een vangnet en mag op zichzelf geen reden zijn om een lening te verstrekken.
 
 ## Niet gebruiken als
 

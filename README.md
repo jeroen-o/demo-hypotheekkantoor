@@ -21,7 +21,8 @@ expliciet uitgewerkt op `nazorg.html`.
 | `werkwijze.html` | De vijf stappen, per stap wat wij doen, wat u aanlevert en wat u krijgt |
 | `adviesproces.html` | Het adviestraject in detail: CBI-benadering, 50%-AO-scenario en de omgang met bestaande voorzieningen |
 | `diensten.html` | Waarover wel en niet wordt geadviseerd, met drie fictieve voorbeeldsituaties |
-| `verduurzaming.html` | Energielabel en leenruimte, financiering van maatregelen, funderingsrisico (`#fundering`) |
+| `verduurzaming.html` | Energielabel en leenruimte, labelherziening (EPBD IV), renovatiepaspoort, financiering van maatregelen |
+| `woning-risicos.html` | Bouwkundige staat, waarde, onderhoud (`#onderhoud`), fundering (`#fundering`), klimaat (`#klimaat`) en de EBA-richtsnoeren voor geldverstrekkers (`#geldverstrekker`) |
 | `nazorg.html` | Wettelijke nazorg (gratis) versus drie onderhoudsabonnementen, met vergelijkingstabel |
 | `kosten.html` | Volledige tarievenlijst, annuleringsstaffel, meerwerk, nazorgprijzen en kosten van derden |
 | `documenten.html` | Twaalf modeldocumenten in een overlay, te printen of op te slaan als PDF |
@@ -33,7 +34,8 @@ expliciet uitgewerkt op `nazorg.html`.
 | `assets/style.css` | Gedeelde stijl |
 | `assets/site.js` | Menu, accordeons, cookiemelding, formulier |
 | `assets/docs.js` | Documentvenster, focusbeheer en printen |
-| `assets/favicon.svg` | Browser-icoon |
+| `assets/favicon.svg`, `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/icon-192.png`, `assets/icon-512.png` | Browser- en app-iconen |
+| `site.webmanifest` | Naam, themakleur en iconen voor mobiel |
 | `tools/kantoor.json` | Gegevens van uw eigen kantoor |
 | `tools/personaliseer.py` | Vervangt de demowaarden door die uit `kantoor.json` |
 
