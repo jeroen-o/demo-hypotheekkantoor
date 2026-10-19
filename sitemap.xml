@@ -303,30 +303,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://demo-hypotheek-kantoor.nl/regels-nu-en-straks.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://demo-hypotheek-kantoor.nl/kies-uw-scenario.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://demo-hypotheek-kantoor.nl/europa.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://demo-hypotheek-kantoor.nl/scenario-2035.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://demo-hypotheek-kantoor.nl/tools.html</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>

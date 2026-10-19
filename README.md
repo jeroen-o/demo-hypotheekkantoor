@@ -22,10 +22,6 @@ expliciet uitgewerkt op `nazorg.html`.
 | `adviesproces.html` | Het adviestraject in detail: CBI-benadering, 50%-AO-scenario en de omgang met bestaande voorzieningen |
 | `diensten.html` | Waarover wel en niet wordt geadviseerd, met drie fictieve voorbeeldsituaties |
 | `verduurzaming.html` | Energielabel en leenruimte, labelherziening (EPBD IV), renovatiepaspoort, financiering van maatregelen |
-| `regels-nu-en-straks.html` | Oude en nieuwe regels naast elkaar, nieuws Rabobank/ABN AMRO, Europa-vergelijking, feitencheck, renteaftrek |
-| `scenario-2035.html` | Toekomstscenario met zekerheidslabels, stressscenario 2030–2035 en de rol van de ECB via kapitaal |
-| `kies-uw-scenario.html` | Gesprekshulp: eigen situatie in drie scenario's (mild, strakker, streng) met printbare gespreksagenda (`assets/scenariokiezer.js`) |
-| `europa.html` | Europese beleidslijnen en wat andere landen al doen |
 | `woning-risicos.html` | Bouwkundige staat, waarde, onderhoud (`#onderhoud`), fundering (`#fundering`), klimaat (`#klimaat`) en de EBA-richtsnoeren voor geldverstrekkers (`#geldverstrekker`) |
 | `nazorg.html` | Wettelijke nazorg (gratis) versus drie onderhoudsabonnementen, met vergelijkingstabel |
 | `kosten.html` | Volledige tarievenlijst, annuleringsstaffel, meerwerk, nazorgprijzen en kosten van derden |
