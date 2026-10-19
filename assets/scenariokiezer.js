@@ -36,7 +36,7 @@
     var s = {
       leeftijd: getal("sk-leeftijd"), schuld: getal("sk-schuld"), av: getal("sk-av"), woz: getal("sk-woz"),
       rente: getal("sk-rente"), einde: getal("sk-einde"), start: getal("sk-start"),
-      label: keuze("sk-label"), fundering: keuze("sk-fundering"), water: keuze("sk-water")
+      label: keuze("sk-label"), fundering: keuze("sk-fundering"), water: keuze("sk-water"), overlijden: keuze("sk-overlijden")
     };
     if (s.av > s.schuld) s.av = s.schuld;
     if (s.einde < NU) s.einde = NU;
@@ -91,6 +91,10 @@
     if (fund[s.fundering] && fund[s.fundering][sleutel]) l.push(fund[s.fundering][sleutel]);
     var water = { ja: { mild: "Overstromingsgebied: lees wat uw opstalverzekering dekt.", strakker: "Overstromingsgebied: het risico kan meetellen in de taxatie.", streng: "Overstromingsgebied: lagere waarde of een rente-opslag is mogelijk." } };
     if (water[s.water]) l.push(water[s.water][sleutel]);
+    var dood = { nee: { mild: "Bij overlijden kan de partner de lasten niet dragen: bespreek een overlijdensrisicoverzekering of aflossen.", strakker: "Bij overlijden kan de partner de lasten niet dragen; banken wegen dat zwaarder mee bij een nieuwe hypotheek.", streng: "Bij overlijden kan de partner de lasten niet dragen; zonder dekking wordt herfinancieren lastig." },
+                 weet: { mild: "", strakker: "Zoek uit wat er bij overlijden met de lasten gebeurt (polis, nabestaandenpensioen).", streng: "Zoek uit wat er bij overlijden met de lasten gebeurt; zonder dekking wegen banken het risico zwaar." },
+                 alleen: { mild: "", strakker: "Alleenstaand: bij overlijden gaat de schuld naar de erfgenamen; met weinig overwaarde moet de woning verkocht worden.", streng: "Alleenstaand: de bank weegt mee of de schuld bij overlijden uit de verkoop kan worden afgelost." } };
+    if (dood[s.overlijden] && dood[s.overlijden][sleutel]) l.push(dood[s.overlijden][sleutel]);
     return l;
   }
 
